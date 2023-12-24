@@ -1,0 +1,1 @@
+SeewoStart.exe /settings
