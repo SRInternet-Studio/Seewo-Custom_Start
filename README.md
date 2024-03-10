@@ -2,8 +2,6 @@
 <br>
 <a href='https://e.seewo.com/'><img src='https://e.seewo.com/static/images/logo_en5_48@2x-cce857090e.png' alt='en-ico' height="100" width="100"></img></a>
 <h1>（希沃）定制启动器 V2.0 ✨</h1>
-</h1>
-</br>
 </div> 
 
 ## 详细信息
@@ -45,6 +43,9 @@ Windows 7 SP1 - Windows 11，Windows 11 以上也可以使用。
 1.0发布时我们承诺过，播放量过1万就开源，别担心，我们的承诺必将做到。
 
 ### 源代码部署
+
+### 重要提醒
+所有Asset文件都被打包为一个 <a href='https://disk.srinternet.top/%E5%B8%8C%E6%B2%83%E5%AE%9A%E5%88%B6%E5%90%AF%E5%8A%A8%E5%99%A8/Assets.zip'>压缩包</a> 内，请您在克隆仓库后先从 <a href='https://disk.srinternet.top/'>思锐云盘</a> 下载Assets.zip，并将其直接解压到项目目录中。
 #### 部署源代码需Windows环境，需要以下软件:
  
 - Blend for Visual Studio 2019
@@ -76,6 +77,7 @@ PS:反馈问题时，请带上软件当时的截图，方便我们查看报错�
 <div align="center">
 <br>
 <a href='https://www.srinternet.top/'><img src='https://cn-sy1.rains3.com/sr-objfiles/srinternet_icon_bgless.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=6SGoUMEiSueuzAGu%2F20240310%2Falist%2Fs3%2Faws4_request&X-Amz-Date=20240310T034737Z&X-Amz-Expires=14400&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3DUTF-8%27%27srinternet_icon_bgless.png&X-Amz-Signature=28e9e855cf23ce4e7db5ed8650c206e4e77f2d7f630107199014f71b75778dd4' alt='en-ico' height="100" width="100"></img></a>
-<h2>Made By 思锐工作室<h2/>
-<h2> - 遵循 Apache 开源协议 - <h2/>
+<h2>Made By 思锐工作室</h2>
+<h2> - 遵循 Apache 开源协议 - </h2>
+</div>
 
