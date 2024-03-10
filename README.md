@@ -1,6 +1,6 @@
 <div align="center">
 <br>
-<a href='https://github.com/SRInternet/Seewo-Custom_Start'><img src='/en.png' alt='en-ico' height="100" width="100"></img></a>
+<a href='https://e.seewo.com/'><img src='https://e.seewo.com/static/images/logo_en5_48@2x-cce857090e.png' alt='en-ico' height="100" width="100"></img></a>
 <h1>（希沃）定制启动器 V2.0 ✨</h1>
 </h1>
 </br>
@@ -75,7 +75,7 @@ PS:反馈问题时，请带上软件当时的截图，方便我们查看报错�
 
 <div align="center">
 <br>
-<img src='/sr.png' alt='sr-ico' height="150" width="150"></img></a></a>
+<a href='https://www.srinternet.top/'><img src='https://cn-sy1.rains3.com/sr-objfiles/srinternet_icon_bgless.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=6SGoUMEiSueuzAGu%2F20240310%2Falist%2Fs3%2Faws4_request&X-Amz-Date=20240310T034737Z&X-Amz-Expires=14400&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3DUTF-8%27%27srinternet_icon_bgless.png&X-Amz-Signature=28e9e855cf23ce4e7db5ed8650c206e4e77f2d7f630107199014f71b75778dd4' alt='en-ico' height="100" width="100"></img></a>
 <h2>Made By 思锐工作室<h2/>
 <h2> - 遵循 Apache 开源协议 - <h2/>
 
