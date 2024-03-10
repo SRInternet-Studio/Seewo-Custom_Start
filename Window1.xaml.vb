@@ -18,7 +18,8 @@ Public Class Window1
     Private ninthLine As String = String.Empty
     Private tenthLine As String = String.Empty
 
-    Private ReadOnly appDirectory As String = AppDomain.CurrentDomain.BaseDirectory 'System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location)
+    Private ReadOnly appDirectory As String = AppDomain.CurrentDomain.BaseDirectory _
+    'System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location)
 
     Private ReadOnly ThemsDirectory As String = appDirectory & "\Thems"
 
@@ -26,25 +27,25 @@ Public Class Window1
 
     Private Sub Window1_Loaded(sender As Object, e As RoutedEventArgs) Handles Me.Loaded
 
-        For i As Integer = 1 To folders.Length()
+        For i = 1 To folders.Length()
             Console.WriteLine(i - 1)
             Dim myString As String = folders(i - 1)
 
             '查找最后一个 "\" 的位置
             Dim lastBackslashIndex As Integer = myString.LastIndexOf("\")
-            If lastBackslashIndex <> -1 Then '确保找到了 "\" 符号
+            If lastBackslashIndex <> - 1 Then '确保找到了 "\" 符号
                 '截取 "\" 后面的全部字符
                 Dim result As String = myString.Substring(lastBackslashIndex + 1)
                 Console.WriteLine(result) '输出结果
 
                 Dim newItem As New ListBoxItem With {
-                    .Content = result
-                }
+                        .Content = result
+                        }
                 List1.Items.Add(newItem)
 
                 Dim newItem1 As New ComboBoxItem With {
-                    .Content = result
-                }
+                        .Content = result
+                        }
                 comboBox.Items.Add(newItem1)
             End If
         Next
@@ -114,8 +115,9 @@ Public Class Window1
 
             Dim founded = False
             For Each item As Object In comboBox.Items ' 遍历ComboBox的所有项
-                Dim comboBoxItem As ComboBoxItem = TryCast(item, ComboBoxItem) ' 将项转换为ComboBoxItem类型
-                If comboBoxItem IsNot Nothing AndAlso comboBoxItem.Content.ToString() = ninthLine.ToString() Then ' 判断Content属性是否为"测试"
+                Dim comboBoxItem = TryCast(item, ComboBoxItem) ' 将项转换为ComboBoxItem类型
+                If comboBoxItem IsNot Nothing AndAlso comboBoxItem.Content.ToString() = ninthLine.ToString() Then _
+' 判断Content属性是否为"测试"
                     comboBox.SelectedItem = comboBoxItem ' 选中该项
                     founded = True
                     Exit For ' 退出循环
@@ -137,7 +139,6 @@ Public Class Window1
             textBox.IsEnabled = True
             button1.IsEnabled = True
         End If
-
     End Sub
 
     Private Sub MySelectionChanged(sender As Object, e As EventArgs)
@@ -201,11 +202,11 @@ Public Class Window1
         GC.Collect()
 
         Dim openFileDialog As New OpenFileDialog With {
-            .Filter = "PNG Files (*.png)|*.png",
-            .FilterIndex = 1,
-            .Multiselect = False,
-            .Title = "选择 PNG 文件"
-        }
+                .Filter = "PNG Files (*.png)|*.png",
+                .FilterIndex = 1,
+                .Multiselect = False,
+                .Title = "选择 PNG 文件"
+                }
 
         Dim result As Boolean = openFileDialog.ShowDialog()
 
@@ -255,26 +256,26 @@ Public Class Window1
         List1.Items.Clear()
         comboBox.Items.Clear()
         folders = Directory.GetDirectories(ThemsDirectory)
-        For i As Integer = 1 To folders.Length()
+        For i = 1 To folders.Length()
             Console.WriteLine(i - 1)
             Dim myString As String = folders(i - 1)
 
             '查找最后一个 "\" 的位置
             Dim lastBackslashIndex As Integer = myString.LastIndexOf("\")
-            If lastBackslashIndex <> -1 Then '确保找到了 "\" 符号
+            If lastBackslashIndex <> - 1 Then '确保找到了 "\" 符号
                 '截取 "\" 后面的全部字符
                 Dim result As String = myString.Substring(lastBackslashIndex + 1)
                 Console.WriteLine(result) '输出结果
 
                 Dim newItem As New ListBoxItem With {
-                    .Content = result
-                }
+                        .Content = result
+                        }
 
                 List1.Items.Add(newItem)
 
                 Dim newItem1 As New ComboBoxItem With {
-                    .Content = result
-                }
+                        .Content = result
+                        }
                 comboBox.Items.Add(newItem1)
             End If
         Next
@@ -288,11 +289,11 @@ Public Class Window1
         GC.Collect()
 
         Dim openFileDialog As New OpenFileDialog With {
-            .Filter = "PNG Files (*.png)|*.png",
-            .FilterIndex = 1,
-            .Multiselect = False,
-            .Title = "选择 PNG 文件"
-        }
+                .Filter = "PNG Files (*.png)|*.png",
+                .FilterIndex = 1,
+                .Multiselect = False,
+                .Title = "选择 PNG 文件"
+                }
 
         Dim result As Boolean = openFileDialog.ShowDialog()
 
@@ -349,11 +350,11 @@ Public Class Window1
         GC.Collect()
 
         Dim openFileDialog As New OpenFileDialog With {
-            .Filter = "PNG Files (*.png)|*.png",
-            .FilterIndex = 1,
-            .Multiselect = False,
-            .Title = "选择 PNG 文件"
-        }
+                .Filter = "PNG Files (*.png)|*.png",
+                .FilterIndex = 1,
+                .Multiselect = False,
+                .Title = "选择 PNG 文件"
+                }
 
         Dim result As Boolean = openFileDialog.ShowDialog()
 
@@ -436,30 +437,29 @@ Public Class Window1
         List1.Items.Clear()
         comboBox.Items.Clear()
         folders = Directory.GetDirectories(ThemsDirectory)
-        For i As Integer = 1 To folders.Length()
+        For i = 1 To folders.Length()
             Console.WriteLine(i - 1)
             Dim myString As String = folders(i - 1)
 
             '查找最后一个 "\" 的位置
             Dim lastBackslashIndex As Integer = myString.LastIndexOf("\")
-            If lastBackslashIndex <> -1 Then '确保找到了 "\" 符号
+            If lastBackslashIndex <> - 1 Then '确保找到了 "\" 符号
                 '截取 "\" 后面的全部字符
                 Dim result As String = myString.Substring(lastBackslashIndex + 1)
                 Console.WriteLine(result) '输出结果
 
                 Dim newItem As New ListBoxItem With {
-                    .Content = result
-                }
+                        .Content = result
+                        }
 
                 List1.Items.Add(newItem)
 
                 Dim newItem1 As New ComboBoxItem With {
-                    .Content = result
-                }
+                        .Content = result
+                        }
                 comboBox.Items.Add(newItem1)
             End If
         Next
-
     End Sub
 
     Private Sub del_Click(sender As Object, e As RoutedEventArgs) Handles del.Click
@@ -491,26 +491,26 @@ Public Class Window1
                 List1.Items.Clear()
                 comboBox.Items.Clear()
                 folders = Directory.GetDirectories(ThemsDirectory)
-                For i As Integer = 1 To folders.Length()
+                For i = 1 To folders.Length()
                     Console.WriteLine(i - 1)
                     Dim myString As String = folders(i - 1)
 
                     '查找最后一个 "\" 的位置
                     Dim lastBackslashIndex As Integer = myString.LastIndexOf("\")
-                    If lastBackslashIndex <> -1 Then '确保找到了 "\" 符号
+                    If lastBackslashIndex <> - 1 Then '确保找到了 "\" 符号
                         '截取 "\" 后面的全部字符
                         Dim result As String = myString.Substring(lastBackslashIndex + 1)
                         Console.WriteLine(result) '输出结果
 
                         Dim newItem As New ListBoxItem With {
-                            .Content = result
-                        }
+                                .Content = result
+                                }
 
                         List1.Items.Add(newItem)
 
                         Dim newItem1 As New ComboBoxItem With {
-                            .Content = result
-                        }
+                                .Content = result
+                                }
                         comboBox.Items.Add(newItem1)
                     End If
                 Next
@@ -552,6 +552,7 @@ Public Class Window1
             SharedV.Saving = True
         End Try
     End Sub
+
     Private Sub changename()
 
         Dim window2 As New Window2
@@ -564,7 +565,7 @@ Public Class Window1
         Dim selectedItem As ListBoxItem = List1.SelectedItem
         Dim oldFolderPath As String = ThemsDirectory & "\" & selectedItem.Content   ' 原文件夹路径
         Dim newFolderName As String = sname.Text        ' 新的文件夹名字
-        Dim isSuccess As Boolean = False
+        Dim isSuccess = False
 
         While Not isSuccess
             Try
@@ -585,26 +586,26 @@ Public Class Window1
         List1.Items.Clear()
         comboBox.Items.Clear()
         folders = Directory.GetDirectories(ThemsDirectory)
-        For i As Integer = 1 To folders.Length()
+        For i = 1 To folders.Length()
             Console.WriteLine(i - 1)
             Dim myString As String = folders(i - 1)
 
             '查找最后一个 "\" 的位置
             Dim lastBackslashIndex As Integer = myString.LastIndexOf("\")
-            If lastBackslashIndex <> -1 Then '确保找到了 "\" 符号
+            If lastBackslashIndex <> - 1 Then '确保找到了 "\" 符号
                 '截取 "\" 后面的全部字符
                 Dim result As String = myString.Substring(lastBackslashIndex + 1)
                 Console.WriteLine(result) '输出结果
 
                 Dim newItem As New ListBoxItem With {
-                    .Content = result
-                }
+                        .Content = result
+                        }
 
                 List1.Items.Add(newItem)
 
                 Dim newItem1 As New ComboBoxItem With {
-                    .Content = result
-                }
+                        .Content = result
+                        }
                 comboBox.Items.Add(newItem1)
             End If
         Next
@@ -624,19 +625,17 @@ Public Class Window1
 
     Private Sub button_Click(sender As Object, e As RoutedEventArgs) Handles button.Click
         Dim openFileDialog As New OpenFileDialog With {
-            .Filter = "可执行文件 (*.exe)|*.exe",
-            .FilterIndex = 1,
-            .Multiselect = False,
-            .Title = "选择可执行文件路径"
-        }
+                .Filter = "可执行文件 (*.exe)|*.exe",
+                .FilterIndex = 1,
+                .Multiselect = False,
+                .Title = "选择可执行文件路径"
+                }
 
         Dim result As Boolean = openFileDialog.ShowDialog()
         Dim path As String = openFileDialog.FileName
         If result = True Then
             _filepath.Text = path
         End If
-
-
     End Sub
 
     Private Sub checkBox_Click(sender As Object, e As RoutedEventArgs) Handles checkBox.Click
@@ -659,11 +658,11 @@ Public Class Window1
 
     Private Sub button1_Click(sender As Object, e As RoutedEventArgs) Handles button1.Click
         Dim openFileDialog As New OpenFileDialog With {
-            .Filter = "波形音频 (*.wav)|*.wav",
-            .FilterIndex = 1,
-            .Multiselect = False,
-            .Title = "选择启动音效路径"
-        }
+                .Filter = "波形音频 (*.wav)|*.wav",
+                .FilterIndex = 1,
+                .Multiselect = False,
+                .Title = "选择启动音效路径"
+                }
 
         Dim result As Boolean = openFileDialog.ShowDialog()
         Dim path As String = openFileDialog.FileName
@@ -684,12 +683,13 @@ Public Class Window1
             End Try
 
         End If
-
     End Sub
 
     Private Sub Window1_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         e.Cancel = True
-        Dim yon = MsgBox("确认关闭前，请确保所有设置已经应用，否则您的更改不会生效。" & vbCrLf & "以后，您可以在本程序的根目录下双击【配置启动器.bat】文件以再次打开本设置界面。o((>ω< ))o", vbYesNo, "关闭？")
+        Dim yon =
+                MsgBox("确认关闭前，请确保所有设置已经应用，否则您的更改不会生效。" & vbCrLf & "以后，您可以在本程序的根目录下双击【配置启动器.bat】文件以再次打开本设置界面。o((>ω< ))o",
+                       vbYesNo, "关闭？")
         If yon = 6 Then
             End
         End If
@@ -730,7 +730,7 @@ Public Class Window1
                 End If
 
                 File.Delete("settings.ini")
-                Dim filePath As String = "settings.ini" ' 设置文件路径
+                Dim filePath = "settings.ini" ' 设置文件路径
                 Using writer As New StreamWriter(filePath) ' 创建StreamWriter对象并打开文件
                     writer.WriteLine(firstLine)
                     writer.WriteLine(secondLine)
@@ -743,17 +743,18 @@ Public Class Window1
                     writer.WriteLine(ninthLine)
                     writer.WriteLine(tenthLine)
                 End Using ' 关闭文件并释放资源
-            Catch ex As System.NullReferenceException
+            Catch ex As NullReferenceException
                 MsgBox("已引发异常：" & vbCrLf & ex.ToString & vbCrLf & vbCrLf & "    请用户检查主题配置中是否有值为空"， vbCritical, "错误")
             Catch _e As Exception
                 MsgBox("已引发异常：" & vbCrLf & _e.ToString & vbCrLf & vbCrLf & "    请用户检查主题配置中是否有值为空"， vbCritical, "错误")
             End Try
         Else
-            MsgBox("指定的 " & _filepath.Text() & " 由于不存在、不可用、不完整、没有权限等其他原因无法被设定，请更换路径。" & vbLf & vbCrLf & "提示：暂不支持完整路径后面接参数", vbCritical, "错误")
+            MsgBox(
+                "指定的 " & _filepath.Text() & " 由于不存在、不可用、不完整、没有权限等其他原因无法被设定，请更换路径。" & vbLf & vbCrLf & "提示：暂不支持完整路径后面接参数",
+                vbCritical, "错误")
         End If
 
         SharedV.Saving = True
-
     End Sub
 
     Private Sub windowsave_Click(sender As Object, e As RoutedEventArgs) Handles windowsave.Click
@@ -764,7 +765,7 @@ Public Class Window1
         starting_config = windowname.Text()
 
         File.Delete("product.config")
-        Dim filePath As String = "product.config" ' 设置文件路径
+        Dim filePath = "product.config" ' 设置文件路径
         Using writer As New StreamWriter(filePath) ' 创建StreamWriter对象并打开文件
             writer.WriteLine(starting_config)
         End Using ' 关闭文件并释放资源

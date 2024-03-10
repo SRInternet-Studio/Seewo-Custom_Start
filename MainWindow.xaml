@@ -3,1453 +3,720 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:SeewoStart"
         mc:Ignorable="d"
-        Title="SeewoPro loading……" Height="450" Width="800" WindowStyle="None" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="SeewoPro loading……" Height="450" Width="800" WindowStyle="None" WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
     <Window.Resources>
-        <FontFamily x:Key="Segoe UI">"segoeui.ttf"</FontFamily>
         <Storyboard x:Key="StartAni">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="window">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)"
+                                           Storyboard.TargetName="window">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1" />
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBlock">
-                <EasingDoubleKeyFrame KeyTime="0" Value="93.6"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="93.6"/>
+            <DoubleAnimationUsingKeyFrames
+                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
+                Storyboard.TargetName="textBlock">
+                <EasingDoubleKeyFrame KeyTime="0" Value="93.6" />
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="93.6" />
                 <EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
+                        <QuarticEase EasingMode="EaseOut" />
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="textBlock">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-0.8"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-0.8"/>
+            <DoubleAnimationUsingKeyFrames
+                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)"
+                Storyboard.TargetName="textBlock">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-0.8" />
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-0.8" />
                 <EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
+                        <QuarticEase EasingMode="EaseOut" />
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBlock1">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-129.6"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-129.6"/>
+            <DoubleAnimationUsingKeyFrames
+                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
+                Storyboard.TargetName="textBlock1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-129.6" />
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-129.6" />
                 <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
+                        <QuarticEase EasingMode="EaseOut" />
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
-                <EasingDoubleKeyFrame KeyTime="0:0:4.2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.2" Value="0" />
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="textBlock1">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-1.6"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-1.6"/>
+            <DoubleAnimationUsingKeyFrames
+                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)"
+                Storyboard.TargetName="textBlock1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-1.6" />
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-1.6" />
                 <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
+                        <QuarticEase EasingMode="EaseOut" />
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)"
+                                           Storyboard.TargetName="textBlock">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0" />
                 <EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="1">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
+                        <QuarticEase EasingMode="EaseOut" />
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock1">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)"
+                                           Storyboard.TargetName="textBlock1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0" />
                 <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="1">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
+                        <QuarticEase EasingMode="EaseOut" />
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBlock2">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="-70"/>
+            <DoubleAnimationUsingKeyFrames
+                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
+                Storyboard.TargetName="textBlock2">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="-70" />
                 <EasingDoubleKeyFrame KeyTime="0:0:3.1" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuadraticEase EasingMode="EaseOut"/>
+                        <QuadraticEase EasingMode="EaseOut" />
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock2">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="0"/>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)"
+                                           Storyboard.TargetName="textBlock2">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="0" />
                 <EasingDoubleKeyFrame KeyTime="0:0:3.1" Value="1">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuadraticEase EasingMode="EaseOut"/>
+                        <QuadraticEase EasingMode="EaseOut" />
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBlock3">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="-67"/>
+            <DoubleAnimationUsingKeyFrames
+                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
+                Storyboard.TargetName="textBlock3">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="-67" />
                 <EasingDoubleKeyFrame KeyTime="0:0:3.4" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuadraticEase EasingMode="EaseOut"/>
+                        <QuadraticEase EasingMode="EaseOut" />
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBlock4">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="-67"/>
+            <DoubleAnimationUsingKeyFrames
+                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
+                Storyboard.TargetName="textBlock4">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="-67" />
                 <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuadraticEase EasingMode="EaseOut"/>
+                        <QuadraticEase EasingMode="EaseOut" />
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock3">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="0"/>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)"
+                                           Storyboard.TargetName="textBlock3">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="0" />
                 <EasingDoubleKeyFrame KeyTime="0:0:3.4" Value="1">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuadraticEase EasingMode="EaseOut"/>
+                        <QuadraticEase EasingMode="EaseOut" />
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock4">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="0"/>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)"
+                                           Storyboard.TargetName="textBlock4">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="0" />
                 <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="1">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuadraticEase EasingMode="EaseOut"/>
+                        <QuadraticEase EasingMode="EaseOut" />
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBlock5">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="-33"/>
+            <DoubleAnimationUsingKeyFrames
+                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
+                Storyboard.TargetName="textBlock5">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="-33" />
                 <EasingDoubleKeyFrame KeyTime="0:0:3.4" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuadraticEase EasingMode="EaseOut"/>
+                        <QuadraticEase EasingMode="EaseOut" />
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image2">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="-33"/>
+            <DoubleAnimationUsingKeyFrames
+                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
+                Storyboard.TargetName="image2">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="-33" />
                 <EasingDoubleKeyFrame KeyTime="0:0:3.4" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuadraticEase EasingMode="EaseOut"/>
+                        <QuadraticEase EasingMode="EaseOut" />
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock5">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="0"/>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)"
+                                           Storyboard.TargetName="textBlock5">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="0" />
                 <EasingDoubleKeyFrame KeyTime="0:0:3.4" Value="1">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuadraticEase EasingMode="EaseOut"/>
+                        <QuadraticEase EasingMode="EaseOut" />
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image2">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="0"/>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)"
+                                           Storyboard.TargetName="image2">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="0" />
                 <EasingDoubleKeyFrame KeyTime="0:0:3.4" Value="1">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuadraticEase EasingMode="EaseOut"/>
+                        <QuadraticEase EasingMode="EaseOut" />
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+            <DoubleAnimationUsingKeyFrames
+                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
+                Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
                 <EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
+                        <QuarticEase EasingMode="EaseOut" />
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="image">
-                <EasingDoubleKeyFrame KeyTime="0" Value="3.056"/>
+            <DoubleAnimationUsingKeyFrames
+                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)"
+                Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="3.056" />
                 <EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="1">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
+                        <QuarticEase EasingMode="EaseOut" />
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="image">
-                <EasingDoubleKeyFrame KeyTime="0" Value="3.056"/>
+            <DoubleAnimationUsingKeyFrames
+                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)"
+                Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="3.056" />
                 <EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="1">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
+                        <QuarticEase EasingMode="EaseOut" />
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+            <DoubleAnimationUsingKeyFrames
+                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)"
+                Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
                 <EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
+                        <QuarticEase EasingMode="EaseOut" />
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="yuanshen">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-355.6"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="-355.6"/>
+            <DoubleAnimationUsingKeyFrames
+                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
+                Storyboard.TargetName="yuanshen">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-355.6" />
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="-355.6" />
                 <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuadraticEase EasingMode="EaseInOut"/>
+                        <QuadraticEase EasingMode="EaseInOut" />
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="yuanshen">
-                <EasingDoubleKeyFrame KeyTime="0" Value="185.709"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="185.709"/>
+            <DoubleAnimationUsingKeyFrames
+                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)"
+                Storyboard.TargetName="yuanshen">
+                <EasingDoubleKeyFrame KeyTime="0" Value="185.709" />
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="185.709" />
                 <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuadraticEase EasingMode="EaseInOut"/>
+                        <QuadraticEase EasingMode="EaseInOut" />
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="yuanshen">
-                <EasingDoubleKeyFrame KeyTime="0" Value="2.83"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="2.83"/>
+            <DoubleAnimationUsingKeyFrames
+                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)"
+                Storyboard.TargetName="yuanshen">
+                <EasingDoubleKeyFrame KeyTime="0" Value="2.83" />
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="2.83" />
                 <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="1">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuadraticEase EasingMode="EaseInOut"/>
+                        <QuadraticEase EasingMode="EaseInOut" />
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="yuanshen">
-                <EasingDoubleKeyFrame KeyTime="0" Value="2.914"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="2.914"/>
+            <DoubleAnimationUsingKeyFrames
+                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)"
+                Storyboard.TargetName="yuanshen">
+                <EasingDoubleKeyFrame KeyTime="0" Value="2.914" />
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="2.914" />
                 <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="1">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuadraticEase EasingMode="EaseInOut"/>
+                        <QuadraticEase EasingMode="EaseInOut" />
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="textBlock1">
-                <EasingColorKeyFrame KeyTime="0" Value="sc#1, 0.7692308, 0.2894324, 0"/>
-                <EasingColorKeyFrame KeyTime="0:0:2" Value="Orange"/>
-                <EasingColorKeyFrame KeyTime="0:0:2.7" Value="Orange"/>
-                <EasingColorKeyFrame KeyTime="0:0:4.2" Value="Orange"/>
+            <ColorAnimationUsingKeyFrames
+                Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[0].(GradientStop.Color)"
+                Storyboard.TargetName="textBlock1">
+                <EasingColorKeyFrame KeyTime="0" Value="sc#1, 0.7692308, 0.2894324, 0" />
+                <EasingColorKeyFrame KeyTime="0:0:2" Value="Orange" />
+                <EasingColorKeyFrame KeyTime="0:0:2.7" Value="Orange" />
+                <EasingColorKeyFrame KeyTime="0:0:4.2" Value="Orange" />
             </ColorAnimationUsingKeyFrames>
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="textBlock1">
-                <EasingColorKeyFrame KeyTime="0" Value="sc#1, 0.272677124, 0.239701688, 1"/>
-                <EasingColorKeyFrame KeyTime="0:0:2" Value="#FF421CFF"/>
-                <EasingColorKeyFrame KeyTime="0:0:2.7" Value="#FF421CFF"/>
-                <EasingColorKeyFrame KeyTime="0:0:4.2" Value="Orange"/>
+            <ColorAnimationUsingKeyFrames
+                Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[1].(GradientStop.Color)"
+                Storyboard.TargetName="textBlock1">
+                <EasingColorKeyFrame KeyTime="0" Value="sc#1, 0.272677124, 0.239701688, 1" />
+                <EasingColorKeyFrame KeyTime="0:0:2" Value="#FF421CFF" />
+                <EasingColorKeyFrame KeyTime="0:0:2.7" Value="#FF421CFF" />
+                <EasingColorKeyFrame KeyTime="0:0:4.2" Value="Orange" />
             </ColorAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(Brush.RelativeTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="textBlock1">
-                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="360"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:4.2" Value="900.8549999999999"/>
+            <DoubleAnimationUsingKeyFrames
+                Storyboard.TargetProperty="(TextElement.Foreground).(Brush.RelativeTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)"
+                Storyboard.TargetName="textBlock1">
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="360" />
+                <EasingDoubleKeyFrame KeyTime="0:0:4.2" Value="900.8549999999999" />
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[0].(GradientStop.Offset)" Storyboard.TargetName="textBlock1">
-                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:4.2" Value="0"/>
+            <DoubleAnimationUsingKeyFrames
+                Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[0].(GradientStop.Offset)"
+                Storyboard.TargetName="textBlock1">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:4.2" Value="0" />
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[1].(GradientStop.Offset)" Storyboard.TargetName="textBlock1">
-                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:4.2" Value="1"/>
+            <DoubleAnimationUsingKeyFrames
+                Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[1].(GradientStop.Offset)"
+                Storyboard.TargetName="textBlock1">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="1" />
+                <EasingDoubleKeyFrame KeyTime="0:0:4.2" Value="1" />
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image2_Copy">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="-33"/>
+            <DoubleAnimationUsingKeyFrames
+                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
+                Storyboard.TargetName="image2_Copy">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="-33" />
                 <EasingDoubleKeyFrame KeyTime="0:0:3.4" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuadraticEase EasingMode="EaseOut"/>
+                        <QuadraticEase EasingMode="EaseOut" />
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image2_Copy">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="0"/>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)"
+                                           Storyboard.TargetName="image2_Copy">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="0" />
                 <EasingDoubleKeyFrame KeyTime="0:0:3.4" Value="1">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuadraticEase EasingMode="EaseOut"/>
+                        <QuadraticEase EasingMode="EaseOut" />
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-        </Storyboard>
-        <Storyboard x:Key="EndAni">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBlock">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="115.5">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBlock1">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-138">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock">
-                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock1">
-                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="yuanshen">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-81.657">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBlock5">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="67.959">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image2">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="65.375">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBlock2">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-5.011">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBlock3">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBlock4">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="yuanshen">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.765">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="yuanshen">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.765">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="yuanshen">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="46.348">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="textBlock5">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.765">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="textBlock5">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.765">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="textBlock5">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="44.518">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="image2">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.765">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="image2">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.765">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image2">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="46.686">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="textBlock2">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.765">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="textBlock2">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.765">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="textBlock2">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-26.679">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="textBlock3">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.765">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="textBlock3">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.765">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="textBlock3">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-44.686">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="textBlock4">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.765">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="textBlock4">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.765">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="textBlock4">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-49.616">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="yuanshen">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock5">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image2">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock2">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock3">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock4">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="window">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="window">
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.4" Value="{x:Static Visibility.Visible}"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.9" Value="{x:Static Visibility.Collapsed}"/>
-            </ObjectAnimationUsingKeyFrames>
-        </Storyboard>
-        <Storyboard x:Key="Pro_Animation">
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="textBlock">
-                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="textBlock1">
-                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="yuanshen">
-                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="textBlock5">
-                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="image2">
-                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="textBlock2">
-                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="textBlock3">
-                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="textBlock4">
-                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="textBlock_Copy">
-                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="textBlock_Copy1">
-                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
-            </ObjectAnimationUsingKeyFrames>
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="textBlock_Copy1">
-                <EasingColorKeyFrame KeyTime="0" Value="#FFA25700"/>
-                <EasingColorKeyFrame KeyTime="0:0:2" Value="sc#1, 0.194617838, 0.0612460524, 0"/>
-                <EasingColorKeyFrame KeyTime="0:0:4" Value="#FFFF8900"/>
-            </ColorAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[1].(GradientStop.Offset)" Storyboard.TargetName="textBlock_Copy1">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0.287"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="textBlock_Copy1">
-                <EasingColorKeyFrame KeyTime="0" Value="Black"/>
-                <EasingColorKeyFrame KeyTime="0:0:4" Value="Black"/>
-            </ColorAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[0].(GradientStop.Offset)" Storyboard.TargetName="textBlock_Copy1">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(Brush.RelativeTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="textBlock_Copy1">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="360"/>
-            </DoubleAnimationUsingKeyFrames>
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[2].(GradientStop.Color)" Storyboard.TargetName="textBlock_Copy1">
-                <EasingColorKeyFrame KeyTime="0" Value="#FFB25F00"/>
-                <EasingColorKeyFrame KeyTime="0:0:2" Value="#FF0400B2"/>
-                <EasingColorKeyFrame KeyTime="0:0:4" Value="#FFB25F00"/>
-            </ColorAnimationUsingKeyFrames>
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[3].(GradientStop.Color)" Storyboard.TargetName="textBlock_Copy1">
-                <EasingColorKeyFrame KeyTime="0" Value="#FF12008F"/>
-                <EasingColorKeyFrame KeyTime="0:0:2" Value="#FF32008F"/>
-                <EasingColorKeyFrame KeyTime="0:0:4" Value="#FF12008F"/>
-            </ColorAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[3].(GradientStop.Offset)" Storyboard.TargetName="textBlock_Copy1">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0.212"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0.325"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0.212"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="0.499"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="0.212"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="textBlock_Copy1">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0.11"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0.203"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0.11"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="0.194"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="0.11"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[4].(GradientStop.Offset)" Storyboard.TargetName="textBlock_Copy1">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0.054"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0.131"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0.054"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="0.063"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="0.054"/>
-            </DoubleAnimationUsingKeyFrames>
-        </Storyboard>
-        <Storyboard x:Key="foreshow_ani">
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="textBlock">
-                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:9.3" Value="{x:Static Visibility.Visible}"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:10.3" Value="{x:Static Visibility.Visible}"/>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="textBlock1">
-                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:9.1" Value="{x:Static Visibility.Visible}"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:10.1" Value="{x:Static Visibility.Visible}"/>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="yuanshen">
-                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="textBlock5">
-                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="image2">
-                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="textBlock2">
-                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="textBlock3">
-                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="textBlock4">
-                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.8" Value="{x:Static Visibility.Hidden}"/>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="textBlock_Copy2">
-                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
-            </ObjectAnimationUsingKeyFrames>
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="textBlock_Copy2">
-                <EasingColorKeyFrame KeyTime="0" Value="#FF000105"/>
-                <EasingColorKeyFrame KeyTime="0:0:1.2" Value="#FF001FFF">
-                    <EasingColorKeyFrame.EasingFunction>
-                        <ExponentialEase EasingMode="EaseOut"/>
-                    </EasingColorKeyFrame.EasingFunction>
-                </EasingColorKeyFrame>
-                <EasingColorKeyFrame KeyTime="0:0:3" Value="#FF001FFF"/>
-            </ColorAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(Brush.RelativeTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="textBlock_Copy2">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-68.629"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="-68.629">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <ExponentialEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[0].(GradientStop.Offset)" Storyboard.TargetName="textBlock_Copy2">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[1].(GradientStop.Offset)" Storyboard.TargetName="textBlock_Copy2">
-                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="textBlock_Copy2">
-                <EasingColorKeyFrame KeyTime="0" Value="Black"/>
-                <EasingColorKeyFrame KeyTime="0:0:1.2" Value="#FFFF7700">
-                    <EasingColorKeyFrame.EasingFunction>
-                        <ExponentialEase EasingMode="EaseOut"/>
-                    </EasingColorKeyFrame.EasingFunction>
-                </EasingColorKeyFrame>
-            </ColorAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="textBlock_Copy2">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.34"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="1">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <ExponentialEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[2].(GradientStop.Color)" Storyboard.TargetName="textBlock_Copy2">
-                <EasingColorKeyFrame KeyTime="0" Value="#FF000001"/>
-                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="White"/>
-                <EasingColorKeyFrame KeyTime="0:0:1.2" Value="#FF1212F7">
-                    <EasingColorKeyFrame.EasingFunction>
-                        <ExponentialEase EasingMode="EaseOut"/>
-                    </EasingColorKeyFrame.EasingFunction>
-                </EasingColorKeyFrame>
-                <EasingColorKeyFrame KeyTime="0:0:3" Value="Blue"/>
-            </ColorAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock_Copy2">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="0">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <ExponentialEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="textBlock_Copy2">
-                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="-0.032">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <ExponentialEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="textBlock_Copy2">
-                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="0.883">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <ExponentialEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="textBlock_Copy2">
-                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="0.883">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <ExponentialEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBlock_Copy2">
-                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="-19.562">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <ExponentialEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="textBlock_Copy">
-                <DiscreteObjectKeyFrame KeyTime="0:0:4" Value="{x:Static Visibility.Visible}"/>
-            </ObjectAnimationUsingKeyFrames>
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="textBlock_Copy">
-                <EasingColorKeyFrame KeyTime="0:0:4" Value="Black"/>
-                <EasingColorKeyFrame KeyTime="0:0:9" Value="#FF0031FF">
-                    <EasingColorKeyFrame.EasingFunction>
-                        <CircleEase EasingMode="EaseOut"/>
-                    </EasingColorKeyFrame.EasingFunction>
-                </EasingColorKeyFrame>
-            </ColorAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(Brush.RelativeTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="textBlock_Copy">
-                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:9" Value="396.69">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <CircleEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="textBlock_Copy">
-                <EasingColorKeyFrame KeyTime="0:0:4" Value="Black"/>
-                <EasingColorKeyFrame KeyTime="0:0:9" Value="#FFFF8900">
-                    <EasingColorKeyFrame.EasingFunction>
-                        <CircleEase EasingMode="EaseOut"/>
-                    </EasingColorKeyFrame.EasingFunction>
-                </EasingColorKeyFrame>
-            </ColorAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="textBlock_Copy">
-                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="0.49"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:9" Value="0.478">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <CircleEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[2].(GradientStop.Color)" Storyboard.TargetName="textBlock_Copy">
-                <EasingColorKeyFrame KeyTime="0:0:4" Value="Black"/>
-                <EasingColorKeyFrame KeyTime="0:0:9" Value="#FF59008C">
-                    <EasingColorKeyFrame.EasingFunction>
-                        <CircleEase EasingMode="EaseOut"/>
-                    </EasingColorKeyFrame.EasingFunction>
-                </EasingColorKeyFrame>
-            </ColorAnimationUsingKeyFrames>
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[3].(GradientStop.Color)" Storyboard.TargetName="textBlock_Copy">
-                <EasingColorKeyFrame KeyTime="0:0:4" Value="Black"/>
-                <EasingColorKeyFrame KeyTime="0:0:9" Value="#FFD04700">
-                    <EasingColorKeyFrame.EasingFunction>
-                        <CircleEase EasingMode="EaseOut"/>
-                    </EasingColorKeyFrame.EasingFunction>
-                </EasingColorKeyFrame>
-            </ColorAnimationUsingKeyFrames>
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[4].(GradientStop.Color)" Storyboard.TargetName="textBlock_Copy">
-                <EasingColorKeyFrame KeyTime="0:0:4" Value="Black"/>
-                <EasingColorKeyFrame KeyTime="0:0:9" Value="#FF2D2494">
-                    <EasingColorKeyFrame.EasingFunction>
-                        <CircleEase EasingMode="EaseOut"/>
-                    </EasingColorKeyFrame.EasingFunction>
-                </EasingColorKeyFrame>
-            </ColorAnimationUsingKeyFrames>
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[5].(GradientStop.Color)" Storyboard.TargetName="textBlock_Copy">
-                <EasingColorKeyFrame KeyTime="0:0:4" Value="Black"/>
-                <EasingColorKeyFrame KeyTime="0:0:9" Value="#FFDC6800">
-                    <EasingColorKeyFrame.EasingFunction>
-                        <CircleEase EasingMode="EaseOut"/>
-                    </EasingColorKeyFrame.EasingFunction>
-                </EasingColorKeyFrame>
-            </ColorAnimationUsingKeyFrames>
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[6].(GradientStop.Color)" Storyboard.TargetName="textBlock_Copy">
-                <EasingColorKeyFrame KeyTime="0:0:4" Value="Black"/>
-                <EasingColorKeyFrame KeyTime="0:0:9" Value="#FFD07713">
-                    <EasingColorKeyFrame.EasingFunction>
-                        <CircleEase EasingMode="EaseOut"/>
-                    </EasingColorKeyFrame.EasingFunction>
-                </EasingColorKeyFrame>
-            </ColorAnimationUsingKeyFrames>
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[7].(GradientStop.Color)" Storyboard.TargetName="textBlock_Copy">
-                <EasingColorKeyFrame KeyTime="0:0:4" Value="Black"/>
-                <EasingColorKeyFrame KeyTime="0:0:9" Value="#FF0016C7">
-                    <EasingColorKeyFrame.EasingFunction>
-                        <CircleEase EasingMode="EaseOut"/>
-                    </EasingColorKeyFrame.EasingFunction>
-                </EasingColorKeyFrame>
-            </ColorAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="textBlock_Copy3">
-                <DiscreteObjectKeyFrame KeyTime="0:0:4.2" Value="{x:Static Visibility.Visible}"/>
-            </ObjectAnimationUsingKeyFrames>
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="textBlock_Copy3">
-                <EasingColorKeyFrame KeyTime="0:0:4.2" Value="#FF000105"/>
-                <EasingColorKeyFrame KeyTime="0:0:5.4" Value="#FF001FFF">
-                    <EasingColorKeyFrame.EasingFunction>
-                        <ExponentialEase EasingMode="EaseOut"/>
-                    </EasingColorKeyFrame.EasingFunction>
-                </EasingColorKeyFrame>
-                <EasingColorKeyFrame KeyTime="0:0:7.9" Value="#FF001FFF"/>
-            </ColorAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(Brush.RelativeTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="textBlock_Copy3">
-                <EasingDoubleKeyFrame KeyTime="0:0:4.2" Value="-68.629"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:5.4" Value="-68.629">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <ExponentialEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[0].(GradientStop.Offset)" Storyboard.TargetName="textBlock_Copy3">
-                <EasingDoubleKeyFrame KeyTime="0:0:4.2" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[1].(GradientStop.Offset)" Storyboard.TargetName="textBlock_Copy3">
-                <EasingDoubleKeyFrame KeyTime="0:0:4.2" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:7.9" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="textBlock_Copy3">
-                <EasingColorKeyFrame KeyTime="0:0:4.2" Value="Black"/>
-                <EasingColorKeyFrame KeyTime="0:0:5.4" Value="#FFFF7700">
-                    <EasingColorKeyFrame.EasingFunction>
-                        <ExponentialEase EasingMode="EaseOut"/>
-                    </EasingColorKeyFrame.EasingFunction>
-                </EasingColorKeyFrame>
-            </ColorAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="textBlock_Copy3">
-                <EasingDoubleKeyFrame KeyTime="0:0:4.2" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:4.4" Value="0.34"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:5.4" Value="1">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <ExponentialEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-                <EasingDoubleKeyFrame KeyTime="0:0:7.9" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[2].(GradientStop.Color)" Storyboard.TargetName="textBlock_Copy3">
-                <EasingColorKeyFrame KeyTime="0:0:4.2" Value="#FF000001"/>
-                <EasingColorKeyFrame KeyTime="0:0:4.4" Value="White"/>
-                <EasingColorKeyFrame KeyTime="0:0:5.4" Value="#FF1212F7">
-                    <EasingColorKeyFrame.EasingFunction>
-                        <ExponentialEase EasingMode="EaseOut"/>
-                    </EasingColorKeyFrame.EasingFunction>
-                </EasingColorKeyFrame>
-                <EasingColorKeyFrame KeyTime="0:0:7.9" Value="Blue"/>
-            </ColorAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock_Copy3">
-                <EasingDoubleKeyFrame KeyTime="0:0:4.2" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:5.4" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:7.9" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:9" Value="0">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <ExponentialEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="textBlock_Copy3">
-                <EasingDoubleKeyFrame KeyTime="0:0:5.4" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:7.9" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:9" Value="-0.032">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <ExponentialEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="textBlock_Copy3">
-                <EasingDoubleKeyFrame KeyTime="0:0:7.9" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:9" Value="0.883">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <ExponentialEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="textBlock_Copy3">
-                <EasingDoubleKeyFrame KeyTime="0:0:7.9" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:9" Value="0.883">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <ExponentialEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBlock_Copy3">
-                <EasingDoubleKeyFrame KeyTime="0:0:7.9" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:9" Value="-19.562">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <ExponentialEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.FontStyle)" Storyboard.TargetName="textBlock_Copy3">
-                <DiscreteObjectKeyFrame KeyTime="0:0:5.4">
-                    <DiscreteObjectKeyFrame.Value>
-                        <FontStyle>Normal</FontStyle>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:5.7">
-                    <DiscreteObjectKeyFrame.Value>
-                        <FontStyle>Normal</FontStyle>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:7.9">
-                    <DiscreteObjectKeyFrame.Value>
-                        <FontStyle>Normal</FontStyle>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="textBlock_Copy4">
-                <DiscreteObjectKeyFrame KeyTime="0:0:7.6" Value="{x:Static Visibility.Visible}"/>
-            </ObjectAnimationUsingKeyFrames>
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock_Copy4">
-                <EasingColorKeyFrame KeyTime="0:0:7.6" Value="Black"/>
-            </ColorAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock_Copy4">
-                <EasingDoubleKeyFrame KeyTime="0:0:7.6" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:9" Value="1">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <CubicEase EasingMode="EaseIn"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="0">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="image">
-                <EasingDoubleKeyFrame KeyTime="0" Value="22.64"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="1">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="image">
-                <EasingDoubleKeyFrame KeyTime="0" Value="22.64"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="1">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="0">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBlock">
-                <EasingDoubleKeyFrame KeyTime="0:0:9.3" Value="93.6"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:10.3" Value="0">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="textBlock">
-                <EasingDoubleKeyFrame KeyTime="0:0:9.3" Value="-0.8"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:10.3" Value="0">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock">
-                <EasingDoubleKeyFrame KeyTime="0:0:9.3" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:10.3" Value="1">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBlock1">
-                <EasingDoubleKeyFrame KeyTime="0:0:9.1" Value="-129.6"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:10.1" Value="0">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-                <EasingDoubleKeyFrame KeyTime="0:0:11.8" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="textBlock1">
-                <EasingDoubleKeyFrame KeyTime="0:0:9.1" Value="-1.6"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:10.1" Value="0">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock1">
-                <EasingDoubleKeyFrame KeyTime="0:0:9.1" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:10.1" Value="1">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="textBlock1">
-                <EasingColorKeyFrame KeyTime="0:0:9.1" Value="Orange"/>
-                <EasingColorKeyFrame KeyTime="0:0:10.1" Value="Orange"/>
-                <EasingColorKeyFrame KeyTime="0:0:11.8" Value="Orange"/>
-            </ColorAnimationUsingKeyFrames>
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="textBlock1">
-                <EasingColorKeyFrame KeyTime="0:0:9.1" Value="#FF421CFF"/>
-                <EasingColorKeyFrame KeyTime="0:0:10.1" Value="#FF421CFF"/>
-                <EasingColorKeyFrame KeyTime="0:0:11.8" Value="Orange"/>
-            </ColorAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(Brush.RelativeTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="textBlock1">
-                <EasingDoubleKeyFrame KeyTime="0:0:9.1" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:10.1" Value="360"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:11.8" Value="900.8549999999999"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[0].(GradientStop.Offset)" Storyboard.TargetName="textBlock1">
-                <EasingDoubleKeyFrame KeyTime="0:0:10.1" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:11.8" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[1].(GradientStop.Offset)" Storyboard.TargetName="textBlock1">
-                <EasingDoubleKeyFrame KeyTime="0:0:10.1" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:11.8" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="textBlock_Copy5">
-                <DiscreteObjectKeyFrame KeyTime="0:0:10.5" Value="{x:Static Visibility.Visible}"/>
-            </ObjectAnimationUsingKeyFrames>
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="textBlock_Copy5">
-                <EasingColorKeyFrame KeyTime="0:0:10.5" Value="#FF000105"/>
-                <EasingColorKeyFrame KeyTime="0:0:12.1" Value="#FF001FFF">
-                    <EasingColorKeyFrame.EasingFunction>
-                        <ExponentialEase EasingMode="EaseOut"/>
-                    </EasingColorKeyFrame.EasingFunction>
-                </EasingColorKeyFrame>
-            </ColorAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(Brush.RelativeTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="textBlock_Copy5">
-                <EasingDoubleKeyFrame KeyTime="0:0:10.5" Value="-68.629"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:12.1" Value="-68.629">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <ExponentialEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[0].(GradientStop.Offset)" Storyboard.TargetName="textBlock_Copy5">
-                <EasingDoubleKeyFrame KeyTime="0:0:10.5" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:10.7" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:12.1" Value="0.197"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[1].(GradientStop.Offset)" Storyboard.TargetName="textBlock_Copy5">
-                <EasingDoubleKeyFrame KeyTime="0:0:10.5" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="textBlock_Copy5">
-                <EasingColorKeyFrame KeyTime="0:0:10.5" Value="Black"/>
-                <EasingColorKeyFrame KeyTime="0:0:12.1" Value="#FFFF7700">
-                    <EasingColorKeyFrame.EasingFunction>
-                        <ExponentialEase EasingMode="EaseOut"/>
-                    </EasingColorKeyFrame.EasingFunction>
-                </EasingColorKeyFrame>
-            </ColorAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="textBlock_Copy5">
-                <EasingDoubleKeyFrame KeyTime="0:0:10.5" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:10.7" Value="0.34"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:12.1" Value="1">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <ExponentialEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(GradientBrush.GradientStops)[2].(GradientStop.Color)" Storyboard.TargetName="textBlock_Copy5">
-                <EasingColorKeyFrame KeyTime="0:0:10.5" Value="#FF000001"/>
-                <EasingColorKeyFrame KeyTime="0:0:10.7" Value="White"/>
-                <EasingColorKeyFrame KeyTime="0:0:12.1" Value="#FF1212F7">
-                    <EasingColorKeyFrame.EasingFunction>
-                        <ExponentialEase EasingMode="EaseOut"/>
-                    </EasingColorKeyFrame.EasingFunction>
-                </EasingColorKeyFrame>
-            </ColorAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock_Copy5">
-                <EasingDoubleKeyFrame KeyTime="0:0:10.5" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:12.1" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="textBlock_Copy5">
-                <EasingDoubleKeyFrame KeyTime="0:0:12.1" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
     </Window.Resources>
     <Window.Triggers>
         <EventTrigger RoutedEvent="FrameworkElement.Loaded">
-            <BeginStoryboard x:Name="StartAni_BeginStoryboard" Storyboard="{StaticResource StartAni}"/>
+            <BeginStoryboard x:Name="StartAni_BeginStoryboard" Storyboard="{StaticResource StartAni}" />
         </EventTrigger>
     </Window.Triggers>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="89*"/>
-            <RowDefinition Height="361*"/>
+            <RowDefinition Height="89*" />
+            <RowDefinition Height="361*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="564*"/>
-            <ColumnDefinition Width="167*"/>
-            <ColumnDefinition Width="70*"/>
+            <ColumnDefinition Width="564*" />
+            <ColumnDefinition Width="167*" />
+            <ColumnDefinition Width="70*" />
         </Grid.ColumnDefinitions>
-        <Image x:Name="image" Margin="-8.336,-7.326,-4.842,-11.082" Source="9月29日.png" Stretch="UniformToFill" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="3" Grid.RowSpan="2">
+        <Image x:Name="image" Margin="-8.336,-7.326,-4.842,-11.082" Source="/Assets/images/starry_sky.png"
+               Stretch="UniformToFill"
+               RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="3" Grid.RowSpan="2">
             <Image.RenderTransform>
                 <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-0.191"/>
-                    <TranslateTransform/>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform Angle="-0.191" />
+                    <TranslateTransform />
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="90" Margin="-0.6,97.2,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="430.8" Foreground="White" FontWeight="Bold" FontSize="72" RenderTransformOrigin="0.709,0.503" TextAlignment="Right" FontFamily="/SeewoStart;component/#Segoe UI Semibold" Grid.Row="1">
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="90" Margin="-0.6,97.2,0,0" TextWrapping="Wrap"
+                   VerticalAlignment="Top" Width="430.8" Foreground="White" FontWeight="Bold" FontSize="72"
+                   RenderTransformOrigin="0.709,0.503" TextAlignment="Right"
+                   FontFamily="/SeewoStart;component/#Segoe UI Semibold" Grid.Row="1">
             <TextBlock.RenderTransform>
                 <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
                 </TransformGroup>
             </TextBlock.RenderTransform>
             <TextBlock.Effect>
                 <DropShadowEffect BlurRadius="5"
-                              ShadowDepth="2"
-                              Direction="-45"
-                              Color="Black"/>
-            </TextBlock.Effect><Run Text="希沃"/><Run FontSize="24" Text=" "/></TextBlock>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="89.467" Margin="427.933,79.2,-0.066,0" TextWrapping="Wrap" Text="Pro" VerticalAlignment="Top" Width="372.133" FontSize="48" FontFamily="/SeewoStart;component/#Segoe UI Semilight" TextDecorations="{x:Null}" Grid.ColumnSpan="3" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+                                  ShadowDepth="2"
+                                  Direction="-45"
+                                  Color="Black" />
+            </TextBlock.Effect>
+            <Run Text="希沃" /><Run FontSize="24" Text=" " />
+        </TextBlock>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="89.467" Margin="427.933,79.2,-0.066,0"
+                   TextWrapping="Wrap" Text="Pro" VerticalAlignment="Top" Width="372.133" FontSize="48"
+                   FontFamily="/SeewoStart;component/#Segoe UI Semilight" TextDecorations="{x:Null}"
+                   Grid.ColumnSpan="3" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
             <TextBlock.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
                         <TransformGroup>
-                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
-                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
-                            <RotateTransform CenterY="0.5" CenterX="0.5"/>
-                            <TranslateTransform/>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5" />
+                            <SkewTransform CenterY="0.5" CenterX="0.5" />
+                            <RotateTransform CenterY="0.5" CenterX="0.5" />
+                            <TranslateTransform />
                         </TransformGroup>
                     </LinearGradientBrush.RelativeTransform>
-                    <GradientStop Color="Orange" Offset="0"/>
-                    <GradientStop Color="Orange" Offset="1"/>
+                    <GradientStop Color="Orange" Offset="0" />
+                    <GradientStop Color="Orange" Offset="1" />
                 </LinearGradientBrush>
             </TextBlock.Foreground>
             <TextBlock.RenderTransform>
                 <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
                 </TransformGroup>
             </TextBlock.RenderTransform>
             <TextBlock.Effect>
                 <DropShadowEffect BlurRadius="5"
-                              ShadowDepth="2"
-                              Direction="-45"
-                              Color="Black"/>
+                                  ShadowDepth="2"
+                                  Direction="-45"
+                                  Color="Black" />
             </TextBlock.Effect>
         </TextBlock>
-        <Image x:Name="yuanshen" Margin="142.171,5.7,5.3,15.064" Source="未命名@凡科快图 (2).png" Stretch="Uniform" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.ColumnSpan="2"  >
+        <Image x:Name="yuanshen" Margin="142.171,5.7,5.3,15.064" Source="/Assets/images/genshin_icon_bgless.png"
+               Stretch="Uniform"
+               RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.ColumnSpan="2">
             <Image.RenderTransform>
                 <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <TextBlock x:Name="textBlock5" HorizontalAlignment="Left" Height="63.916" Margin="72.589,19.013,0,0" TextWrapping="Wrap" Text="|" VerticalAlignment="Top" Width="101.256" Foreground="White" FontSize="24" FontFamily="Segoe UI Symbol" TextDecorations="{x:Null}" RenderTransformOrigin="0.5,0.5">
+        <TextBlock x:Name="textBlock5" HorizontalAlignment="Left" Height="63.916" Margin="72.589,19.013,0,0"
+                   TextWrapping="Wrap" Text="|" VerticalAlignment="Top" Width="101.256" Foreground="White"
+                   FontSize="24" FontFamily="Segoe UI Symbol" TextDecorations="{x:Null}"
+                   RenderTransformOrigin="0.5,0.5">
             <TextBlock.RenderTransform>
                 <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
                 </TransformGroup>
             </TextBlock.RenderTransform>
             <TextBlock.Effect>
                 <DropShadowEffect BlurRadius="5"
-                              ShadowDepth="2"
-                              Direction="-45"
-                              Color="Black"/>
+                                  ShadowDepth="2"
+                                  Direction="-45"
+                                  Color="Black" />
             </TextBlock.Effect>
         </TextBlock>
-        <Image x:Name="image2" Margin="86.735,18.8,379.967,26.735" Source="splash-removebg-preview.png" Stretch="Uniform" RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="image2" Margin="86.735,18.8,379.967,26.735" Source="/Assets/images/mihoyo_icon_bgless.png"
+               Stretch="Uniform" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Height="31.2" Margin="0.669,246,0,0" TextWrapping="Wrap" Text="正在启动！" VerticalAlignment="Top" Width="798.933" Foreground="White" FontSize="20" FontFamily="/SeewoStart;component/#Segoe UI Light" RenderTransformOrigin="0.709,0.503" Grid.ColumnSpan="3" TextAlignment="Center" Grid.Row="1">
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Height="31.2" Margin="0.669,246,0,0"
+                   TextWrapping="Wrap" Text="正在启动！" VerticalAlignment="Top" Width="798.933" Foreground="White"
+                   FontSize="20" FontFamily="/SeewoStart;component/#Segoe UI Light" RenderTransformOrigin="0.709,0.503"
+                   Grid.ColumnSpan="3" TextAlignment="Center" Grid.Row="1">
             <TextBlock.RenderTransform>
                 <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
                 </TransformGroup>
             </TextBlock.RenderTransform>
             <TextBlock.Effect>
                 <DropShadowEffect BlurRadius="5"
-                              ShadowDepth="2"
-                              Direction="-45"
-                              Color="Black"/>
+                                  ShadowDepth="2"
+                                  Direction="-45"
+                                  Color="Black" />
             </TextBlock.Effect>
         </TextBlock>
-        <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Height="40.8" Margin="9,318,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="787.2" Foreground="White" Grid.ColumnSpan="3" TextAlignment="Center" RenderTransformOrigin="0.5,0.5" FontFamily="/SeewoStart;component/#Segoe UI Light" Grid.Row="1">
+        <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Height="40.8" Margin="9,318,0,0" TextWrapping="Wrap"
+                   VerticalAlignment="Top" Width="787.2" Foreground="White" Grid.ColumnSpan="3" TextAlignment="Center"
+                   RenderTransformOrigin="0.5,0.5" FontFamily="/SeewoStart;component/#Segoe UI Light" Grid.Row="1">
             <TextBlock.RenderTransform>
                 <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
                 </TransformGroup>
-            </TextBlock.RenderTransform><Run Text="抵制"/><Run Text="扰乱秩序"/><Run Text="，坚持认真上课，"/><Run Text="注意自我"/><Run Text="提醒"/><Run Text="，谨防"/><Run Text="上课睡觉；"/><Run Text="适度"/><Run Text="教学"/><Run Text="益脑，"/><Run Text="拖堂教学"/><Run Text=""/><Run Text="伤身，合理安排时间，享受"/><Run Text="快乐教学"/><Run Text=""/><Run Text="。"/>
+            </TextBlock.RenderTransform>
+            <Run Text="抵制" /><Run Text="扰乱秩序" /><Run Text="，坚持认真上课，" /><Run Text="注意自我" /><Run Text="提醒" />
+            <Run Text="，谨防" /><Run Text="上课睡觉；" /><Run Text="适度" /><Run Text="教学" /><Run Text="益脑，" />
+            <Run Text="拖堂教学" /><Run Text="" /><Run Text="伤身，合理安排时间，享受" /><Run Text="快乐教学" /><Run Text="" />
+            <Run Text="。" />
             <TextBlock.Effect>
                 <DropShadowEffect BlurRadius="5"
-                              ShadowDepth="2"
-                              Direction="-45"
-                              Color="Black"/>
+                                  ShadowDepth="2"
+                                  Direction="-45"
+                                  Color="Black" />
             </TextBlock.Effect>
         </TextBlock>
-        <TextBlock x:Name="textBlock4" HorizontalAlignment="Left" Height="40.8" Margin="9,339,0,-19.2" TextWrapping="Wrap" VerticalAlignment="Top" Width="787.2" Foreground="White" Grid.ColumnSpan="3" TextAlignment="Center" RenderTransformOrigin="0.5,0.5" FontFamily="/SeewoStart;component/#Segoe UI Light" Grid.Row="1">
+        <TextBlock x:Name="textBlock4" HorizontalAlignment="Left" Height="40.8" Margin="9,339,0,-19.2"
+                   TextWrapping="Wrap" VerticalAlignment="Top" Width="787.2" Foreground="White" Grid.ColumnSpan="3"
+                   TextAlignment="Center" RenderTransformOrigin="0.5,0.5"
+                   FontFamily="/SeewoStart;component/#Segoe UI Light" Grid.Row="1">
             <TextBlock.RenderTransform>
                 <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
                 </TransformGroup>
-            </TextBlock.RenderTransform><Run Text="Copyright "/><Run Text="©"/><Run Text=" 2011-2023 Guangzhou Shirui. All Rights Reserved"/>
+            </TextBlock.RenderTransform>
+            <Run Text="Copyright " /><Run Text="©" /><Run Text=" 2011-2023 Guangzhou Shirui. All Rights Reserved" />
             <TextBlock.Effect>
                 <DropShadowEffect BlurRadius="5"
-                              ShadowDepth="2"
-                              Direction="-45"
-                              Color="Black"/>
+                                  ShadowDepth="2"
+                                  Direction="-45"
+                                  Color="Black" />
             </TextBlock.Effect>
         </TextBlock>
-        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Height="1224" Margin="-522.6,-179.4,0,-594.6" TextWrapping="Wrap" VerticalAlignment="Top" Width="754.8" FontSize="600" RenderTransformOrigin="0.709,0.503" TextAlignment="Right" FontFamily="Microsoft YaHei Light" Text="O" Grid.RowSpan="2" Visibility="Hidden">
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Height="1224" Margin="-522.6,-179.4,0,-594.6"
+                   TextWrapping="Wrap" VerticalAlignment="Top" Width="754.8" FontSize="600"
+                   RenderTransformOrigin="0.709,0.503" TextAlignment="Right" FontFamily="Microsoft YaHei Light"
+                   Text="O" Grid.RowSpan="2" Visibility="Hidden">
             <TextBlock.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
                         <TransformGroup>
-                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
-                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
-                            <RotateTransform CenterY="0.5" CenterX="0.5"/>
-                            <TranslateTransform/>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5" />
+                            <SkewTransform CenterY="0.5" CenterX="0.5" />
+                            <RotateTransform CenterY="0.5" CenterX="0.5" />
+                            <TranslateTransform />
                         </TransformGroup>
                     </LinearGradientBrush.RelativeTransform>
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="White" Offset="1"/>
-                    <GradientStop Color="#FF825D7C" Offset="0.49"/>
-                    <GradientStop Color="#FFC1602F" Offset="0.224"/>
-                    <GradientStop Color="#FF3A2FB5" Offset="0.752"/>
-                    <GradientStop Color="#FFBE691B" Offset="0.125"/>
-                    <GradientStop Color="#FFE17F12" Offset="0.042"/>
-                    <GradientStop Color="#FF162ACA" Offset="0.878"/>
+                    <GradientStop Color="Black" Offset="0" />
+                    <GradientStop Color="White" Offset="1" />
+                    <GradientStop Color="#FF825D7C" Offset="0.49" />
+                    <GradientStop Color="#FFC1602F" Offset="0.224" />
+                    <GradientStop Color="#FF3A2FB5" Offset="0.752" />
+                    <GradientStop Color="#FFBE691B" Offset="0.125" />
+                    <GradientStop Color="#FFE17F12" Offset="0.042" />
+                    <GradientStop Color="#FF162ACA" Offset="0.878" />
                 </LinearGradientBrush>
             </TextBlock.Foreground>
             <TextBlock.RenderTransform>
                 <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
                 </TransformGroup>
             </TextBlock.RenderTransform>
             <TextBlock.Effect>
                 <DropShadowEffect BlurRadius="5"
-                    ShadowDepth="2"
-                    Direction="-45"
-                    Color="Black"/>
-            </TextBlock.Effect></TextBlock>
-        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Height="2148" Margin="-725.4,-1858.2,-422.2,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1947.6" FontSize="2000" RenderTransformOrigin="0.709,0.503" TextAlignment="Right" FontFamily="Microsoft YaHei Light" Text="O" Grid.RowSpan="2" Grid.ColumnSpan="3" Visibility="Hidden">
+                                  ShadowDepth="2"
+                                  Direction="-45"
+                                  Color="Black" />
+            </TextBlock.Effect>
+        </TextBlock>
+        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Height="2148" Margin="-725.4,-1858.2,-422.2,0"
+                   TextWrapping="Wrap" VerticalAlignment="Top" Width="1947.6" FontSize="2000"
+                   RenderTransformOrigin="0.709,0.503" TextAlignment="Right" FontFamily="Microsoft YaHei Light"
+                   Text="O" Grid.RowSpan="2" Grid.ColumnSpan="3" Visibility="Hidden">
             <TextBlock.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
                         <TransformGroup>
-                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
-                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
-                            <RotateTransform CenterY="0.5" CenterX="0.5"/>
-                            <TranslateTransform/>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5" />
+                            <SkewTransform CenterY="0.5" CenterX="0.5" />
+                            <RotateTransform CenterY="0.5" CenterX="0.5" />
+                            <TranslateTransform />
                         </TransformGroup>
                     </LinearGradientBrush.RelativeTransform>
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="White" Offset="1"/>
-                    <GradientStop Color="#FFB25F00" Offset="0.11"/>
-                    <GradientStop Color="#FF12008F" Offset="0.212"/>
-                    <GradientStop Color="#FF532955" Offset="0.054"/>
+                    <GradientStop Color="Black" Offset="0" />
+                    <GradientStop Color="White" Offset="1" />
+                    <GradientStop Color="#FFB25F00" Offset="0.11" />
+                    <GradientStop Color="#FF12008F" Offset="0.212" />
+                    <GradientStop Color="#FF532955" Offset="0.054" />
                 </LinearGradientBrush>
             </TextBlock.Foreground>
             <TextBlock.RenderTransform>
                 <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
                 </TransformGroup>
             </TextBlock.RenderTransform>
             <TextBlock.Effect>
                 <DropShadowEffect BlurRadius="5"
-                    ShadowDepth="2"
-                    Direction="-45"
-                    Color="Black"/>
-            </TextBlock.Effect></TextBlock>
-        <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Height="90" Margin="-0.6,97.2,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="800.4" FontWeight="Bold" FontSize="72" RenderTransformOrigin="0.709,0.503" TextAlignment="Center" FontFamily="/SeewoStart;component/#Segoe UI Semibold" Grid.Row="1" Grid.ColumnSpan="3" Text="12.22" Visibility="Hidden">
+                                  ShadowDepth="2"
+                                  Direction="-45"
+                                  Color="Black" />
+            </TextBlock.Effect>
+        </TextBlock>
+        <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Height="90" Margin="-0.6,97.2,0,0"
+                   TextWrapping="Wrap" VerticalAlignment="Top" Width="800.4" FontWeight="Bold" FontSize="72"
+                   RenderTransformOrigin="0.709,0.503" TextAlignment="Center"
+                   FontFamily="/SeewoStart;component/#Segoe UI Semibold" Grid.Row="1" Grid.ColumnSpan="3" Text="12.22"
+                   Visibility="Hidden">
             <TextBlock.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
                         <TransformGroup>
-                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
-                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
-                            <RotateTransform CenterY="0.5" CenterX="0.5"/>
-                            <TranslateTransform/>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5" />
+                            <SkewTransform CenterY="0.5" CenterX="0.5" />
+                            <RotateTransform CenterY="0.5" CenterX="0.5" />
+                            <TranslateTransform />
                         </TransformGroup>
                     </LinearGradientBrush.RelativeTransform>
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="White" Offset="1"/>
-                    <GradientStop Color="#FF000001" Offset="0.328"/>
+                    <GradientStop Color="Black" Offset="0" />
+                    <GradientStop Color="White" Offset="1" />
+                    <GradientStop Color="#FF000001" Offset="0.328" />
                 </LinearGradientBrush>
             </TextBlock.Foreground>
             <TextBlock.RenderTransform>
                 <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
                 </TransformGroup>
             </TextBlock.RenderTransform>
             <TextBlock.Effect>
                 <DropShadowEffect BlurRadius="5"
-                    ShadowDepth="2"
-                    Direction="-45"
-                    Color="Black"/>
-            </TextBlock.Effect></TextBlock>
-        <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left" Height="90" Margin="115.8,97.2,-116.2,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="800.4" FontWeight="Bold" FontSize="72" RenderTransformOrigin="0.709,0.503" TextAlignment="Center" FontFamily="/SeewoStart;component/#Segoe UI Light" Grid.Row="1" Grid.ColumnSpan="3" Text="On bilibili" Visibility="Hidden">
+                                  ShadowDepth="2"
+                                  Direction="-45"
+                                  Color="Black" />
+            </TextBlock.Effect>
+        </TextBlock>
+        <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left" Height="90" Margin="115.8,97.2,-116.2,0"
+                   TextWrapping="Wrap" VerticalAlignment="Top" Width="800.4" FontWeight="Bold" FontSize="72"
+                   RenderTransformOrigin="0.709,0.503" TextAlignment="Center"
+                   FontFamily="/SeewoStart;component/#Segoe UI Light" Grid.Row="1" Grid.ColumnSpan="3"
+                   Text="On bilibili" Visibility="Hidden">
             <TextBlock.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
                         <TransformGroup>
-                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
-                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
-                            <RotateTransform CenterY="0.5" CenterX="0.5"/>
-                            <TranslateTransform/>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5" />
+                            <SkewTransform CenterY="0.5" CenterX="0.5" />
+                            <RotateTransform CenterY="0.5" CenterX="0.5" />
+                            <TranslateTransform />
                         </TransformGroup>
                     </LinearGradientBrush.RelativeTransform>
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="White" Offset="1"/>
-                    <GradientStop Color="#FF000001" Offset="0.328"/>
+                    <GradientStop Color="Black" Offset="0" />
+                    <GradientStop Color="White" Offset="1" />
+                    <GradientStop Color="#FF000001" Offset="0.328" />
                 </LinearGradientBrush>
             </TextBlock.Foreground>
             <TextBlock.RenderTransform>
                 <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
                 </TransformGroup>
             </TextBlock.RenderTransform>
             <TextBlock.Effect>
                 <DropShadowEffect BlurRadius="5"
-                    ShadowDepth="2"
-                    Direction="-45"
-                    Color="Black"/>
-            </TextBlock.Effect></TextBlock>
-        <TextBlock x:Name="textBlock_Copy4" HorizontalAlignment="Left" Height="1224" Margin="-522.6,-179.4,0,-594.6" TextWrapping="Wrap" VerticalAlignment="Top" Width="754.8" FontSize="600" RenderTransformOrigin="0.709,0.503" TextAlignment="Right" FontFamily="Microsoft YaHei Light" Text="O" Grid.RowSpan="2" Visibility="Hidden" Foreground="Black">
+                                  ShadowDepth="2"
+                                  Direction="-45"
+                                  Color="Black" />
+            </TextBlock.Effect>
+        </TextBlock>
+        <TextBlock x:Name="textBlock_Copy4" HorizontalAlignment="Left" Height="1224" Margin="-522.6,-179.4,0,-594.6"
+                   TextWrapping="Wrap" VerticalAlignment="Top" Width="754.8" FontSize="600"
+                   RenderTransformOrigin="0.709,0.503" TextAlignment="Right" FontFamily="Microsoft YaHei Light"
+                   Text="O" Grid.RowSpan="2" Visibility="Hidden" Foreground="Black">
             <TextBlock.RenderTransform>
                 <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
                 </TransformGroup>
             </TextBlock.RenderTransform>
             <TextBlock.Effect>
                 <DropShadowEffect BlurRadius="5"
-                    ShadowDepth="2"
-                    Direction="-45"
-                    Color="Black"/>
-            </TextBlock.Effect></TextBlock>
-        <TextBlock x:Name="textBlock_Copy5" HorizontalAlignment="Left" Height="90" Margin="-0.6,220.8,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="800.4" FontWeight="Bold" FontSize="30" RenderTransformOrigin="0.709,0.503" TextAlignment="Center" FontFamily="/SeewoStart;component/#Segoe UI Semibold" Grid.Row="1" Grid.ColumnSpan="3" Visibility="Hidden">
+                                  ShadowDepth="2"
+                                  Direction="-45"
+                                  Color="Black" />
+            </TextBlock.Effect>
+        </TextBlock>
+        <TextBlock x:Name="textBlock_Copy5" HorizontalAlignment="Left" Height="90" Margin="-0.6,220.8,0,0"
+                   TextWrapping="Wrap" VerticalAlignment="Top" Width="800.4" FontWeight="Bold" FontSize="30"
+                   RenderTransformOrigin="0.709,0.503" TextAlignment="Center"
+                   FontFamily="/SeewoStart;component/#Segoe UI Semibold" Grid.Row="1" Grid.ColumnSpan="3"
+                   Visibility="Hidden">
             <TextBlock.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
                         <TransformGroup>
-                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
-                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
-                            <RotateTransform CenterY="0.5" CenterX="0.5"/>
-                            <TranslateTransform/>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5" />
+                            <SkewTransform CenterY="0.5" CenterX="0.5" />
+                            <RotateTransform CenterY="0.5" CenterX="0.5" />
+                            <TranslateTransform />
                         </TransformGroup>
                     </LinearGradientBrush.RelativeTransform>
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="White" Offset="1"/>
-                    <GradientStop Color="White" Offset="0.328"/>
+                    <GradientStop Color="Black" Offset="0" />
+                    <GradientStop Color="White" Offset="1" />
+                    <GradientStop Color="White" Offset="0.328" />
                 </LinearGradientBrush>
             </TextBlock.Foreground>
             <TextBlock.RenderTransform>
                 <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
                 </TransformGroup>
             </TextBlock.RenderTransform>
             <TextBlock.Effect>
                 <DropShadowEffect BlurRadius="5"
-                    ShadowDepth="2"
-                    Direction="-45"
-                    Color="Black"/>
-            </TextBlock.Effect><Run Text="I"/><Run Text="ntersperse Everything."/></TextBlock>
-        <Image x:Name="image2_Copy" Margin="10.697,17.466,489.605,28.069" Source="sbenlauncher.ico" Stretch="Uniform" RenderTransformOrigin="0.5,0.5">
+                                  ShadowDepth="2"
+                                  Direction="-45"
+                                  Color="Black" />
+            </TextBlock.Effect>
+            <Run Text="I" /><Run Text="ntersperse Everything." />
+        </TextBlock>
+        <Image x:Name="image2_Copy" Margin="10.697,17.466,489.605,28.069" Source="/Assets/icons/sbenlauncher.ico"
+               Stretch="Uniform"
+               RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>

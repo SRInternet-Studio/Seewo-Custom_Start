@@ -24,17 +24,24 @@ Public Class MainWindow
     Private IsEnded As Boolean = False
     Private starting_config As String
     'Dim targetTitle As String = "希沃白板" ' 目标窗口的标题
-    Private Declare Function IsWindowVisible Lib "user32.dll" (ByVal hWnd As IntPtr) As Boolean
+    Private Declare Function IsWindowVisible Lib "user32.dll"(hWnd As IntPtr) As Boolean
     'Private Declare Function FindWindowEx Lib "user32.dll" (ByVal hwndParent As IntPtr, ByVal hwndChildAfter As IntPtr, ByVal lpszClass As String, ByVal lpszWindow As String) As IntPtr
-    Private Declare Function FindWindowEx Lib "user32.dll" Alias "FindWindowExA" (ByVal hwndParent As IntPtr, ByVal hwndChildAfter As IntPtr, ByVal lpszClass As String, ByVal lpszWindow As String) As IntPtr
-    Private Declare Function GetWindowText Lib "user32.dll" Alias "GetWindowTextA" (ByVal hwnd As IntPtr, ByVal lpString As StringBuilder, ByVal cch As Integer) As Integer
-    Private Declare Function GetClassName Lib "user32.dll" Alias "GetClassNameA" (ByVal hWnd As IntPtr, ByVal lpClassName As StringBuilder, ByVal nMaxCount As Integer) As Integer
+    Private Declare Function FindWindowEx Lib "user32.dll" Alias "FindWindowExA"(hwndParent As IntPtr,
+                                                                                 hwndChildAfter As IntPtr,
+                                                                                 lpszClass As String,
+                                                                                 lpszWindow As String) As IntPtr
+    Private Declare Function GetWindowText Lib "user32.dll" Alias "GetWindowTextA"(hwnd As IntPtr,
+                                                                                   lpString As StringBuilder,
+                                                                                   cch As Integer) As Integer
+    Private Declare Function GetClassName Lib "user32.dll" Alias "GetClassNameA"(hWnd As IntPtr,
+                                                                                 lpClassName As StringBuilder,
+                                                                                 nMaxCount As Integer) As Integer
 
     Private WithEvents pollTimer As New DispatcherTimer()
     Private ReadOnly started As Boolean = False
 
-    <DllImport("user32.dll", SetLastError:=True, CharSet:=CharSet.Auto)>
-    Private Shared Function FindWindow(ByVal lpClassName As String, ByVal lpWindowName As String) As IntPtr
+    <DllImport("user32.dll", SetLastError := True, CharSet := CharSet.Auto)>
+    Private Shared Function FindWindow(lpClassName As String, lpWindowName As String) As IntPtr
     End Function
     'Protected Overrides Sub OnInitialized(ByVal e As EventArgs)
     '    MyBase.OnInitialized(e)
@@ -94,7 +101,7 @@ Public Class MainWindow
 
     ' 寻找窗口是否存在的方法
     Public Function IsWindowExistsByTitle(windowTitle As String) As Boolean
-        Dim windows = Application.Current.Windows.OfType(Of Window)()
+        Dim windows = Application.Current.Windows.OfType (Of Window)()
 
         Dim existingWindow = windows.FirstOrDefault(Function(w) w.Title = windowTitle)
 
@@ -116,13 +123,14 @@ Public Class MainWindow
 
             Topmost = True
 
-            Dim appDirectory As String = AppDomain.CurrentDomain.BaseDirectory 'System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location)
+            Dim appDirectory As String = AppDomain.CurrentDomain.BaseDirectory _
+            'System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location)
 
             Dim ThemsDirectory As String = appDirectory & "\Thems"
 
             Dim folders() As String = Directory.GetDirectories(ThemsDirectory)
 
-            System.Diagnostics.Debug.WriteLine(folders.Length)
+            Debug.WriteLine(folders.Length)
 
             Dim filePath As String = appDirectory & "\settings.ini"
             Dim configPath As String = appDirectory & "\product.config"
@@ -163,9 +171,9 @@ Public Class MainWindow
             Dim selectedFolder As String
 
             Try
-                image2_Copy.Source = New BitmapImage(New Uri(appDirectory & "\sbenlauncher.ico", UriKind.Absolute))
+                image2_Copy.Source = New BitmapImage(New Uri(appDirectory & "\swenlauncher.ico", UriKind.Absolute))
             Catch ex As Exception
-                MsgBox("主题读取失败。 " & secondLine & " sbenlauncher.ico 可能消失了，这意味着我们无法获取将要启动的程序的图标。", vbExclamation)
+                MsgBox("主题读取失败。 " & secondLine & " swenlauncher.ico 可能消失了，这意味着我们无法获取将要启动的程序的图标。", vbExclamation)
             End Try
 
 
@@ -188,7 +196,7 @@ Public Class MainWindow
 
                         Dim wholeDirectory_2 As String = selectedFolder & "\trademark.png"
 
-                        System.Diagnostics.Debug.WriteLine(wholeDirectory)
+                        Debug.WriteLine(wholeDirectory)
 
                         image.Source = New BitmapImage(New Uri(wholeDirectory, UriKind.Absolute))
 
@@ -202,7 +210,7 @@ Public Class MainWindow
                     MsgBox("主题读取失败。 " & secondLine & " 请检查 Thems 文件夹是否为空，或其内部图片是否完好。", vbExclamation)
                 End If
             Else
-                selectedFolder = Path.Combine(path1:=ThemsDirectory, path2:=ninthLine)
+                selectedFolder = Path.Combine(path1 := ThemsDirectory, path2 := ninthLine)
                 Try
                     '获取选定文件夹内的所有文件
                     Dim files() As String = Directory.GetFiles(selectedFolder)
@@ -213,7 +221,7 @@ Public Class MainWindow
 
                     Dim wholeDirectory_2 As String = selectedFolder & "\trademark.png"
 
-                    System.Diagnostics.Debug.WriteLine(wholeDirectory)
+                    Debug.WriteLine(wholeDirectory)
 
                     image.Source = New BitmapImage(New Uri(wholeDirectory, UriKind.Absolute))
 
@@ -224,7 +232,6 @@ Public Class MainWindow
                     MsgBox("主题读取失败。 " & secondLine & " 请检查 Thems 文件夹是否为空，或其内部图片是否完好。", vbExclamation)
                 End Try
             End If
-
 
 
             textBlock.Text = fourLine
@@ -295,7 +302,7 @@ Public Class MainWindow
         IsEnded = True
         Focus()
         pollTimer.Stop()
-        Dim startStoryboard As Storyboard = TryCast(FindResource("EndAni"), Storyboard)
+        Dim startStoryboard = TryCast(FindResource("EndAni"), Storyboard)
         ' 当Storyboard资源存在时，播放动画
         startStoryboard.Begin()
         Await Task.Delay(2000)
@@ -308,6 +315,7 @@ Public Class MainWindow
         Dim runningProcesses() As Process = Process.GetProcessesByName(processName)
         Return runningProcesses.Length > 0
     End Function
+
     Private Sub pollTimer_Tick(sender As Object, e As EventArgs) Handles pollTimer.Tick
         Topmost = True
         Focus()

@@ -1,9 +1,5 @@
-﻿Imports System
-Imports System.Globalization
-Imports System.Reflection
-Imports System.Resources
+﻿Imports System.Reflection
 Imports System.Runtime.InteropServices
-Imports System.Windows
 
 ' 有关程序集的一般信息由以下
 ' 控制。更改这些特性值可修改
@@ -38,7 +34,6 @@ Imports System.Windows
 '(未在页面中找到资源时使用，
 '资源词典中找到资源时使用)
 <Assembly: ThemeInfo(ResourceDictionaryLocation.None, ResourceDictionaryLocation.SourceAssembly)>
-
 
 
 '如果此项目向 COM 公开，则下列 GUID 用于 typelib 的 ID

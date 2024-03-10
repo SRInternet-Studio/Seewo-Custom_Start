@@ -4,26 +4,28 @@ Imports System.Runtime.InteropServices
 
 Public Class Window2
     <DllImport("gdi32.dll")>
-    Private Shared Function AddFontResource(ByVal lpFileName As String) As Integer
+    Private Shared Function AddFontResource(lpFileName As String) As Integer
     End Function
 
     Private Sub RefreshFonts()
         ' 删除字体缓存中的所有字体
-        For Each fontFile As String In System.IO.Directory.GetFiles("C:\Windows\Fonts", "*.ttf")
+        For Each fontFile As String In Directory.GetFiles("C:\Windows\Fonts", "*.ttf")
             AddFontResource(fontFile)
         Next
 
         ' 重新加载所有字体
-        For Each fontFile As String In System.IO.Directory.GetFiles("C:\Windows\Fonts", "*.ttf")
+        For Each fontFile As String In Directory.GetFiles("C:\Windows\Fonts", "*.ttf")
             AddFontResource(fontFile)
         Next
     End Sub
+
     Private Sub Window2_Loaded(sender As Object, e As RoutedEventArgs) Handles Me.Loaded
         'Start()
         Topmost = True
         Focus()
         check()
     End Sub
+
     Private Async Sub check()
         Do While SharedV.Saving = False
             ' 可以在循环中执行其他需要的操作
@@ -44,9 +46,11 @@ Public Class Window2
         Hide()
         Close()
     End Sub
+
     Private Async Sub Start()
         Await Task.Delay(2000)
-        Dim appDirectory As String = AppDomain.CurrentDomain.BaseDirectory 'System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location)
+        Dim appDirectory As String = AppDomain.CurrentDomain.BaseDirectory _
+        'System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location)
         Dim fontFilePath As String = appDirectory & "\DingTalk_JinBuTi_Regular.ttf"
         'InstallFontToSystem(fontFilePath)
         Process.Start(fontFilePath
@@ -61,14 +65,16 @@ Public Class Window2
         End
         'RestartApplication()
     End Sub
+
     Public Sub RestartApplication()
         Dim exePath As String = Process.GetCurrentProcess().MainModule.FileName
         Dim startInfo As New ProcessStartInfo(exePath)
         Process.Start(startInfo)
         End
     End Sub
+
     Private Sub RemoveFontFromCache(fontFilePath As String)
-        For Each fontFile As String In System.IO.Directory.GetFiles(Environment.GetFolderPath(Environment.SpecialFolder.Fonts))
+        For Each fontFile As String In Directory.GetFiles(Environment.GetFolderPath(Environment.SpecialFolder.Fonts))
             If String.Compare(fontFile, fontFilePath, StringComparison.OrdinalIgnoreCase) = 0 Then
                 Dim fontFamilyName As String = Path.GetFileNameWithoutExtension(fontFile)
                 Dim fontCollection As New PrivateFontCollection()
@@ -81,7 +87,7 @@ Public Class Window2
     Public Sub InstallFontToSystem(fontFilePath As String)
         Try
             Dim destinationPath As String = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Fonts),
-                                                    Path.GetFileName(fontFilePath))
+                                                         Path.GetFileName(fontFilePath))
 
             ' 先在字体缓存中删除同名的字体
             RemoveFontFromCache(destinationPath)

@@ -1,1 +1,0 @@
-swenlauncher.exe /settings
