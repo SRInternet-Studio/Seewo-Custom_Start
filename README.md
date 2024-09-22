@@ -24,7 +24,7 @@
 
 #### 使用说明
 
- :point_right: [点此查看使用教程视频](https://www.bilibili.com/video/BV1eC4y1D73H/)
+ :point_right: [点此查看使用教程视频(暂未发布,发布将在第一时间更新！)]()
 
 #### 开源
 1.0发布时我们承诺过，播放量过1万就开源，别担心，我们的承诺必将做到，这不就来了吗，具体部署教程请看源代码部署
@@ -54,7 +54,7 @@ PS:反馈问题时，请带上软件当时的截图，方便我们查看报错�
 
 
 #### 支持我们 （纯属自愿）
-1.  [爱发电](https://afdian.net/a/srinternet)
+1.  [爱发电](https://afdian.com/a/srinternet)
 您的支持能让我们变的更好！！！！！！1
 
 <div align="center">
