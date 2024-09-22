@@ -1,0 +1,41 @@
+﻿<Window x:Class="dl"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="定制启动器 · 安装程序 下载页面" Height="195.8" Width="851.2" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Window.Resources>
+        <Storyboard x:Key="ColorAnimation">
+            <ColorAnimation
+            Storyboard.TargetProperty="(ProgressBar.Foreground).(SolidColorBrush.Color)"
+            From="Red" To="Blue" Duration="0:0:1"
+            AutoReverse="True" RepeatBehavior="Forever" />
+        </Storyboard>
+    </Window.Resources>
+    <Grid Margin="0,0,0,23">
+        <ProgressBar x:Name="ProgressBar1" HorizontalAlignment="Left" Height="44.4" Margin="29.091,50.6,0,0" VerticalAlignment="Top" Width="751" RenderTransformOrigin="1,0.5" UseLayoutRounding="False" LargeChange="0" Foreground="#FFEBDAE0">
+
+        </ProgressBar>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="30.6" Margin="29.091,19,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="735" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black" FontSize="20" Foreground="#FF0043FF" FontWeight="Bold" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform><Run Text="正在下载"/><Run Text=" "/><Run Text="定制启动器"/><LineBreak/><Run/></TextBlock>
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Height="23" Margin="29.091,109,0,0" TextWrapping="Wrap" Text="0%" VerticalAlignment="Top" Width="171" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black" FontSize="18" Foreground="#FF0043FF" FontWeight="Bold" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+
+    </Grid>
+</Window>

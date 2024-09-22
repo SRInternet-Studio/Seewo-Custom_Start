@@ -1,5 +1,9 @@
-﻿Imports System.Reflection
+﻿Imports System
+Imports System.Globalization
+Imports System.Reflection
+Imports System.Resources
 Imports System.Runtime.InteropServices
+Imports System.Windows
 
 ' 有关程序集的一般信息由以下
 ' 控制。更改这些特性值可修改
@@ -11,7 +15,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("希沃启动器")>
 <Assembly: AssemblyCompany("思锐工作室")>
 <Assembly: AssemblyProduct("SeewoStart")>
-<Assembly: AssemblyCopyright("Copyright ©  Seewo 2023")>
+<Assembly: AssemblyCopyright("Copyright ©  Seewo 2024")>
 <Assembly: AssemblyTrademark("Seewo")>
 <Assembly: ComVisible(True)>
 
@@ -36,6 +40,7 @@ Imports System.Runtime.InteropServices
 <Assembly: ThemeInfo(ResourceDictionaryLocation.None, ResourceDictionaryLocation.SourceAssembly)>
 
 
+
 '如果此项目向 COM 公开，则下列 GUID 用于 typelib 的 ID
 <Assembly: Guid("01e6e317-ffd3-4100-92eb-ee0e8a3f3604")>
 
@@ -50,5 +55,5 @@ Imports System.Runtime.InteropServices
 '通过使用 "*"，如下所示:
 ' <Assembly: AssemblyVersion("1.0.*")>
 
-<Assembly: AssemblyVersion("2.0.0.0")>
-<Assembly: AssemblyFileVersion("2.0.0.0")>
+<Assembly: AssemblyVersion("4.0.0.0")>
+<Assembly: AssemblyFileVersion("4.0.0.0")>

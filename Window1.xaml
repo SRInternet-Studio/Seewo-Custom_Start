@@ -1,826 +1,705 @@
 ﻿<Window
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    x:Class="Window1"
-    mc:Ignorable="d"
-    Title="定制启动器 设置界面" Height="498.8" Width="983.2" ResizeMode="NoResize">
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SeewoStart"
+        xmlns:effects="clr-namespace:System.Windows.Media.Effects;assembly=PresentationCore"
+        xmlns:SVG="clr-namespace:SVGImage.SVG;assembly=SVGImage" xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls" x:Class="Window1"
+        mc:Ignorable="d"
+        Title="定制启动器 设置界面" Height="498.8" Width="983.2" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Window.Resources>
+        <BlurEffect x:Key="BlurEffect" Radius="5"/>
         <Storyboard x:Key="enter_ani">
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
-                Storyboard.TargetName="tabControl">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-319" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-319" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="tabControl">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-319"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-319"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut" />
+                        <QuarticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)"
-                Storyboard.TargetName="tabControl">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-1" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-1" />
-                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="tabControl">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
-                Storyboard.TargetName="border">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-494" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-494" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="border">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-494"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-494"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut" />
+                        <QuarticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
-                Storyboard.TargetName="add">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-492" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-492" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="add">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-492"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-492"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut" />
+                        <QuarticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
-                Storyboard.TargetName="del">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-492" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-492" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="del">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-492"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-492"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut" />
+                        <QuarticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
-                Storyboard.TargetName="textBlock">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBlock">
                 <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
-                Storyboard.TargetName="_filepath">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="_filepath">
                 <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
-                Storyboard.TargetName="button">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="button">
                 <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)"
-                Storyboard.TargetName="textBlock">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-21" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="textBlock">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-21"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)"
-                Storyboard.TargetName="_filepath">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-21" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="_filepath">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-21"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)"
-                Storyboard.TargetName="button">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-21" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="button">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-21"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)"
-                                           Storyboard.TargetName="textBlock">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="1">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)"
-                                           Storyboard.TargetName="_filepath">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="_filepath">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="1">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)"
-                                           Storyboard.TargetName="button">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="button">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="1">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
-                Storyboard.TargetName="textBlock1">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBlock1">
                 <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)"
-                Storyboard.TargetName="textBlock1">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-21" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="textBlock1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-21"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)"
-                                           Storyboard.TargetName="textBlock1">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="0" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="1">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
-                Storyboard.TargetName="comboBox">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="comboBox">
                 <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)"
-                Storyboard.TargetName="comboBox">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-21" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="comboBox">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-21"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)"
-                                           Storyboard.TargetName="comboBox">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="0" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="comboBox">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="1">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
-                Storyboard.TargetName="checkBox">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="checkBox">
                 <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)"
-                Storyboard.TargetName="checkBox">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-21" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="checkBox">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-21"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)"
-                                           Storyboard.TargetName="checkBox">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="checkBox">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="1">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
-                Storyboard.TargetName="textBlock2">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBlock2">
                 <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)"
-                Storyboard.TargetName="textBlock2">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="-21" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="textBlock2">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="-21"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)"
-                                           Storyboard.TargetName="textBlock2">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock2">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
-                Storyboard.TargetName="textBlock3">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBlock3">
                 <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)"
-                Storyboard.TargetName="textBlock3">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="-21" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="textBlock3">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="-21"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)"
-                                           Storyboard.TargetName="textBlock3">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock3">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
-                Storyboard.TargetName="_1">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="_1">
                 <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)"
-                Storyboard.TargetName="_1">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="-21" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="_1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="-21"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="_1">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
-                Storyboard.TargetName="textBlock4">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBlock4">
                 <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)"
-                Storyboard.TargetName="textBlock4">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="-21" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="textBlock4">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="-21"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)"
-                                           Storyboard.TargetName="textBlock4">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="0" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock4">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="1">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
-                Storyboard.TargetName="_2">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="_2">
                 <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)"
-                Storyboard.TargetName="_2">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="-21" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="_2">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="-21"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="_2">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="1">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
-                Storyboard.TargetName="textBlock5">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBlock5">
                 <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)"
-                Storyboard.TargetName="textBlock5">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="-21" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="textBlock5">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="-21"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)"
-                                           Storyboard.TargetName="textBlock5">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock5">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="1">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
-                Storyboard.TargetName="_3">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="_3">
                 <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)"
-                Storyboard.TargetName="_3">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="-21" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="_3">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="-21"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="_3">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="1">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
-                Storyboard.TargetName="textBlock6">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBlock6">
                 <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)"
-                Storyboard.TargetName="textBlock6">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-21" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="textBlock6">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-21"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)"
-                                           Storyboard.TargetName="textBlock6">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock6">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="1">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
-                Storyboard.TargetName="_4">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="_4">
                 <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)"
-                Storyboard.TargetName="_4">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-21" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="_4">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-21"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="_4">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="1">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
-                Storyboard.TargetName="textBlock7">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBlock7">
                 <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)"
-                Storyboard.TargetName="textBlock7">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="-21" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="textBlock7">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="-21"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)"
-                                           Storyboard.TargetName="textBlock7">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="0" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock7">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:2" Value="1">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
-                Storyboard.TargetName="_5">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="_5">
                 <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)"
-                Storyboard.TargetName="_5">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="-21" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="_5">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="-21"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="_5">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:2" Value="1">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
-                Storyboard.TargetName="textBlock8">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBlock8">
                 <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)"
-                Storyboard.TargetName="textBlock8">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="-21" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="textBlock8">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="-21"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)"
-                                           Storyboard.TargetName="textBlock8">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="0" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock8">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="1">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
-                Storyboard.TargetName="textBlock9">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBlock9">
                 <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)"
-                Storyboard.TargetName="textBlock9">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="-21" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="textBlock9">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="-21"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)"
-                                           Storyboard.TargetName="textBlock9">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="0" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock9">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="1">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
-                Storyboard.TargetName="textBox">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBox">
                 <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)"
-                Storyboard.TargetName="textBox">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="-21" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="textBox">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="-21"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)"
-                                           Storyboard.TargetName="textBox">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="0" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBox">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="1">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
-                Storyboard.TargetName="button1">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="button1">
                 <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)"
-                Storyboard.TargetName="button1">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="-21" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="button1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="-21"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)"
-                                           Storyboard.TargetName="button1">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="0" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="button1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="1">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
-                Storyboard.TargetName="checkBox1">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="checkBox1">
                 <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)"
-                Storyboard.TargetName="checkBox1">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21" />
-                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="-21" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="checkBox1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="-21"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)"
-                                           Storyboard.TargetName="checkBox1">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="0" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="checkBox1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="1">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
+                        <QuinticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)"
-                                           Storyboard.TargetName="waiting">
-                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.8" Value="{x:Static Visibility.Visible}" />
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.9" Value="{x:Static Visibility.Collapsed}" />
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="waiting">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.8" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.9" Value="{x:Static Visibility.Collapsed}"/>
             </ObjectAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
-                Storyboard.TargetName="waiting">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="waiting">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)"
-                                           Storyboard.TargetName="waiting">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="waiting">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
-                Storyboard.TargetName="refreshh">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-492" />
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-492" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="refreshh">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-492"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-492"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseOut" />
+                        <QuarticEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
     </Window.Resources>
     <Window.Background>
-        <ImageBrush ImageSource="/Assets/images/mihoyo_icon_bgless.png" Stretch="UniformToFill" />
+        <ImageBrush ImageSource="default-img/background2.png" Stretch="UniformToFill"/>
     </Window.Background>
     <Window.Triggers>
         <EventTrigger RoutedEvent="FrameworkElement.Loaded">
-            <BeginStoryboard Storyboard="{StaticResource enter_ani}" />
+            <BeginStoryboard Storyboard="{StaticResource enter_ani}"/>
         </EventTrigger>
     </Window.Triggers>
-    <Grid>
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
 
-        <TextBlock HorizontalAlignment="Left" Height="24" Margin="798.333,-1.2,-1,0" TextWrapping="Wrap"
-                   VerticalAlignment="Top" Width="172.667" FontWeight="Bold" Foreground="Black" Background="White"
-                   FontSize="18" Visibility="Hidden">
-            <Run Text=" " /><Run Text="本地主题列表" />
-        </TextBlock>
-        <Border x:Name="border" BorderThickness="1" HorizontalAlignment="Left" Height="440.4" Margin="796.2,22.4,0,0"
-                VerticalAlignment="Top" Width="173.6" RenderTransformOrigin="0.5,0.5">
+        <TextBlock HorizontalAlignment="Left" Height="24" Margin="798.333,-1.2,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172.667" FontWeight="Bold" Foreground="Black" Background="White" FontSize="18" Visibility="Hidden"><Run Text=" "/><Run Text="本地主题列表"/></TextBlock>
+        <Border x:Name="border" BorderThickness="1" HorizontalAlignment="Left" Height="440.4" Margin="796.2,22.4,0,0" VerticalAlignment="Top" Width="173.6" RenderTransformOrigin="0.5,0.5">
             <Border.RenderTransform>
                 <TransformGroup>
-                    <ScaleTransform />
-                    <SkewTransform />
-                    <RotateTransform />
-                    <TranslateTransform />
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
                 </TransformGroup>
             </Border.RenderTransform>
             <Border.Effect>
                 <DropShadowEffect Color="Black"
-                                  BlurRadius="10"
-                                  Opacity="0.5"
-                                  ShadowDepth="1" />
+                            BlurRadius="10"
+                            Opacity="0.5"
+                            ShadowDepth="1" />
             </Border.Effect>
-            <ListBox x:Name="List1" HorizontalAlignment="Left" Height="307.066" Margin="-5,-0.4,0,0"
-                     VerticalAlignment="Top" Width="173.6" Opacity="0.9" SelectedIndex="0">
+            <ListBox x:Name="List1" HorizontalAlignment="Left" Height="307.066" Margin="-5,-0.4,0,0" VerticalAlignment="Top" Width="173.6" Opacity="0.9"  SelectedIndex="0" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black">
                 <ListBox.ItemContainerStyle>
                     <Style TargetType="{x:Type ListBoxItem}">
                         <Setter Property="HorizontalContentAlignment" Value="Right" />
@@ -828,23 +707,19 @@
                 </ListBox.ItemContainerStyle>
             </ListBox>
         </Border>
-        <Button x:Name="add" Content="增加" HorizontalAlignment="Left" Height="37.22" Margin="802.2,377.79,0,0"
-                VerticalAlignment="Top" Width="158.6" FontSize="16" RenderTransformOrigin="0.5,0.5"
-                BorderBrush="{x:Null}" Background="White" Cursor="Hand" Foreground="Black" OpacityMask="{x:Null}"
-                x:FieldModifier="public">
+        <Button x:Name="add" Content="增加" HorizontalAlignment="Left" Height="37.22" Margin="802.2,378.19,0,0" VerticalAlignment="Top" Width="158.6" FontSize="16" RenderTransformOrigin="0.5,0.5" BorderBrush="{x:Null}" Background="White" Cursor="Hand" Foreground="Black" OpacityMask="{x:Null}" x:FieldModifier="public" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black">
             <Button.RenderTransform>
                 <TransformGroup>
-                    <ScaleTransform />
-                    <SkewTransform />
-                    <RotateTransform />
-                    <TranslateTransform />
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
                 </TransformGroup>
             </Button.RenderTransform>
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border BorderThickness="1" BorderBrush="Black" CornerRadius="7"
-                            Background="{TemplateBinding Background}">
-                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    <Border BorderThickness="1" BorderBrush="Black" CornerRadius="7" Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
                     </Border>
                 </ControlTemplate>
             </Button.Template>
@@ -852,23 +727,19 @@
                 <DropShadowEffect Color="#FFBAB9B9" BlurRadius="2" ShadowDepth="0" Opacity="100" />
             </Button.Effect>
         </Button>
-        <Button x:Name="del" Content="删除" HorizontalAlignment="Left" Height="37.22" Margin="802.2,418.79,0,0"
-                VerticalAlignment="Top" Width="158.6" FontSize="16" RenderTransformOrigin="0.5,0.5"
-                BorderBrush="{x:Null}" Background="White" Cursor="Hand" Foreground="Black" OpacityMask="{x:Null}"
-                x:FieldModifier="public">
+        <Button x:Name="del" Content="删除" HorizontalAlignment="Left" Height="37.22" Margin="802.2,419.19,0,0" VerticalAlignment="Top" Width="158.6" FontSize="16" RenderTransformOrigin="0.5,0.5" BorderBrush="{x:Null}" Background="White" Cursor="Hand" Foreground="Black" OpacityMask="{x:Null}" x:FieldModifier="public" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black">
             <Button.RenderTransform>
                 <TransformGroup>
-                    <ScaleTransform />
-                    <SkewTransform />
-                    <RotateTransform />
-                    <TranslateTransform />
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
                 </TransformGroup>
             </Button.RenderTransform>
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border BorderThickness="1" BorderBrush="Black" CornerRadius="7"
-                            Background="{TemplateBinding Background}">
-                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    <Border BorderThickness="1" BorderBrush="Black" CornerRadius="7" Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
                     </Border>
                 </ControlTemplate>
             </Button.Template>
@@ -876,23 +747,19 @@
                 <DropShadowEffect Color="#FFBAB9B9" BlurRadius="2" ShadowDepth="0" Opacity="100" />
             </Button.Effect>
         </Button>
-        <Button x:Name="refreshh" Content="刷新" HorizontalAlignment="Left" Height="37.22" Margin="802.2,336.79,0,0"
-                VerticalAlignment="Top" Width="158.6" FontSize="16" RenderTransformOrigin="0.5,0.5"
-                BorderBrush="{x:Null}" Background="White" Cursor="Hand" Foreground="Black" OpacityMask="{x:Null}"
-                x:FieldModifier="public">
+        <Button x:Name="refreshh" Content="刷新" HorizontalAlignment="Left" Height="37.22" Margin="802.2,337.19,0,0" VerticalAlignment="Top" Width="158.6" FontSize="16" RenderTransformOrigin="0.5,0.5" BorderBrush="{x:Null}" Background="White" Cursor="Hand" Foreground="Black" OpacityMask="{x:Null}" x:FieldModifier="public" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black">
             <Button.RenderTransform>
                 <TransformGroup>
-                    <ScaleTransform />
-                    <SkewTransform />
-                    <RotateTransform />
-                    <TranslateTransform />
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
                 </TransformGroup>
             </Button.RenderTransform>
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border BorderThickness="1" BorderBrush="Black" CornerRadius="7"
-                            Background="{TemplateBinding Background}">
-                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    <Border BorderThickness="1" BorderBrush="Black" CornerRadius="7" Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
                     </Border>
                 </ControlTemplate>
             </Button.Template>
@@ -900,516 +767,412 @@
                 <DropShadowEffect Color="#FFBAB9B9" BlurRadius="2" ShadowDepth="0" Opacity="100" />
             </Button.Effect>
         </Button>
-        <Border BorderThickness="1" HorizontalAlignment="Left" Height="461.2" Margin="0.2,0,0,-0.4"
-                VerticalAlignment="Top" Width="799.2">
+        <Border BorderThickness="1" HorizontalAlignment="Left" Height="461.2" Margin="0.2,0,0,0" VerticalAlignment="Top" Width="799.2">
             <Border.Effect>
                 <DropShadowEffect Color="Black"
-                                  BlurRadius="10"
-                                  Opacity="0.2"
-                                  ShadowDepth="1" />
+                            BlurRadius="10"
+                            Opacity="0.2"
+                            ShadowDepth="1" />
             </Border.Effect>
             <TabControl x:Name="tabControl" Margin="0.2,0,-0.6,-1.2" Opacity="0.9" RenderTransformOrigin="0.5,0.5">
                 <TabControl.RenderTransform>
                     <TransformGroup>
-                        <ScaleTransform />
-                        <SkewTransform />
-                        <RotateTransform />
-                        <TranslateTransform />
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
                     </TransformGroup>
                 </TabControl.RenderTransform>
-                <TabItem x:Name="tabItem" Header="启动常量" RenderTransformOrigin="0.5,0.5">
+                <TabItem x:Name="tabItem" Header="启动常量" RenderTransformOrigin="0.5,0.5" >
                     <TabItem.RenderTransform>
                         <TransformGroup>
-                            <ScaleTransform />
-                            <SkewTransform />
-                            <RotateTransform />
-                            <TranslateTransform />
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
                         </TransformGroup>
                     </TabItem.RenderTransform>
                     <Grid Background="#FFE5E5E5">
-                        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="23.2" Margin="19,12.76,0,0"
-                                   TextWrapping="Wrap" VerticalAlignment="Top" Width="767.2" FontSize="16"
-                                   RenderTransformOrigin="0.5,0.5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="24" Margin="19,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="768" FontSize="16" RenderTransformOrigin="0.5,0.5" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black">
                             <TextBlock.RenderTransform>
                                 <TransformGroup>
-                                    <ScaleTransform />
-                                    <SkewTransform />
-                                    <RotateTransform />
-                                    <TranslateTransform />
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
                                 </TransformGroup>
-                            </TextBlock.RenderTransform>
-                            <Run Text="启动" /><Run Text="程序路径" /><Run Text="" /><Run Text="：" />
-                        </TextBlock>
-                        <TextBox x:Name="_filepath" HorizontalAlignment="Left" Height="20" Margin="131.8,13.36,0,0"
-                                 Text=".exe" VerticalAlignment="Top" Width="580" FontSize="14"
-                                 RenderTransformOrigin="0.5,0.5">
+                            </TextBlock.RenderTransform><Run Text="启动"/><Run Text="程序路径"/><Run Text=""/><Run Text="："/></TextBlock>
+                        <TextBox x:Name="_filepath" HorizontalAlignment="Left" Height="20" Margin="139.751,13,0,0" Text=".exe" VerticalAlignment="Top" Width="554.666" FontSize="14" RenderTransformOrigin="0.5,0.5" >
                             <TextBox.RenderTransform>
                                 <TransformGroup>
-                                    <ScaleTransform />
-                                    <SkewTransform />
-                                    <RotateTransform />
-                                    <TranslateTransform />
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
                                 </TransformGroup>
                             </TextBox.RenderTransform>
                         </TextBox>
-                        <Button x:Name="button" Content="选取" HorizontalAlignment="Left" Height="20.8"
-                                Margin="716.094,12.76,0,0" VerticalAlignment="Top" Width="60"
-                                RenderTransformOrigin="0.5,0.5">
+                        <Button x:Name="button" Content="选取" HorizontalAlignment="Left" Height="21" Margin="702.041,13,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.5,0.5" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black">
                             <Button.RenderTransform>
                                 <TransformGroup>
-                                    <ScaleTransform />
-                                    <SkewTransform />
-                                    <RotateTransform />
-                                    <TranslateTransform />
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
                                 </TransformGroup>
                             </Button.RenderTransform>
                         </Button>
-                        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Height="49.6" Margin="9.8,85.76,0,0"
-                                   TextWrapping="Wrap" VerticalAlignment="Top" Width="767.2" FontSize="16"
-                                   FontWeight="Bold" FontFamily="/SeewoStart;component/#Segoe UI"
-                                   RenderTransformOrigin="0.5,0.5">
+                        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Height="50" Margin="10,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="768" FontSize="16" FontWeight="Bold" FontFamily="/SeewoStart;component/Font/#DingTalk JinBuTi" RenderTransformOrigin="0.5,0.5">
                             <TextBlock.RenderTransform>
                                 <TransformGroup>
-                                    <ScaleTransform />
-                                    <SkewTransform />
-                                    <RotateTransform />
-                                    <TranslateTransform />
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
                                 </TransformGroup>
-                            </TextBlock.RenderTransform>
-                            <Run Text="文字" /><Run Text=" " />
-                            <Run FontFamily="/SeewoStart;component/#Segoe UI"
-                                 Text="————————————————————————————————————————————" />
-                        </TextBlock>
-                        <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Height="23.2" Margin="19,112.76,0,0"
-                                   TextWrapping="Wrap" VerticalAlignment="Top" Width="767.2" FontSize="16"
-                                   RenderTransformOrigin="0.5,0.5">
+                            </TextBlock.RenderTransform><Run Text="文字"/><Run Text=" "/><Run Text="————————————————————————————————————————————"/></TextBlock>
+                        <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Height="23" Margin="19,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="767" FontSize="16" RenderTransformOrigin="0.5,0.5" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black">
                             <TextBlock.RenderTransform>
                                 <TransformGroup>
-                                    <ScaleTransform />
-                                    <SkewTransform />
-                                    <RotateTransform />
-                                    <TranslateTransform />
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
                                 </TransformGroup>
-                            </TextBlock.RenderTransform>
-                            <Run Text="标题" /><Run Text="：" />
-                        </TextBlock>
-                        <TextBox x:Name="_1" HorizontalAlignment="Left" Height="20" Margin="69.4,113.36,0,0" Text="希沃"
-                                 VerticalAlignment="Top" Width="705.6" FontSize="14" RenderTransformOrigin="0.5,0.5">
+                            </TextBlock.RenderTransform><Run Text="标题"/><Run Text="："/></TextBlock>
+                        <TextBox x:Name="_1" HorizontalAlignment="Left" Height="20" Margin="70.638,113,0,0" Text="希沃" VerticalAlignment="Top" Width="706" FontSize="14" RenderTransformOrigin="0.5,0.5">
                             <TextBox.RenderTransform>
                                 <TransformGroup>
-                                    <ScaleTransform />
-                                    <SkewTransform />
-                                    <RotateTransform />
-                                    <TranslateTransform />
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
                                 </TransformGroup>
                             </TextBox.RenderTransform>
                         </TextBox>
-                        <TextBlock x:Name="textBlock4" HorizontalAlignment="Left" Height="23.2" Margin="19,141.76,0,0"
-                                   TextWrapping="Wrap" VerticalAlignment="Top" Width="767.2" FontSize="16"
-                                   RenderTransformOrigin="0.5,0.5">
+                        <TextBlock x:Name="textBlock4" HorizontalAlignment="Left" Height="24" Margin="19,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="768" FontSize="16" RenderTransformOrigin="0.5,0.5" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black">
                             <TextBlock.RenderTransform>
                                 <TransformGroup>
-                                    <ScaleTransform />
-                                    <SkewTransform />
-                                    <RotateTransform />
-                                    <TranslateTransform />
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
                                 </TransformGroup>
-                            </TextBlock.RenderTransform>
-                            <Run Text="副标题" /><Run Text="：" />
-                        </TextBlock>
-                        <TextBox x:Name="_2" HorizontalAlignment="Left" Height="20" Margin="88.959,142.36,0,0"
-                                 Text="Pro" VerticalAlignment="Top" Width="686.269" FontSize="14"
-                                 RenderTransformOrigin="0.5,0.5">
+                            </TextBlock.RenderTransform><Run Text="副标题"/><Run Text="："/></TextBlock>
+                        <TextBox x:Name="_2" HorizontalAlignment="Left" Height="20" Margin="71.417,142,0,0" Text="Pro" VerticalAlignment="Top" Width="687" FontSize="14" RenderTransformOrigin="0.5,0.5">
                             <TextBox.RenderTransform>
                                 <TransformGroup>
-                                    <ScaleTransform />
-                                    <SkewTransform />
-                                    <RotateTransform />
-                                    <TranslateTransform />
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
                                 </TransformGroup>
                             </TextBox.RenderTransform>
                         </TextBox>
-                        <TextBlock x:Name="textBlock5" HorizontalAlignment="Left" Height="23.2" Margin="19,171.76,0,0"
-                                   TextWrapping="Wrap" VerticalAlignment="Top" Width="767.2" FontSize="16"
-                                   RenderTransformOrigin="0.5,0.5">
+                        <TextBlock x:Name="textBlock5" HorizontalAlignment="Left" Height="24" Margin="19,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="768" FontSize="16" RenderTransformOrigin="0.5,0.5" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black">
                             <TextBlock.RenderTransform>
                                 <TransformGroup>
-                                    <ScaleTransform />
-                                    <SkewTransform />
-                                    <RotateTransform />
-                                    <TranslateTransform />
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
                                 </TransformGroup>
-                            </TextBlock.RenderTransform>
-                            <Run Text="启动文字" /><Run Text="：" />
-                        </TextBlock>
-                        <TextBox x:Name="_3" HorizontalAlignment="Left" Height="20" Margin="105.655,172.36,0,0"
-                                 Text="正在启动！" VerticalAlignment="Top" Width="669.573" FontSize="14"
-                                 RenderTransformOrigin="0.5,0.5">
+                            </TextBlock.RenderTransform><Run Text="启动文字"/><Run Text="："/></TextBlock>
+                        <TextBox x:Name="_3" HorizontalAlignment="Left" Height="20" Margin="88.417,172,0,0" Text="正在启动！" VerticalAlignment="Top" Width="670" FontSize="14" RenderTransformOrigin="0.5,0.5">
                             <TextBox.RenderTransform>
                                 <TransformGroup>
-                                    <ScaleTransform />
-                                    <SkewTransform />
-                                    <RotateTransform />
-                                    <TranslateTransform />
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
                                 </TransformGroup>
                             </TextBox.RenderTransform>
                         </TextBox>
-                        <TextBlock x:Name="textBlock6" HorizontalAlignment="Left" Height="23.2" Margin="19,200.76,0,0"
-                                   TextWrapping="Wrap" VerticalAlignment="Top" Width="767.2" FontSize="16"
-                                   RenderTransformOrigin="0.5,0.5">
+                        <TextBlock x:Name="textBlock6" HorizontalAlignment="Left" Height="24" Margin="19,201,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="768" FontSize="16" RenderTransformOrigin="0.5,0.5" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black">
                             <TextBlock.RenderTransform>
                                 <TransformGroup>
-                                    <ScaleTransform />
-                                    <SkewTransform />
-                                    <RotateTransform />
-                                    <TranslateTransform />
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
                                 </TransformGroup>
-                            </TextBlock.RenderTransform>
-                            <Run Text="警示" /><Run Text="文字" /><Run Text="：" />
-                        </TextBlock>
-                        <TextBox x:Name="_4" HorizontalAlignment="Left" Height="20" Margin="105.655,201.36,0,0"
-                                 Text="抵制扰乱秩序，坚持认真上课，注意自我提醒，谨防上课睡觉；适度教学益脑，拖堂教学伤身，合理安排时间，享受快乐教学。"
-                                 VerticalAlignment="Top" Width="669.573" FontSize="14" MaxLines="1"
-                                 RenderTransformOrigin="0.5,0.5">
+                            </TextBlock.RenderTransform><Run Text="警示"/><Run Text="文字"/><Run Text="："/></TextBlock>
+                        <TextBox x:Name="_4" HorizontalAlignment="Left" Height="20" Margin="88.417,201,0,0" Text="抵制扰乱秩序，坚持认真上课，注意自我提醒，谨防上课睡觉；适度教学益脑，拖堂教学伤身，合理安排时间，享受快乐教学。" VerticalAlignment="Top" Width="670" FontSize="14" MaxLines="1" RenderTransformOrigin="0.5,0.5">
                             <TextBox.RenderTransform>
                                 <TransformGroup>
-                                    <ScaleTransform />
-                                    <SkewTransform />
-                                    <RotateTransform />
-                                    <TranslateTransform />
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
                                 </TransformGroup>
                             </TextBox.RenderTransform>
                         </TextBox>
-                        <TextBlock x:Name="textBlock7" HorizontalAlignment="Left" Height="23.2" Margin="19,228.76,0,0"
-                                   TextWrapping="Wrap" VerticalAlignment="Top" Width="767.2" FontSize="16"
-                                   RenderTransformOrigin="0.5,0.5">
+                        <TextBlock x:Name="textBlock7" HorizontalAlignment="Left" Height="24" Margin="19,229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="768" FontSize="16" RenderTransformOrigin="0.5,0.5" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black">
                             <TextBlock.RenderTransform>
                                 <TransformGroup>
-                                    <ScaleTransform />
-                                    <SkewTransform />
-                                    <RotateTransform />
-                                    <TranslateTransform />
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
                                 </TransformGroup>
-                            </TextBlock.RenderTransform>
-                            <Run Text="版权文字" /><Run Text="：" />
-                        </TextBlock>
-                        <TextBox x:Name="_5" HorizontalAlignment="Left" Height="20" Margin="105.655,229.36,0,0"
-                                 VerticalAlignment="Top" Width="669.573" FontSize="14" MaxLines="1"
-                                 Text="Copyright © 2011-2023 Guangzhou Shirui. All Rights Reserved"
-                                 RenderTransformOrigin="0.5,0.5">
+                            </TextBlock.RenderTransform><Run Text="版权文字"/><Run Text="："/></TextBlock>
+                        <TextBox x:Name="_5" HorizontalAlignment="Left" Height="20" Margin="88.417,229,0,0" VerticalAlignment="Top" Width="670" FontSize="14" MaxLines="1" Text="Copyright © 2011-2023 Guangzhou Shirui. All Rights Reserved" RenderTransformOrigin="0.5,0.5">
                             <TextBox.RenderTransform>
                                 <TransformGroup>
-                                    <ScaleTransform />
-                                    <SkewTransform />
-                                    <RotateTransform />
-                                    <TranslateTransform />
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
                                 </TransformGroup>
                             </TextBox.RenderTransform>
                         </TextBox>
-                        <TextBlock x:Name="textBlock8" HorizontalAlignment="Left" Height="49.6" Margin="9.8,262.76,0,0"
-                                   TextWrapping="Wrap" VerticalAlignment="Top" Width="767.2" FontSize="16"
-                                   FontWeight="Bold" FontFamily="/SeewoStart;component/#Segoe UI"
-                                   RenderTransformOrigin="0.5,0.5">
+                        <TextBlock x:Name="textBlock8" HorizontalAlignment="Left" Height="50" Margin="10,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="768" FontSize="16" FontWeight="Bold" FontFamily="/SeewoStart;component/Font/#DingTalk JinBuTi" RenderTransformOrigin="0.5,0.5">
                             <TextBlock.RenderTransform>
                                 <TransformGroup>
-                                    <ScaleTransform />
-                                    <SkewTransform />
-                                    <RotateTransform />
-                                    <TranslateTransform />
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
                                 </TransformGroup>
-                            </TextBlock.RenderTransform>
-                            <Run Text="音效" /><Run Text=" ——————————————————" /><Run Text="——————————————" />
-                            <Run Text="————————————" />
-                        </TextBlock>
-                        <TextBlock x:Name="textBlock9" HorizontalAlignment="Left" Height="23.2" Margin="19,289.76,0,0"
-                                   TextWrapping="Wrap" VerticalAlignment="Top" Width="767.2" FontSize="16"
-                                   RenderTransformOrigin="0.5,0.5">
+                            </TextBlock.RenderTransform><Run Text="音效"/><Run Text=" ——————————————————"/><Run Text="——————————————"/><Run Text="————————————"/></TextBlock>
+                        <TextBlock x:Name="textBlock9" HorizontalAlignment="Left" Height="24" Margin="19,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="768" FontSize="16" RenderTransformOrigin="0.5,0.5" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black">
                             <TextBlock.RenderTransform>
                                 <TransformGroup>
-                                    <ScaleTransform />
-                                    <SkewTransform />
-                                    <RotateTransform />
-                                    <TranslateTransform />
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
                                 </TransformGroup>
-                            </TextBlock.RenderTransform>
-                            <Run Text="音效" /><Run Text="：" />
-                        </TextBlock>
-                        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="20" Margin="69.4,290.36,0,0"
-                                 Text="Start.wav" VerticalAlignment="Top" Width="642.4" FontSize="14"
-                                 RenderTransformOrigin="0.5,0.5" IsReadOnly="True">
+                            </TextBlock.RenderTransform><Run Text="音效"/><Run Text="："/></TextBlock>
+                        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="20" Margin="70.638,290,0,0" Text="Start.wav" VerticalAlignment="Top" Width="643" FontSize="14" RenderTransformOrigin="0.5,0.5" IsReadOnly="True">
                             <TextBox.RenderTransform>
                                 <TransformGroup>
-                                    <ScaleTransform />
-                                    <SkewTransform />
-                                    <RotateTransform />
-                                    <TranslateTransform />
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
                                 </TransformGroup>
                             </TextBox.RenderTransform>
                         </TextBox>
-                        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="23.2" Margin="19,40.76,0,0"
-                                   TextWrapping="Wrap" VerticalAlignment="Top" Width="767.2" FontSize="16"
-                                   RenderTransformOrigin="0.5,0.5">
+                        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="24" Margin="19,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="768" FontSize="16" RenderTransformOrigin="0.5,0.5" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black">
                             <TextBlock.RenderTransform>
                                 <TransformGroup>
-                                    <ScaleTransform />
-                                    <SkewTransform />
-                                    <RotateTransform />
-                                    <TranslateTransform />
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
                                 </TransformGroup>
-                            </TextBlock.RenderTransform>
-                            <Run Text="主题" /><Run Text="：" />
-                            <InlineUIContainer>
-                                <MenuItem Header="MenuItem" Height="2.4" Width="2.4" />
-                            </InlineUIContainer>
-                        </TextBlock>
-                        <CheckBox x:Name="checkBox" Content="启动时随机选择主题" HorizontalAlignment="Left" Height="16.8"
-                                  Margin="20.2,66.76,0,0" VerticalAlignment="Top" Width="268" IsChecked="True"
-                                  RenderTransformOrigin="0.5,0.5">
+                            </TextBlock.RenderTransform><Run Text="主题"/><Run Text="："/><InlineUIContainer>
+                            <MenuItem Header="MenuItem" Height="2.4" Width="2.4"/>
+                        </InlineUIContainer></TextBlock>
+                        <CheckBox x:Name="checkBox" Content="启动时随机选择主题" HorizontalAlignment="Left" Height="17" Margin="20,67,0,0" VerticalAlignment="Top" Width="268" IsChecked="True" RenderTransformOrigin="0.5,0.5" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black">
                             <CheckBox.RenderTransform>
                                 <TransformGroup>
-                                    <ScaleTransform />
-                                    <SkewTransform />
-                                    <RotateTransform />
-                                    <TranslateTransform />
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
                                 </TransformGroup>
                             </CheckBox.RenderTransform>
                         </CheckBox>
-                        <Button x:Name="button1" Content="选取" HorizontalAlignment="Left" Height="20.8"
-                                Margin="716.658,289.76,0,0" VerticalAlignment="Top" Width="60"
-                                RenderTransformOrigin="0.5,0.5">
+                        <Button x:Name="button1" Content="选取" HorizontalAlignment="Left" Height="21" Margin="720.541,289.5,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.5,0.5" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black">
                             <Button.RenderTransform>
                                 <TransformGroup>
-                                    <ScaleTransform />
-                                    <SkewTransform />
-                                    <RotateTransform />
-                                    <TranslateTransform />
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
                                 </TransformGroup>
                             </Button.RenderTransform>
                         </Button>
-                        <CheckBox x:Name="checkBox1" Content="我不想要启动音效" HorizontalAlignment="Left" Height="16.8"
-                                  Margin="20.2,317.76,0,0" VerticalAlignment="Top" Width="268"
-                                  RenderTransformOrigin="0.5,0.5">
+                        <CheckBox x:Name="checkBox1" Content="我不想要启动音效" HorizontalAlignment="Left" Height="17" Margin="20,318,0,0" VerticalAlignment="Top" Width="268" RenderTransformOrigin="0.5,0.5" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black">
                             <CheckBox.RenderTransform>
                                 <TransformGroup>
-                                    <ScaleTransform />
-                                    <SkewTransform />
-                                    <RotateTransform />
-                                    <TranslateTransform />
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
                                 </TransformGroup>
                             </CheckBox.RenderTransform>
                         </CheckBox>
-                        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="711.2"
-                                  Margin="64.8,42.4,0,0" IsEnabled="False" RenderTransformOrigin="0.5,0.5"
-                                  SelectedIndex="0">
+                        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="711" Margin="66.638,42,0,0" IsEnabled="False" RenderTransformOrigin="0.5,0.5" SelectedIndex="0">
                             <ComboBox.RenderTransform>
                                 <TransformGroup>
-                                    <ScaleTransform />
-                                    <SkewTransform />
-                                    <RotateTransform />
-                                    <TranslateTransform />
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
                                 </TransformGroup>
                             </ComboBox.RenderTransform>
                         </ComboBox>
-                        <Button x:Name="saving" Content="全部应用" HorizontalAlignment="Left" Height="30.4"
-                                Margin="654.094,397.52,0,0" VerticalAlignment="Top" Width="130.4"
-                                RenderTransformOrigin="0.5,0.5">
+
+                        <Button x:Name="saving" Content="全部应用" HorizontalAlignment="Left" Height="30" Margin="640.041,398,0,0" VerticalAlignment="Top" Width="130" RenderTransformOrigin="0.5,0.5" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black">
                             <Button.RenderTransform>
                                 <TransformGroup>
-                                    <ScaleTransform />
-                                    <SkewTransform />
-                                    <RotateTransform />
-                                    <TranslateTransform />
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
                                 </TransformGroup>
                             </Button.RenderTransform>
                         </Button>
+
                     </Grid>
                 </TabItem>
-                <TabItem x:Name="tabItem1" Header="主题编辑" HorizontalAlignment="Left" Width="64"
-                         RenderTransformOrigin="0.5,0.5">
+                <TabItem x:Name="tabItem1" Header="主题编辑" HorizontalAlignment="Left" Width="64" RenderTransformOrigin="0.5,0.5">
                     <TabItem.RenderTransform>
                         <TransformGroup>
-                            <ScaleTransform />
-                            <SkewTransform />
-                            <RotateTransform />
-                            <TranslateTransform />
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
                         </TransformGroup>
                     </TabItem.RenderTransform>
                     <Grid Background="#FFE5E5E5" Height="435.16" VerticalAlignment="Top" Margin="0,0,0,-1.6">
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="103*" />
-                            <RowDefinition Height="8*" />
-                            <RowDefinition Height="325*" />
+                            <RowDefinition/>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="37*" />
-                            <ColumnDefinition Width="57*" />
-                            <ColumnDefinition Width="302*" />
+                            <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <TextBlock HorizontalAlignment="Left" Height="49.6" Margin="9.8,6.76,0,0" TextWrapping="Wrap"
-                                   VerticalAlignment="Top" Width="767.2" FontSize="16" FontWeight="Bold"
-                                   FontFamily="/SeewoStart;component/#Segoe UI" Grid.ColumnSpan="3">
-                            <Run Text="图片" /><Run Text=" ——————————————————" /><Run Text="——————————————" />
-                            <Run Text="————————————" />
-                        </TextBlock>
-                        <TextBlock HorizontalAlignment="Left" Height="23.2" Margin="19,33.76,0,0" TextWrapping="Wrap"
-                                   VerticalAlignment="Top" Width="767.2" FontSize="16" Text="背景：" Grid.ColumnSpan="3" />
-                        <TextBox x:Name="tbackground" HorizontalAlignment="Left" Height="20" Margin="69.4,34.36,0,0"
-                                 Text="/Assets/images/mihoyo_icon_bgless.png" VerticalAlignment="Top" Width="642.4"
-                                 FontSize="14"
-                                 Grid.ColumnSpan="3" IsReadOnly="True" />
-                        <Button x:Name="xbacoground" Content="选取" HorizontalAlignment="Left" Height="20.8"
-                                Margin="528.433,33.76,0,0" VerticalAlignment="Top" Width="60" Grid.Column="2" />
-                        <TextBlock HorizontalAlignment="Left" Height="23.2" Margin="19,62.76,0,0" TextWrapping="Wrap"
-                                   VerticalAlignment="Top" Width="767.2" FontSize="16" Grid.ColumnSpan="3">
-                            <Run Text="商标" /><Run Text="：" />
-                        </TextBlock>
-                        <TextBox x:Name="ttrademark" HorizontalAlignment="Left" Height="20" Margin="69.4,63.36,0,0"
-                                 Text="trademark.png" VerticalAlignment="Top" Width="642.4" FontSize="14"
-                                 Grid.ColumnSpan="3" IsReadOnly="True" />
-                        <Button x:Name="xtrademark" Content="选取" HorizontalAlignment="Left" Height="20.8"
-                                Margin="528.433,62.76,0,0" VerticalAlignment="Top" Width="60" Grid.Column="2" />
-                        <TextBlock HorizontalAlignment="Left" Height="23.2" Margin="19,92.76,0,0" TextWrapping="Wrap"
-                                   VerticalAlignment="Top" Width="767.2" FontSize="16" Grid.ColumnSpan="3"
-                                   Grid.RowSpan="3">
-                            <Run Text="图标" /><Run Text="：" />
-                        </TextBlock>
-                        <TextBox x:Name="tstartimg" HorizontalAlignment="Left" Height="20" Margin="69.4,93.36,0,0"
-                                 Text="StartIMG.png" VerticalAlignment="Top" Width="642.4" FontSize="14"
-                                 Grid.ColumnSpan="3" IsReadOnly="True" Grid.RowSpan="3" />
-                        <Button x:Name="xstartimg" Content="选取" HorizontalAlignment="Left" Height="20.8"
-                                Margin="528.433,92.76,0,0" VerticalAlignment="Top" Width="60" Grid.Column="2"
-                                Grid.RowSpan="3" />
-                        <Image x:Name="image1" HorizontalAlignment="Left" Height="253.44" Margin="123.175,55.278,0,0"
-                               VerticalAlignment="Top" Width="460.8" Grid.Column="2"
-                               Source="/Assets/images/mihoyo_icon_bgless.png"
-                               Stretch="UniformToFill" Grid.Row="2" />
-                        <Image x:Name="image2" Margin="133.711,64.718,407.472,230.495"
-                               Source="/Assets/images/mihoyo_icon_bgless.png" Stretch="Uniform"
-                               RenderTransformOrigin="0.5,0.5"
-                               Grid.Column="2" Grid.Row="2">
+                        <TextBlock HorizontalAlignment="Left" Height="50" Margin="10,7,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="768" FontSize="16" FontWeight="Bold" FontFamily="/SeewoStart;component/Font/#DingTalk JinBuTi"><Run Text="图片"/><Run Text=" ——————————————————"/><Run Text="——————————————"/><Run Text="————————————"/></TextBlock>
+                        <Image x:Name="image1" HorizontalAlignment="Left" Height="208.959" Margin="399.545,39.827,0,0" VerticalAlignment="Top" Width="385.334" Source="default-img/9月29日.png" Stretch="UniformToFill"/>
+                        <Image x:Name="image2" Margin="418.879,45.66,310.999,359.871" Source="default-img/splash-removebg-preview.png" Stretch="Uniform" RenderTransformOrigin="0.5,0.5">
                             <Image.RenderTransform>
                                 <TransformGroup>
-                                    <ScaleTransform />
-                                    <SkewTransform />
-                                    <RotateTransform />
-                                    <TranslateTransform />
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
                                 </TransformGroup>
                             </Image.RenderTransform>
                         </Image>
-                        <Image x:Name="yuanshen" Margin="294.042,137.218,193.7,96.801"
-                               Source="/Assets/images/genshin_icon_bgless.png"
-                               Stretch="Uniform" RenderTransformOrigin="0.5,0.5" Grid.Column="2" Grid.Row="2">
+                        <Image x:Name="yuanshen" Margin="535.379,97.786,121.721,247.5" Source="default-img/ys.png" Stretch="Uniform" RenderTransformOrigin="0.5,0.5"  >
                             <Image.RenderTransform>
                                 <TransformGroup>
-                                    <ScaleTransform />
-                                    <SkewTransform />
-                                    <RotateTransform />
-                                    <TranslateTransform />
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
                                 </TransformGroup>
                             </Image.RenderTransform>
                         </Image>
-                        <TextBlock x:Name="cuowu" HorizontalAlignment="Left" Height="23.2" Margin="423.8,289.878,0,0"
-                                   TextWrapping="Wrap" VerticalAlignment="Top" Width="149.6" FontSize="16"
-                                   Grid.Column="2" Text="请重新选择一个主题" Foreground="Red" Visibility="Hidden" Grid.Row="2" />
-                        <TextBlock HorizontalAlignment="Left" Height="23.2" Margin="19,8.974,0,0" TextWrapping="Wrap"
-                                   VerticalAlignment="Top" Width="767.2" FontSize="16" Grid.ColumnSpan="3" Grid.Row="2">
-                            <Run Text="主题名称" /><Run Text="：" />
-                        </TextBlock>
-                        <TextBox x:Name="sname" HorizontalAlignment="Left" Height="20" Margin="27.837,9.574,0,0"
-                                 Text="DEFAULT" VerticalAlignment="Top" Width="610.4" FontSize="14" Grid.ColumnSpan="2"
-                                 Grid.Row="2" Grid.Column="1" />
-                        <Button x:Name="namesave" Content="应用" HorizontalAlignment="Left" Height="20.8"
-                                Margin="528.433,8.974,0,0" VerticalAlignment="Top" Width="60" Grid.Column="2"
-                                Grid.Row="2" />
+                        <MediaElement x:Name="kdtkyd6666" Margin="399.531,39.827,0,0" RenderTransformOrigin="0.5,0.5" AllowDrop="True" ScrubbingEnabled="True" IsEnabled="False" LoadedBehavior="Manual" Width="{Binding ActualWidth, ElementName=image1}" Height="{Binding ActualHeight, ElementName=image1}" HorizontalAlignment="Left" VerticalAlignment="Top" Stretch="UniformToFill" UnloadedBehavior="Manual" Volume="-1">
+                            <MediaElement.RenderTransform>
+
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </MediaElement.RenderTransform>
+                        </MediaElement>
+                        <TextBlock x:Name="cuowu" HorizontalAlignment="Left" Height="24" Margin="463.879,392.041,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="16" Text="请重新选择一个主题" Foreground="Red"  />
+                        <CheckBox x:Name="MP4114" Content="禁用启动视频" HorizontalAlignment="Left" Height="28" Margin="448.905,282.915,0,0" VerticalAlignment="Top" Width="103" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black" IsEnabled="False"/>
+                        <Button x:Name="namesave_Copy1" Content="全部应用" HorizontalAlignment="Left" Height="40.5" Margin="630.963,377.724,0,0" VerticalAlignment="Top" Width="133.442" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
+                        <CheckBox x:Name="MP4114_Copy1" Content="启动视频点击" HorizontalAlignment="Left" Height="22" Margin="556.905,282.915,0,0" VerticalAlignment="Top" Width="103" IsEnabled="False" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
+                        <CheckBox x:Name="MP4114_Copy" Content="窗口化启动视频" HorizontalAlignment="Left" Height="28" Margin="666.906,283.416,0,0" VerticalAlignment="Top" Width="107" IsEnabled="False" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
+                        <ScrollViewer Margin="8.004,22.727,403.496,0" VerticalAlignment="Top" Height="393.314">
+                            <StackPanel>
+                                <Grid Height="637.524" Margin="-5,0,0,0">
+                                    <TextBlock HorizontalAlignment="Left" Height="24" Margin="15,12,-26.233,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="768" FontSize="16" Text="背景：" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
+                                    <TextBox x:Name="tbackground" HorizontalAlignment="Left" Height="20" Margin="16.689,39,0,0" Text="background.png" VerticalAlignment="Top" Width="343" FontSize="14" IsReadOnly="True" />
+                                    <Button x:Name="xbacoground" Content="选取" HorizontalAlignment="Left" Height="21" Margin="65.879,11.5,0,0" VerticalAlignment="Top" Width="60" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
+                                    <TextBlock HorizontalAlignment="Left" Height="24" Margin="15,69,-26.233,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="768" FontSize="16" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"><Run Text="商标"/><Run Text="："/></TextBlock>
+                                    <TextBox x:Name="ttrademark" HorizontalAlignment="Left" Height="20" Margin="16.189,98.5,0,0" Text="trademark.png" VerticalAlignment="Top" Width="343" FontSize="14" IsReadOnly="True"/>
+                                    <Button x:Name="xtrademark" Content="选取" HorizontalAlignment="Left" Height="21" Margin="65.879,69,0,0" VerticalAlignment="Top" Width="60" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
+                                    <TextBlock HorizontalAlignment="Left" Height="24" Margin="15,129,-26.233,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="768" FontSize="16" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"><Run Text="图标"/><Run Text="："/></TextBlock>
+                                    <TextBox x:Name="tstartimg" HorizontalAlignment="Left" Height="20" Margin="16.189,157.5,0,0" Text="StartIMG.png" VerticalAlignment="Top" Width="343" FontSize="14" IsReadOnly="True"/>
+                                    <Button x:Name="xstartimg" Content="选取" HorizontalAlignment="Left" Height="21" Margin="66.379,129,0,0" VerticalAlignment="Top" Width="60" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
+                                    <TextBlock HorizontalAlignment="Left" Height="24" Margin="15,188.786,-26.233,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="768" FontSize="16" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"><Run Text="主题名称"/><Run Text="："/></TextBlock>
+                                    <TextBox x:Name="sname" HorizontalAlignment="Left" Height="20" Margin="16.189,216.786,0,0" Text="DEFAULT" VerticalAlignment="Top" Width="343" FontSize="14"/>
+                                    <Button x:Name="namesave" Content="应用" HorizontalAlignment="Left" Height="21" Margin="97.879,188.786,0,0" VerticalAlignment="Top" Width="60" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
+                                    <TextBlock HorizontalAlignment="Left" Height="24" Margin="15,247.286,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="82" FontSize="16" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"><Run Text="启动视频"/><Run Text="："/></TextBlock>
+                                    <Button x:Name="namesave_Copy" Content="选取" HorizontalAlignment="Left" Height="21" Margin="97.879,246.786,0,0" VerticalAlignment="Top" Width="60" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
+                                    <Button x:Name="namesave_Copy2" Content="选取" HorizontalAlignment="Left" Height="21" Margin="105.379,303.786,0,0" VerticalAlignment="Top" Width="60" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
+                                    <TextBlock Height="24" Margin="15,302.786,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" HorizontalAlignment="Left" Width="111.5" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"><Run Text="启动视频2"/><Run Text="："/></TextBlock>
+                                    <TextBox x:Name="sname_Copy" HorizontalAlignment="Left" Height="20" Margin="16.189,274.286,0,0" Text="startmp4.mp4" VerticalAlignment="Top" Width="343" FontSize="14" IsReadOnly="True"/>
+                                    <TextBox x:Name="sname_Copy1" HorizontalAlignment="Left" Height="20" Margin="16.189,330.786,0,0" Text="starmp41.mp4" VerticalAlignment="Top" Width="343" FontSize="14" IsReadOnly="True"/>
+                                    <TextBlock HorizontalAlignment="Left" Height="33.44" Margin="15,392.745,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="101" Text="标题:" FontSize="17" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
+                                    <TextBox x:Name="_1_1" HorizontalAlignment="Left" Height="33.174" Margin="16.689,419.745,0,0" Text="希沃 " VerticalAlignment="Top" Width="343" FontSize="14" AcceptsTab="True" MaxHeight="20"/>
+                                    <TextBlock HorizontalAlignment="Left" Height="33.44" Margin="15,442.025,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="101" Text="副标题:" FontSize="17" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
+                                    <TextBox x:Name="_2_2" HorizontalAlignment="Left" Height="33.175" Margin="16.689,467.689,0,0" Text="Pro" VerticalAlignment="Top" Width="343" FontSize="14" MaxHeight="20"/>
+                                    <TextBlock HorizontalAlignment="Left" Height="33.44" Margin="15,487.785,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="101" Text="启动文字:" FontSize="16" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
+                                    <TextBox x:Name="_3_3" HorizontalAlignment="Left" Height="33.176" Margin="16.689,512.316,0,0" Text="寓教于乐 2.0" VerticalAlignment="Top" Width="343" FontSize="14" MaxHeight="20"/>
+                                    <TextBlock HorizontalAlignment="Left" Height="33.44" Margin="15,533.545,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="101" Text="警示文字:" FontSize="16" Cursor="None" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
+                                    <TextBox x:Name="_4_4" HorizontalAlignment="Left" Height="33.174" Margin="16.689,555.444,0,0" VerticalAlignment="Top" Width="343" FontSize="14" Text="抵制扰乱秩序，坚持认真上课，注意自我提醒，谨防上课睡觉；适度教学益脑，拖堂教学伤身，合理安排时间，享受快乐教学。" MaxHeight="20"/>
+                                    <TextBlock HorizontalAlignment="Left" Height="33.44" Margin="15,579.305,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="101" Text="版权文字:" FontSize="16" Cursor="Arrow" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
+                                    <TextBox x:Name="_5_5" HorizontalAlignment="Left" Height="33.174" Margin="16.689,603.071,0,-17.721" Text="Copyright © 2011-2024 Guangzhou Shirui. All Rights Reserved" VerticalAlignment="Top" Width="343" FontSize="14"  MaxHeight="20"/>
+                                    <CheckBox x:Name="ff" Content="文字跟随主题（支持每个主题单独设置以下内容）" HorizontalAlignment="Left" Height="21" Margin="15.5,369.245,0,0" VerticalAlignment="Top" Width="335" FontSize="14" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
+                                </Grid>
+                            </StackPanel>
+                        </ScrollViewer>
                     </Grid>
                 </TabItem>
                 <TabItem x:Name="advanced" Header="高级设置" Margin="-2,0" Height="18.84" VerticalAlignment="Bottom">
                     <TabItem.RenderTransform>
                         <TransformGroup>
-                            <ScaleTransform />
-                            <SkewTransform />
-                            <RotateTransform />
-                            <TranslateTransform />
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </TabItem.RenderTransform>
+                    <Grid Background="#FFE5E5E5" Height="435" VerticalAlignment="Top" Margin="0,0,0,-2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock HorizontalAlignment="Left" Height="23.2" Margin="19,9.76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="767.2" FontSize="16" Text="窗口监测：" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
+                        <TextBox x:Name="windowname" Height="20" Margin="101.655,10.36,16.733,0" Text="DEFAULT" VerticalAlignment="Top" FontSize="14"/>
+                        <Button x:Name="windowsave" Content="应用" HorizontalAlignment="Left" Height="20.8" Margin="692,69.2,0,0" VerticalAlignment="Top" Width="60" FontFamily="/SeewoStart;component/#DingTalk JinBuTi" Visibility="Hidden"/>
+                        <TextBlock HorizontalAlignment="Left" Height="23" Margin="19,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="767" FontSize="16" Text="建议在开发者的指导下修改，任意修改可能会造成判定失误！" Foreground="#FFFF0404" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
+                        <CheckBox x:Name="cs" Content="是否带参数启动" HorizontalAlignment="Left" Height="18" Margin="10,41,0,0" VerticalAlignment="Top" Width="152" IsChecked="True" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
+                        <TextBox x:Name="cstext" HorizontalAlignment="Left" Height="16" Margin="121.818,39,0,0" TextWrapping="Wrap" Text="-m Display -iwb" VerticalAlignment="Top" Width="254"/>
+                        <CheckBox x:Name="ckjczq" Content="窗口检测在前 (可防止希沃白板已经启动，但又多次启动的问题）" HorizontalAlignment="Left" Height="21" Margin="12,100,0,0" VerticalAlignment="Top" Width="391" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
+                        <CheckBox x:Name="cjmode" Content="⚡沉浸式模式⚡(去除希沃Pro文本框的显示，高度还原神启动画面)" HorizontalAlignment="Left" Height="33" Margin="13,146,0,0" VerticalAlignment="Top" Width="426" Visibility="Hidden"/>
+                        <Button x:Name="windowsave_Copy" Content="应用（仅主题文字）" HorizontalAlignment="Left" Height="34.3" Margin="636.838,342,0,0" VerticalAlignment="Top" Width="115.162" Visibility="Hidden"/>
+                        <Button x:Name="windowsave_Copy1" Content="全部应用" HorizontalAlignment="Left" Height="34.3" Margin="37.838,383,0,0" VerticalAlignment="Top" Width="115.162" FontFamily="/SeewoStart;component/#DingTalk JinBuTi"/>
+                        <CheckBox x:Name="cs_Copy" Content="启动视频窗口设置 如勾选，则在视频放完后启动程序，反之，您可以输入一个毫秒数(1s=1000ms),启动器将在您设置的时间启动程序！" HorizontalAlignment="Left" Height="19" Margin="10,122,0,0" VerticalAlignment="Top" Width="742" IsChecked="True" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
+                        <TextBox x:Name="cstext_Copy" HorizontalAlignment="Left" Height="16" Margin="34,141.5,0,0" TextWrapping="Wrap" Text="5000" VerticalAlignment="Top" Width="254"/>
+                        <TextBlock HorizontalAlignment="Left" Height="19" Margin="236.1,381.3,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="545.5" Text="注意:保存文字跟随主题先点此按钮，再点全部应用，不然不生效！！ ↑" FontSize="16" Foreground="#FFF70303" Visibility="Hidden"/>
+
+                    </Grid>
+                </TabItem>
+                <TabItem x:Name="gy" Header="关于页面" Margin="-2,0" Height="18.84" VerticalAlignment="Bottom">
+                    <TabItem.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
                         </TransformGroup>
                     </TabItem.RenderTransform>
                     <Grid Background="#FFE5E5E5" Height="435.16" VerticalAlignment="Top" Margin="0,0,0,-1.6">
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="103*" />
-                            <RowDefinition Height="8*" />
-                            <RowDefinition Height="325*" />
+                            <RowDefinition/>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="37*" />
-                            <ColumnDefinition Width="57*" />
-                            <ColumnDefinition Width="302*" />
+                            <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <TextBlock HorizontalAlignment="Left" Height="23.2" Margin="19,9.76,0,0" TextWrapping="Wrap"
-                                   VerticalAlignment="Top" Width="767.2" FontSize="16" Grid.ColumnSpan="3" Text="窗口监测：" />
-                        <TextBox x:Name="windowname" Height="20" Margin="27.837,10.36,79.4,0" Text="DEFAULT"
-                                 VerticalAlignment="Top" FontSize="14" Grid.ColumnSpan="2" Grid.Column="1" />
-                        <Button x:Name="windowsave" Content="应用" HorizontalAlignment="Left" Height="20.8"
-                                Margin="528.433,9.76,0,0" VerticalAlignment="Top" Width="60" Grid.Column="2" />
-                        <TextBlock HorizontalAlignment="Left" Height="23.2" Margin="19,42.76,0,0" TextWrapping="Wrap"
-                                   VerticalAlignment="Top" Width="767.2" FontSize="16" Grid.ColumnSpan="3"
-                                   Text="建议在开发者的指导下修改，任意修改可能会造成判定失误！" />
-                        <TextBlock HorizontalAlignment="Left" Height="49.6" Margin="9.8,87.76,0,0" TextWrapping="Wrap"
-                                   VerticalAlignment="Top" Width="767.2" FontSize="16" FontWeight="Bold"
-                                   FontFamily="/SeewoStart;component/#Segoe UI" Grid.ColumnSpan="3" Grid.RowSpan="3">
-                            <Run Text="关于和鸣谢" /><Run Text=" ——————————————————" /><Run Text="——————————————" />
-                            <Run Text="—————————" />
-                        </TextBlock>
-                        <Image Margin="24.2,13.414,98.905,246.16" Source="/Assets/images/srinternet_icon_bgless.png"
-                               Stretch="Fill" Grid.Row="2"
-                               Grid.ColumnSpan="2" />
-                        <TextBlock HorizontalAlignment="Left" Height="55.2" Margin="17.637,24.574,0,0"
-                                   TextWrapping="Wrap" VerticalAlignment="Top" Width="417.6" FontSize="18"
-                                   Grid.Column="1" Grid.Row="2" FontFamily="DingTalk JinBuTi" Grid.ColumnSpan="2">
-                            <Run Text="本程序由 " /><Run Foreground="#FF8E32E3" Text="思锐工作室 " /><Run Text="制作" />
-                            <LineBreak /><Run Text="M" /><Run Text="ade by " />
-                            <Run Foreground="#FF8E32E3" FontWeight="Bold" Text="SR Studio" />
-                        </TextBlock>
-                        <Image Margin="24.2,88.414,98.905,171.16" Source="/Assets/images/alist.png" Stretch="Fill"
-                               Grid.Row="2"
-                               Grid.ColumnSpan="2" />
-                        <TextBlock HorizontalAlignment="Left" Height="55.2" Margin="17.637,98.574,0,0"
-                                   TextWrapping="Wrap" VerticalAlignment="Top" Width="417.6" FontSize="18"
-                                   Grid.Column="1" Grid.Row="2" FontFamily="DingTalk JinBuTi" Grid.ColumnSpan="2">
-                            <Run Text="本程序由 " /><Run Foreground="#FF289FCF" Text="思锐云盘 " />
-                            <Run Foreground="#FF75C0B7" Text="Powered by AList" /><LineBreak /><Run Text="提供下载和服务支持" />
-                        </TextBlock>
-                        <Image Margin="27.4,169.614,102.105,96.36" Source="/Assets/images/github.png" Stretch="Fill"
-                               Grid.Row="2"
-                               Grid.ColumnSpan="2" />
-                        <TextBlock HorizontalAlignment="Left" Height="55.2" Margin="17.637,176.574,0,0"
-                                   TextWrapping="Wrap" VerticalAlignment="Top" Width="417.6" FontSize="18"
-                                   Grid.Column="1" Grid.Row="2" FontFamily="DingTalk JinBuTi" Grid.ColumnSpan="2">
-                            <Run Text="本程序" /><Run Text="在 Github 上维护" /><Run Text=" " />
-                            <Run Foreground="#FFFF6500" FontWeight="Bold" TextDecorations="Underline" /><LineBreak />
-                            <Run Foreground="#FFFF6500" FontWeight="Bold" Text="遵顼Apache开源协议"
-                                 TextDecorations="Underline" />
-                        </TextBlock>
-                        <Image Margin="27.4,242.614,102.105,23.36" Source="/Assets/icons/sbenlauncher.ico"
-                               Stretch="Fill"
-                               Grid.Row="2" Grid.ColumnSpan="2" />
-                        <TextBlock HorizontalAlignment="Left" Height="55.2" Margin="17.637,249.574,0,0"
-                                   TextWrapping="Wrap" VerticalAlignment="Top" Width="417.6" FontSize="18"
-                                   Grid.Column="1" Grid.Row="2" FontFamily="DingTalk JinBuTi" Grid.ColumnSpan="2">
-                            <Run Text="本程序" /><Run Text="灵感来源于 " /><Run Foreground="#FF2DB45C" Text="希沃白板" />
-                            <LineBreak /><Run Text="仅供娱乐使用，如有侵权请联系" /><LineBreak />
-                        </TextBlock>
-                        <TextBlock HorizontalAlignment="Left" Height="299.4" Margin="239.895,11.174,0,0"
-                                   TextWrapping="Wrap" VerticalAlignment="Top" Width="352" FontSize="14"
-                                   Grid.Column="2" Grid.Row="2">
-                            <Run Text="本程序所使用第三方字体：" /><LineBreak /><Run Text="1. " />
-                            <Run FontFamily="DingTalk JinBuTi" Text="钉钉进步体" /><LineBreak /><Run Text="2. " />
-                            <Run FontFamily="/SeewoStart;component/#Segoe UI" Text="汉仪文黑" /><LineBreak /><Run />
-                            <LineBreak /><Run Text="本程序所使用的默认第三方素材来源：" /><LineBreak /><Run Text="1. 原神（米哈游） " />
-                            <LineBreak /><Run Text="2. 阴阳师（网易游戏）" /><LineBreak /><Run Text="3. Minecraft（Mojang）" />
-                            <LineBreak /><Run Text="所使用的素材如有侵权，请联系我们。" /><LineBreak /><Run /><LineBreak />
-                            <Run
-                                Text="在分发和传播的过程中，请注意遵循Apache开源协议，并保持程序的完整性、安全性和可行性、保留所有声明，不得对此程序进行商用，且在传播过程中始终将原作者（思锐工作室 或 SR思锐）标注在明显位置。" />
-                            <LineBreak /><Run /><LineBreak /><Run Text="联系我们：QQ群 36779800 邮箱 srinternet@qq.com" />
-                        </TextBlock>
+                        <TextBlock HorizontalAlignment="Left" Height="50" Margin="10,10.5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="768" FontSize="16" FontWeight="Bold" FontFamily="/SeewoStart;component/Font/#DingTalk JinBuTi"><Run Text="关于和鸣谢"/><Run Text=" ——————————————————"/><Run Text="——————————————"/><Run Text="—————————"/></TextBlock>
+                        <Image Margin="24,58,702.457,312" Source="default-img/srlogo.png" Stretch="Fill"/>
+                        <TextBlock HorizontalAlignment="Left" Height="56" Margin="91.963,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="418" FontSize="18" FontFamily="/SeewoStart;component/Font/#DingTalk JinBuTi"><Run Text="本程序由 "/><Run Foreground="#FF8E32E3" Text="思锐工作室 "/><Run Text="制作"/><LineBreak/><Run Text="M"/><Run Text="ade by "/><Run Foreground="#FF8E32E3" FontWeight="Bold" Text="SR Studio"/></TextBlock>
+                        <Image Margin="24,151.022,702.457,219" Source="default-img/logo.png" Stretch="Fill"/>
+                        <TextBlock HorizontalAlignment="Left" Height="56" Margin="91.963,162.022,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="418" FontSize="18" FontFamily="/SeewoStart;component/Font/#DingTalk JinBuTi"><Run Text="本程序由 "/><Run Foreground="#FF289FCF" Text="思锐云盘 "/><Run Foreground="#FF75C0B7" Text="Powered by AList"/><LineBreak/><Run Text="提供下载和服务支持"/></TextBlock>
+                        <Image Margin="27,257.022,705.457,120" Source="default-img/9919.png" Stretch="Fill"/>
+                        <TextBlock x:Name="_114514homo" HorizontalAlignment="Left" Height="56" Margin="91.963,264.022,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="418" FontSize="18" FontFamily="/SeewoStart;component/Font/#DingTalk JinBuTi"><Run Text="本程序"/><Run Text="在 Github 上维护"/><Run Text=" "/><Run Foreground="#FFFF6500" FontWeight="Bold" TextDecorations="Underline"/><LineBreak/><Run Foreground="#FFFF6500" FontWeight="Bold" Text="遵顼Apache开源协议" TextDecorations="Underline"/></TextBlock>
+                        <Image Margin="27,344.022,705.457,33" Source="default-img/sbenlauncher.ico" Stretch="Fill"/>
+                        <TextBlock HorizontalAlignment="Left" Height="56" Margin="91.963,353.022,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="418" FontSize="18" FontFamily="/SeewoStart;component/Font/#DingTalk JinBuTi"><Run Text="本程序"/><Run Text="灵感来源于 "/><Run Foreground="#FF2DB45C" Text="希沃白板"/><LineBreak/><Run Text="仅供娱乐使用，如有侵权请联系"/><LineBreak/></TextBlock>
+                        <TextBlock HorizontalAlignment="Left" Height="305.002" Margin="428.07,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="352" FontSize="14"><Run Text="本程序所使用第三方字体："/><LineBreak/><Run Text="1. "/><Run FontFamily="/SeewoStart;component/Font/#DingTalk JinBuTi" Text="钉钉进步体"/><LineBreak/><Run Text="2. "/><Run FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black" Text="HarmonyOS Sans"/><Run FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black" Text=" SC"/><LineBreak/><Run/><LineBreak/><Run Text="本程序所使用的默认第三方素材来源："/><LineBreak/><Run Text="1. 原神（米哈游） "/><LineBreak/><Run Text="2.崩坏 · 星穹铁道"/><Run Text="（米哈游） "/><LineBreak/><Run Text="3"/><Run Text=". 阴阳师（网易游戏）"/><LineBreak/><Run Text="4"/><Run Text=". Minecraft（Mojang）"/><LineBreak/><Run Text="所使用的素材如有侵权，请联系我们。"/><LineBreak/><Run/><LineBreak/><Run Text="在分发和传播的过程中，请注意遵循Apache开源协议，并保持程序的完整性、安全性和可行性、保留所有声明，不得对此程序进行商用，且在传播过程中始终将原作者（思锐工作室 或 SR思锐）标注在明显位置。"/><LineBreak/><Run/><LineBreak/><Run Text="联系我们：QQ群 36779800 邮箱 srinternet@qq.com"/></TextBlock>
+                        <TextBlock x:Name="ver" HorizontalAlignment="Left" Height="33.623" Margin="434.841,351.002,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="344.666" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black" Foreground="#FF0A00FF" TextAlignment="Center" Panel.ZIndex="-28" FontSize="18"><Run Text="当前程序版本："/></TextBlock>
+                        <Button x:Name="update114" Content="检查更新" HorizontalAlignment="Left" Height="34.667" Margin="544.174,384.625,0,0" VerticalAlignment="Top" Width="124.834" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black" FontSize="18"/>
 
                     </Grid>
                 </TabItem>
@@ -1417,23 +1180,14 @@
             </TabControl>
         </Border>
 
-        <TextBlock x:Name="遮挡" HorizontalAlignment="Left" Height="438" Margin="3.6,21.8,0,0" VerticalAlignment="Top"
-                   Width="794.4" Foreground="Red" FontSize="48" FontWeight="Bold" TextAlignment="Center"
-                   Background="White" FontFamily="/SeewoStart;component/#Segoe UI" Visibility="Hidden">
-            <Run Foreground="#FFFFDC00" /><LineBreak /><Run Foreground="#FFFFB700" Text="测试页面" /><LineBreak />
-            <Run Foreground="#FFFF8900" Text="Version 2.0 Insider Beta 4" /><LineBreak /><Run Text="请勿操作此界面" />
-            <LineBreak /><Run /><LineBreak /><Run FontSize="24" Text="Made by 思锐工作室" />
-        </TextBlock>
-        <TextBlock x:Name="waiting" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center"
-                   Margin="6.037,197.54,7.837,217.54" Text="正在读取设置……" FontWeight="Bold" FontSize="36"
-                   Foreground="#FF0096FF" RenderTransformOrigin="0.5,0.5" TextAlignment="Center" Width="953.726"
-                   Visibility="Collapsed">
+        <TextBlock x:Name="遮挡" HorizontalAlignment="Left" Height="438" Margin="3.6,21.8,0,0" VerticalAlignment="Top" Width="794.4" Foreground="Red" FontSize="48" FontWeight="Bold" TextAlignment="Center" Background="White" FontFamily="/SeewoStart;component/#Segoe UI" Visibility="Hidden"><Run Foreground="#FFFFDC00"/><LineBreak/><Run Foreground="#FFFFB700" Text="测试页面"/><LineBreak/><Run Foreground="#FFFF8900" Text="Version 2.0 Insider Beta 4"/><LineBreak/><Run Text="请勿操作此界面"/><LineBreak/><Run/><LineBreak/><Run FontSize="24" Text="Made by 思锐工作室"/></TextBlock>
+        <TextBlock x:Name="waiting" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Margin="10.837,225.1,12.637,244.7" Text="正在读取设置……" FontWeight="Bold" FontSize="36" Foreground="#FF0096FF" RenderTransformOrigin="0.5,0.5" TextAlignment="Center" Width="953.726" Visibility="Collapsed">
             <TextBlock.RenderTransform>
                 <TransformGroup>
-                    <ScaleTransform />
-                    <SkewTransform />
-                    <RotateTransform />
-                    <TranslateTransform />
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
                 </TransformGroup>
             </TextBlock.RenderTransform>
         </TextBlock>

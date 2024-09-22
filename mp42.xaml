@@ -1,0 +1,14 @@
+﻿<Window x:Class="mp46" AllowsTransparency="True"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SeewoStart"
+        mc:Ignorable="d"
+        Title="SeewoStart Playing…" Height="450" Width="800" WindowStyle="None" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Topmost = "True" Background="{x:Null}" Foreground="{x:Null}">
+    <Grid>
+        <MediaElement x:Name="kdtkyd6666" Grid.ColumnSpan="4" UnloadedBehavior="Manual" Source="startmp4.mp4" Stretch="Fill" SpeedRatio="1" Margin="0" Focusable="True"/>
+        <MediaElement x:Name="kdtkyd6666_Copy" UnloadedBehavior="Manual" Source="startmp4.mp4" Stretch="Fill" SpeedRatio="1" Focusable="True" Visibility="Hidden" LoadedBehavior="Manual"/>
+    </Grid>
+            
+</Window>
