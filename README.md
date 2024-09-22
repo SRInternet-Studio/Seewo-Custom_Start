@@ -34,7 +34,6 @@
 #### 源代码部署
  部署源代码需Windows环境，需要以下软件:
 1.Blend for Visual Studio 2019
-!!!注意，必须2019 用2022会报错!!!
 因为2019官网早就下架了，所以我们打包了一个安装程序
 [点此下载](https://disk.sr-studio.top/d/%E5%B8%8C%E6%B2%83%E5%AE%9A%E5%88%B6%E5%90%AF%E5%8A%A8%E5%99%A8/VS2019/VS-2019%E5%AE%89%E8%A3%85%E7%A8%8B%E5%BA%8F.exe)
 记住，安装时记得勾选以下内容，要不然不会有Blend for Visual Studio 2019
@@ -43,7 +42,9 @@
 ![界面预览](blend.png)
 点击打开项目或解决方案
 ![界面预览](blend1.png)
-之后选择seewostart.sln，打开即可
+之后选择根目录下的seewostart.sln，打开即可
+！！！注意，为了减少仓库文件过大而导致的拉取时间长问题，我们将程序的图片以及字体等资源文件(Assets.zip)放到思锐云盘外链以高速下载[点此下载](https://disk.sr-studio.top/srdisk-files/%E5%B8%8C%E6%B2%83%E5%AE%9A%E5%88%B6%E5%90%AF%E5%8A%A8%E5%99%A8/Assets.zip)下载完成后解压到SeewoStart的项目根目录即可
+提示:编译是默认是Release,Debug文件夹是空的,如果需改Debug,请解压Assetst.zip后进入bin\Release将此文件夹内的所有文件复制到上级bin目录下的Debug即可
 
 #### 问题反馈
 反馈问题可以到:[我要反馈](https://github.com/SRInternet/Seewo-Custom_Start/issues/new)issuse，你也可以通过我们的邮箱srinternet@qq.com进行反馈
@@ -58,6 +59,6 @@ PS:反馈问题时，请带上软件当时的截图，方便我们查看报错�
 
 <div align="center">
 <br>
-<img src='/sr.png' alt='sr-ico' height="200" width="200"></img></a>
+<img src='/srlogo.png' alt='sr-ico' height="200" width="200"></img></a>
 <h2>Made in 思锐工作室<h2/>
 
