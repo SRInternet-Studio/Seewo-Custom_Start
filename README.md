@@ -1,6 +1,6 @@
 <div align="center">
 <br>
-<a href='github的开源路径'><img src='/en.png' alt='en-ico' height="200" width="200"></img></a>
+<a href='https://github.com/SRInternet-Studio/Seewo-Custom_Start'><img src='/sbenlauncher.ico' alt='en-ico' height="200" width="200"></img></a>
 <h1>希沃·定制启动器 V4.0</h1>
 </h1>
 </br>
