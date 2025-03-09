@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
         xmlns:local="clr-namespace:SeewoStart"
         mc:Ignorable="d"
         Title="SeewoPro loading……" Height="450" Width="800" WindowStyle="None" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
@@ -1433,16 +1434,13 @@
     </Window.Triggers>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="89*"/>
-            <RowDefinition Height="361*"/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="564*"/>
-            <ColumnDefinition Width="167*"/>
-            <ColumnDefinition Width="70*"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <Image x:Name="image" Margin="-8.336,-7.326,-4.842,-11.082" Source="default-img/background2.png" Stretch="UniformToFill" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="3" Grid.RowSpan="2">
+        <Image x:Name="image" Margin="-8,-7,-5,-11" Source="default-img/background2.png" Stretch="UniformToFill" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -1452,7 +1450,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="90" Margin="-0.6,97.2,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="430.8" Foreground="White" FontWeight="Bold" FontSize="72" RenderTransformOrigin="0.709,0.503" TextAlignment="Right" FontFamily="/SeewoStart;component/Font/#DingTalk JinBuTi" Grid.Row="1">
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="90" Margin="-1,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="431" Foreground="White" FontWeight="Bold" FontSize="72" RenderTransformOrigin="0.709,0.503" TextAlignment="Right" FontFamily="/SeewoStart;component/Font/#DingTalk JinBuTi">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -1467,7 +1465,7 @@
                               Direction="-45"
                               Color="Black"/>
             </TextBlock.Effect><Run Text="希沃"/><Run FontSize="24" Text=" "/></TextBlock>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="89.467" Margin="427.933,79.2,-0.066,0" TextWrapping="Wrap" Text="Pro" VerticalAlignment="Top" Width="372.133" FontSize="48" FontFamily="/SeewoStart;component/Font/#DingTalk JinBuTi" TextDecorations="{x:Null}" Grid.ColumnSpan="3" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="90" Margin="428,168,0,0" TextWrapping="Wrap" Text="Pro" VerticalAlignment="Top" Width="372" FontSize="48" FontFamily="/SeewoStart;component/Font/#DingTalk JinBuTi" TextDecorations="{x:Null}" RenderTransformOrigin="0.5,0.5">
             <TextBlock.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
@@ -1497,7 +1495,7 @@
                               Color="Black"/>
             </TextBlock.Effect>
         </TextBlock>
-        <Image x:Name="yuanshen" Margin="142.171,5.7,5.3,15.064" Source="default-img/ys.png" Stretch="Uniform" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.ColumnSpan="2"  >
+        <Image x:Name="yuanshen" Margin="702,6,5,376" Source="default-img/ys.png" Stretch="Uniform" RenderTransformOrigin="0.5,0.5"  >
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -1507,7 +1505,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <TextBlock x:Name="textBlock5" HorizontalAlignment="Left" Height="63.916" Margin="72.589,19.013,0,0" TextWrapping="Wrap" Text="|" VerticalAlignment="Top" Width="101.256" Foreground="White" FontSize="24" FontFamily="Segoe UI Symbol" TextDecorations="{x:Null}" RenderTransformOrigin="0.5,0.5">
+        <TextBlock x:Name="textBlock5" HorizontalAlignment="Left" Height="64" Margin="73,19,0,0" TextWrapping="Wrap" Text="|" VerticalAlignment="Top" Width="101" Foreground="White" FontSize="24" FontFamily="Segoe UI Symbol" TextDecorations="{x:Null}" RenderTransformOrigin="0.5,0.5">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -1523,7 +1521,7 @@
                               Color="Black"/>
             </TextBlock.Effect>
         </TextBlock>
-        <Image x:Name="image2" Margin="86.735,18.8,379.967,26.735" Source="default-img/splash-removebg-preview.png" Stretch="Uniform" RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="image2" Margin="87,19,620,388" Source="default-img/splash-removebg-preview.png" Stretch="Uniform" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -1533,7 +1531,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Height="31.2" Margin="0.669,246,0,0" TextWrapping="Wrap" Text="正在启动！" VerticalAlignment="Top" Width="798.933" Foreground="White" FontSize="20" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black" RenderTransformOrigin="0.709,0.503" Grid.ColumnSpan="3" TextAlignment="Center" Grid.Row="1">
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Center" Height="31" Margin="0,335,0,0" TextWrapping="Wrap" Text="正在启动！" VerticalAlignment="Top" Width="800" Foreground="White" FontSize="20" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black" RenderTransformOrigin="0.709,0.503" TextAlignment="Center">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -1549,7 +1547,7 @@
                               Color="Black"/>
             </TextBlock.Effect>
         </TextBlock>
-        <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Height="40.8" Margin="9,318,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="787.2" Foreground="White" Grid.ColumnSpan="3" TextAlignment="Center" RenderTransformOrigin="0.5,0.5" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black" Grid.Row="1">
+        <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Height="41" Margin="9,407,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="787" Foreground="White" TextAlignment="Center" RenderTransformOrigin="0.5,0.5" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -1564,7 +1562,7 @@
                               Direction="-45"
                               Color="Black"/>
             </TextBlock.Effect><Run Text="抵制"/><Run Text="扰乱秩序"/><Run Text="，坚持认真上课，"/><Run Text="注意自我"/><Run Text="提醒"/><Run Text="，谨防"/><Run Text="上课睡觉；"/><Run Text="适度"/><Run Text="教学"/><Run Text="益脑，"/><Run Text="拖堂教学"/><Run Text=""/><Run Text="伤身，合理安排时间，享受"/><Run Text="快乐教学"/><Run Text=""/><Run Text="。"/></TextBlock>
-        <TextBlock x:Name="textBlock4" HorizontalAlignment="Left" Height="40.8" Margin="9,339,0,-19.2" TextWrapping="Wrap" VerticalAlignment="Top" Width="787.2" Foreground="White" Grid.ColumnSpan="3" TextAlignment="Center" RenderTransformOrigin="0.5,0.5" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black" Grid.Row="1" Text="Copyright © 2011-2024 Guangzhou Shirui. All Rights Reserved">
+        <TextBlock x:Name="textBlock4" HorizontalAlignment="Left" Height="41" Margin="9,428,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="787" Foreground="White" TextAlignment="Center" RenderTransformOrigin="0.5,0.5" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black" Text="Copyright © 2011-2024 Guangzhou Shirui. All Rights Reserved">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -1580,7 +1578,7 @@
                               Color="Black"/>
             </TextBlock.Effect>
         </TextBlock>
-        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Height="1224" Margin="-522.6,-179.4,0,-594.6" TextWrapping="Wrap" VerticalAlignment="Top" Width="754.8" FontSize="600" RenderTransformOrigin="0.709,0.503" TextAlignment="Right" FontFamily="Microsoft YaHei Light" Text="O" Grid.RowSpan="2" Visibility="Hidden">
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Height="1224" Margin="-523,-179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="755" FontSize="600" RenderTransformOrigin="0.709,0.503" TextAlignment="Right" FontFamily="Microsoft YaHei Light" Text="O" Visibility="Hidden">
             <TextBlock.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
@@ -1615,7 +1613,7 @@
                     Direction="-45"
                     Color="Black"/>
             </TextBlock.Effect></TextBlock>
-        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Height="2148" Margin="-725.4,-1858.2,-422.2,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1947.6" FontSize="2000" RenderTransformOrigin="0.709,0.503" TextAlignment="Right" FontFamily="Microsoft YaHei Light" Text="O" Grid.RowSpan="2" Grid.ColumnSpan="3" Visibility="Hidden">
+        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Height="2148" Margin="-725,-1858,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1947" FontSize="2000" RenderTransformOrigin="0.709,0.503" TextAlignment="Right" FontFamily="Microsoft YaHei Light" Text="O" Visibility="Hidden">
             <TextBlock.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
@@ -1647,7 +1645,7 @@
                     Direction="-45"
                     Color="Black"/>
             </TextBlock.Effect></TextBlock>
-        <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Height="90" Margin="-0.6,97.2,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="800.4" FontWeight="Bold" FontSize="72" RenderTransformOrigin="0.709,0.503" TextAlignment="Center" FontFamily="/SeewoStart;component/#Segoe UI Semibold" Grid.Row="1" Grid.ColumnSpan="3" Text="12.22" Visibility="Hidden" d:IsLocked="True">
+        <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Center" Height="90" Margin="0,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="800" FontWeight="Bold" FontSize="72" RenderTransformOrigin="0.709,0.503" TextAlignment="Center" FontFamily="/SeewoStart;component/#Segoe UI Semibold" Text="12.22" Visibility="Hidden" d:IsLocked="True">
             <TextBlock.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
@@ -1677,7 +1675,7 @@
                     Direction="-45"
                     Color="Black"/>
             </TextBlock.Effect></TextBlock>
-        <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left" Height="90" Margin="115.8,97.2,-116.2,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="800.4" FontWeight="Bold" FontSize="72" RenderTransformOrigin="0.709,0.503" TextAlignment="Center" FontFamily="/SeewoStart;component/#Segoe UI Light" Grid.Row="1" Grid.ColumnSpan="3" Text="On bilibili" Visibility="Hidden">
+        <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left" Height="90" Margin="116,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="800" FontWeight="Bold" FontSize="72" RenderTransformOrigin="0.709,0.503" TextAlignment="Center" FontFamily="/SeewoStart;component/#Segoe UI Light" Text="On bilibili" Visibility="Hidden">
             <TextBlock.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
@@ -1707,7 +1705,7 @@
                     Direction="-45"
                     Color="Black"/>
             </TextBlock.Effect></TextBlock>
-        <TextBlock x:Name="textBlock_Copy4" HorizontalAlignment="Left" Height="1224" Margin="-522.6,-179.4,0,-594.6" TextWrapping="Wrap" VerticalAlignment="Top" Width="754.8" FontSize="600" RenderTransformOrigin="0.709,0.503" TextAlignment="Right" FontFamily="Microsoft YaHei Light" Text="O" Grid.RowSpan="2" Visibility="Hidden" Foreground="Black">
+        <TextBlock x:Name="textBlock_Copy4" HorizontalAlignment="Left" Height="1224" Margin="-523,-179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="755" FontSize="600" RenderTransformOrigin="0.709,0.503" TextAlignment="Right" FontFamily="Microsoft YaHei Light" Text="O" Visibility="Hidden" Foreground="Black">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -1722,7 +1720,7 @@
                     Direction="-45"
                     Color="Black"/>
             </TextBlock.Effect></TextBlock>
-        <TextBlock x:Name="textBlock_Copy5" HorizontalAlignment="Left" Height="90" Margin="-0.6,220.8,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="800.4" FontWeight="Bold" FontSize="30" RenderTransformOrigin="0.709,0.503" TextAlignment="Center" FontFamily="/SeewoStart;component/#Segoe UI Semibold" Grid.Row="1" Grid.ColumnSpan="3" Visibility="Hidden">
+        <TextBlock x:Name="textBlock_Copy5" HorizontalAlignment="Center" Height="90" Margin="0,310,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="800" FontWeight="Bold" FontSize="30" RenderTransformOrigin="0.709,0.503" TextAlignment="Center" FontFamily="/SeewoStart;component/#Segoe UI Semibold" Visibility="Hidden">
             <TextBlock.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
@@ -1752,7 +1750,7 @@
                     Direction="-45"
                     Color="Black"/>
             </TextBlock.Effect><Run Text="I"/><Run Text="ntersperse Everything."/></TextBlock>
-        <Image x:Name="image2_Copy" Margin="10.697,17.466,489.605,28.069" Source="default-img/sbenlauncher.ico" Stretch="Uniform" RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="image2_Copy" Margin="11,17,728,389" Source="default-img/sbenlauncher.ico" Stretch="Uniform" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -1762,7 +1760,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <TextBlock x:Name="textBlock_Copy6" HorizontalAlignment="Right" Height="90" Margin="0,97.2,-73.533,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="804.133" Foreground="White" FontWeight="Bold" FontSize="72" RenderTransformOrigin="0.709,0.503" TextAlignment="Center" FontFamily="/SeewoStart;component/#DingTalk JinBuTi" Grid.Row="1" Grid.ColumnSpan="3" Visibility="Hidden">
+        <TextBlock x:Name="textBlock_Copy6" HorizontalAlignment="Right" Height="90" Margin="0,186,-74,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="805" Foreground="White" FontWeight="Bold" FontSize="72" RenderTransformOrigin="0.709,0.503" TextAlignment="Center" FontFamily="DingTalk JinBuTi" Visibility="Hidden">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -1777,6 +1775,20 @@
                     Direction="-45"
                     Color="Black"/>
             </TextBlock.Effect></TextBlock>
-
+        <materialDesign:DialogHost x:Name="SingleDialog" Identifier="singleSetting"
+    DialogContentUniformCornerRadius="18"
+    DialogTheme="Inherit" Visibility="Visible" Margin="-10,10,10,-10">
+            <materialDesign:DialogHost.DialogContent>
+                <StackPanel x:Name="HelperGrid" Background="White">
+                    <TextBlock x:Name="singleTitle" Margin="16,16,16,0" FontFamily="HarmonyOS Sans SC Black" FontSize="24" ></TextBlock>
+                    <ScrollViewer x:Name="HelperContent">
+                        <TextBlock x:Name="singleText" Margin="16,5,16,16" FontFamily="HarmonyOS Sans SC Black" FontSize="16" TextWrapping="Wrap" Text="首先，API Key 的申请和使用是完全免费的，无需任何费用，申请前后也无需观看任何广告。" ></TextBlock>
+                    </ScrollViewer>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="16">
+                        <Button Content="好" Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" IsDefault="True" CommandParameter="True" Style="{StaticResource MaterialDesignFlatButton}" Foreground="{DynamicResource MaterialDesign.Brush.Primary}"/>
+                    </StackPanel>
+                </StackPanel>
+            </materialDesign:DialogHost.DialogContent>
+        </materialDesign:DialogHost>
     </Grid>
 </Window>

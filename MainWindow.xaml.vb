@@ -2,6 +2,7 @@
 Imports System.Media
 Imports System.Runtime.InteropServices
 Imports System.Text
+Imports System.Windows.Interop
 Imports System.Windows.Media.Animation
 Imports System.Windows.Threading
 
@@ -55,6 +56,50 @@ Public Class MainWindow
     <DllImport("user32.dll", SetLastError:=True, CharSet:=CharSet.Auto)>
     Private Shared Function FindWindow(ByVal lpClassName As String, ByVal lpWindowName As String) As IntPtr
     End Function
+
+    Private Const HWND_TOPMOST As Integer = -1
+        Private Const HWND_BOTTOM As Integer = 1
+        Private Const SWP_NOSIZE As UInteger = &H1
+        Private Const SWP_NOMOVE As UInteger = &H2
+        Private Const SWP_NOACTIVATE As UInteger = &H10
+        Private Const SWP_SHOWWINDOW As UInteger = &H40
+
+        <DllImport("user32.dll", SetLastError:=True)>
+        Private Shared Function SetWindowPos(hWnd As IntPtr, hWndInsertAfter As IntPtr, X As Integer, Y As Integer, cx As Integer, cy As Integer, uFlags As UInteger) As Boolean
+        End Function
+
+        <DllImport("user32.dll", SetLastError:=True)>
+        Private Shared Function GetWindowLong(hWnd As IntPtr, nIndex As Integer) As Integer
+        End Function
+
+        <DllImport("user32.dll", SetLastError:=True)>
+        Private Shared Function SetWindowLong(hWnd As IntPtr, nIndex As Integer, dwNewLong As Integer) As Integer
+        End Function
+
+        <DllImport("user32.dll", SetLastError:=True)>
+        Private Shared Function SetLayeredWindowAttributes(hWnd As IntPtr, crKey As UInteger, bAlpha As Byte, dwFlags As UInteger) As Boolean
+        End Function
+
+        Private Const GWL_EXSTYLE As Integer = -20
+        Private Const WS_EX_LAYERED As Integer = &H80000
+        Private Const WS_EX_TRANSPARENT As Integer = &H20
+        Private Const LWA_ALPHA As UInteger = &H2
+
+
+
+    Private Sub MainWindow_Activated(sender As Object, e As EventArgs) Handles Me.Activated
+            ' 在激活时确保窗口仍然是最顶层窗口
+            Dim hwnd As IntPtr = New WindowInteropHelper(Me).Handle
+            SetWindowPos(hwnd, New IntPtr(HWND_TOPMOST), 0, 0, 0, 0, SWP_NOSIZE Or SWP_NOMOVE Or SWP_SHOWWINDOW)
+        End Sub
+
+        Private Sub MainWindow_Deactivated(sender As Object, e As EventArgs) Handles Me.Deactivated
+            ' 在失去激活时，保持窗口置顶
+            Dim hwnd As IntPtr = New WindowInteropHelper(Me).Handle
+            SetWindowPos(hwnd, New IntPtr(HWND_TOPMOST), 0, 0, 0, 0, SWP_NOSIZE Or SWP_NOMOVE Or SWP_NOACTIVATE)
+        End Sub
+
+
     'Protected Overrides Sub OnInitialized(ByVal e As EventArgs)
     '    MyBase.OnInitialized(e)
 
@@ -126,7 +171,8 @@ Public Class MainWindow
         'If File.Exists(AppDomain.CurrentDomain.BaseDirectory & "\zt.ttf") Then
         '    Dim fontUri As New Uri(AppDomain.CurrentDomain.BaseDirectory & "\zt.ttf", UriKind.Absolute)
         '    Dim fontFamily As New FontFamily(fontUri, "MyFontName") ' 
-
+        Topmost = True
+        AddHandler Deactivated, AddressOf Me.OnDeactivated
         '    textBlock.FontFamily = fontFamily
         '    textBlock1.FontFamily = fontFamily
         '    textBlock2.FontFamily = fontFamily
@@ -135,10 +181,23 @@ Public Class MainWindow
         '    textBlock_Copy6.FontFamily = fontFamily
         'End If
     End Sub
-
+    Private Sub OnDeactivated(sender As Object, e As EventArgs)
+        Topmost = True
+    End Sub
     Public offoncs As String
     Private Sub MainWindow_Loaded(sender As Object, e As RoutedEventArgs) Handles Me.Loaded
+        ' 获取窗口句柄
+        Dim hwnd As IntPtr = New WindowInteropHelper(Me).Handle
 
+        ' 设置窗口风格
+        Dim exStyle As Integer = GetWindowLong(hwnd, GWL_EXSTYLE)
+        SetWindowLong(hwnd, GWL_EXSTYLE, exStyle Or WS_EX_LAYERED Or WS_EX_TRANSPARENT)
+
+        ' 设置窗口透明度
+        SetLayeredWindowAttributes(hwnd, 0, 255, LWA_ALPHA)
+
+        ' 设置窗口为系统级置顶
+        SetWindowPos(hwnd, New IntPtr(HWND_TOPMOST), 0, 0, 0, 0, SWP_NOSIZE Or SWP_NOMOVE Or SWP_SHOWWINDOW)
         If (SharedV.StartWindow = "1") = False Then
 
             Focus()
@@ -211,10 +270,14 @@ Public Class MainWindow
                 End Using
             End If
             ' If File.Exists(appDirectory & "\file.sr") Then
-
-            Using reader As New StreamReader(appDirectory & "\Emergency-mode.Sr")
-                zt = reader.ReadLine()
-            End Using
+            Try
+                Using reader As New StreamReader(appDirectory & "\Emergency-mode.Sr")
+                    zt = reader.ReadLine()
+                End Using
+            Catch ex As Exception
+                MsgBox("无法找到应急模式配置文件", vbCritical)
+                Process.GetCurrentProcess.Kill()
+            End Try
             If zt = "True" Then
                 Hide()
                 Try
@@ -260,7 +323,7 @@ Public Class MainWindow
                 End Using
             End If
             If line13 = "True" Then
-                Dim hWnd As IntPtr = FindWindow(Nothing, starting_config)
+                Dim hWn1 As IntPtr = FindWindow(Nothing, starting_config)
                 Console.WriteLine(starting_config)
 
                 If hWnd <> IntPtr.Zero Then
@@ -333,7 +396,8 @@ Public Class MainWindow
                         image2.Source = New BitmapImage(New Uri(wholeDirectory_2, UriKind.Absolute))
                     Catch ex As Exception
                         Dim errorw As New error114()
-
+                        error1 = "主题读取失败。 " & secondLine & " 请检查 Thems 文件夹是否为空，或其内部图片是否完好。"
+                        error2 = ex.ToString()
                         errorw.ShowDialog()
                     End Try
                 Else
@@ -503,7 +567,7 @@ Public Class MainWindow
                 Catch ex As Exception
                     MsgBox("音效触发失败。 " & secondLine & "请检查" & musicfile & "是否可用，或在设置界面中关闭启动音效。", vbExclamation)
                 End Try
-                End If
+            End If
             'If Line11 = "True" The
             '  Try
             '        kdtkyd6666.Source = New Uri(selectedFolder & "/startMP4.MP4", UriKind.Absolute)
@@ -513,7 +577,7 @@ Public Class MainWindow
             'End If
 
             Start()
-                Focus()
+            Focus()
             Else
                 Hide()
             Close()

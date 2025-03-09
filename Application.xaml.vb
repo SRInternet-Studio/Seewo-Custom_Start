@@ -13,12 +13,15 @@ Class Application
         AddHandler DispatcherUnhandledException, AddressOf Application_DispatcherUnhandledException
         MyBase.OnStartup(e)
     End Sub
-
+    Public ztpd As Boolean = True
     Private Sub CurrentDomain_UnhandledException(ByVal sender As Object, ByVal e As UnhandledExceptionEventArgs)
-        error1 = "SeewoStart 4.0 已不能正常运行，请截图并反馈"
-        error2 = e.ExceptionObject.ToString()
-        Dim error114 As New error114
-        error114.Show()
+        If ztpd = True Then
+            ztpd = False
+            error1 = "SeewoStart 4.0 已不能正常运行，请截图并反馈"
+            error2 = e.ExceptionObject.ToString()
+            Dim error114 As New error114
+            error114.Show()
+        End If
     End Sub
     Private Sub Application_Startup(sender As Object, e As StartupEventArgs) Handles Me.Startup
         Dim exePath As String = System.Reflection.Assembly.GetExecutingAssembly().Location
@@ -73,10 +76,13 @@ Class Application
     End Sub
 
     Private Sub Application_DispatcherUnhandledException(sender As Object, e As Windows.Threading.DispatcherUnhandledExceptionEventArgs) Handles Me.DispatcherUnhandledException
-        error1 = "SeewoStart 4.0 已不能正常运行，请截图并反馈"
-        error2 = e.Exception.ToString()
-        Dim error114 As New error114
-        error114.Show()
-        e.Handled = True
+        If ztpd = True Then
+            ztpd = False
+            error1 = "SeewoStart 4.0 已不能正常运行，请截图并反馈"
+            error2 = e.Exception.ToString()
+            Dim error114 As New error114
+            error114.Show()
+            e.Handled = True
+        End If
     End Sub
 End Class

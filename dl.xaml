@@ -14,9 +14,7 @@
         </Storyboard>
     </Window.Resources>
     <Grid Margin="0,0,0,23">
-        <ProgressBar x:Name="ProgressBar1" HorizontalAlignment="Left" Height="44.4" Margin="29.091,50.6,0,0" VerticalAlignment="Top" Width="751" RenderTransformOrigin="1,0.5" UseLayoutRounding="False" LargeChange="0" Foreground="#FFEBDAE0">
-
-        </ProgressBar>
+        <ProgressBar x:Name="ProgressBar1" HorizontalAlignment="Left" Height="44.4" Margin="29,51,0,0" VerticalAlignment="Top" Width="790" RenderTransformOrigin="1,0.5" UseLayoutRounding="False" LargeChange="0" Foreground="Red" Background="DarkRed" BorderBrush="DarkRed"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="30.6" Margin="29.091,19,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="735" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black" FontSize="20" Foreground="#FF0043FF" FontWeight="Bold" RenderTransformOrigin="0.5,0.5">
             <TextBlock.RenderTransform>
                 <TransformGroup>

@@ -8,6 +8,7 @@ Imports System.Windows
 Imports System.Windows.Controls
 Imports System.Windows.Media
 Imports System.Windows.Media.Animation
+Imports MaterialDesignThemes.Wpf
 
 Public Class Window1
     Private ReadOnly secondWindow As MainWindow
@@ -183,7 +184,7 @@ Public Class Window1
             sname.Text = selectedItem.Content
             zt = ThemsDirectory & "\" & selectedItem.Content & "\text.ini"
         Catch ex As Exception
-            MsgBox("你是不是偷偷去目录把主题配置文件改成了一个不存在的值？如果不是请截图以下报错反馈！" & vbCrLf & ex.ToString, vbExclamation)
+            messagebox("你是不偷偷去目录把主题配置文件改成了一个不存在的值？这TM让我们怎么读取！如果不是请截图以下报错反馈！" & vbCrLf & ex.ToString, "错的是你,而不是我们！"）
         End Try
         'If Line16 = "True" Then
 
@@ -521,24 +522,8 @@ Public Class Window1
 
             Try
                 If ComparePaths(ThemsDirectory & "\" & selectedItem.Content.ToString() & "\" & tbackground.Text, openFileDialog.FileName) = False Then
-                    Dim secondWindow As New Window2
-                    Dim x As Double = Me.Left + Me.ActualWidth - (secondWindow.Width / 3)
-                    Dim y As Double = Me.Top
-
-                    secondWindow.Left = x
-                    secondWindow.Top = y
-                    Dim moveAnimation As New DoubleAnimation()
-                    moveAnimation.From = secondWindow.Left + secondWindow.Width
-                    moveAnimation.To = x
-                    moveAnimation.Duration = New Duration(TimeSpan.FromSeconds(1))
-                    moveAnimation.EasingFunction = New QuarticEase()
-                    secondWindow.BeginAnimation(Window.LeftProperty, moveAnimation)
-
-                    secondWindow.Show()
-
                     Dim selectedFilePath As String = openFileDialog.FileName
                     tbackground.Text = System.IO.Path.GetFileName(openFileDialog.FileName)
-                    errormsgbox = "ok"
 
                     SharedV.Saving = False
 
@@ -569,6 +554,7 @@ Public Class Window1
                     End Using
                     ' End If
                     SharedV.Saving = True
+                    cg114()
                 Else
                     MsgBox("不是，哥们，你选文件自己干嘛？", vbExclamation)
 
@@ -584,9 +570,7 @@ Public Class Window1
             Catch ex As Exception
                 errormsgbox = "替换失败，因为" & vbCrLf & vbCrLf & ex.ToString
                 SharedV.Saving = True
-                'Dim window2 As New Window2
-                'SharedV.Saving = False
-                'window2.Show()
+
             End Try
         Else
 
@@ -602,7 +586,13 @@ Public Class Window1
 
         End If
     End Sub
-
+    Public Async Sub cg114()
+        If errormsgbox = "ok" Then
+            SnackbarOne.IsActive = True
+            Await Task.Delay(3000)
+            SnackbarOne.IsActive = False
+        End If
+    End Sub
     Private Sub refreshh_Click(sender As Object, e As RoutedEventArgs) Handles refreshh.Click
         List1.Items.Clear()
         comboBox.Items.Clear()
@@ -655,27 +645,12 @@ Public Class Window1
 
                 Dim selectedItem As ListBoxItem = List1.SelectedItem
                 If ComparePaths(ThemsDirectory & "\" & selectedItem.Content.ToString() & "\" & tstartimg.Text, openFileDialog.FileName) = False Then
-                    Dim secondWindow As New Window2
-                    Dim x As Double = Me.Left + Me.ActualWidth - (secondWindow.Width / 3)
-                    Dim y As Double = Me.Top
 
-                    secondWindow.Left = x
-                    secondWindow.Top = y
-                    Dim moveAnimation As New DoubleAnimation()
-                    moveAnimation.From = secondWindow.Left + secondWindow.Width
-                    moveAnimation.To = x
-                    moveAnimation.Duration = New Duration(TimeSpan.FromSeconds(1))
-                    moveAnimation.EasingFunction = New QuarticEase()
-                    secondWindow.BeginAnimation(Window.LeftProperty, moveAnimation)
-
-                    secondWindow.Show()
 
                     tstartimg.Text = System.IO.Path.GetFileName(openFileDialog.FileName)
                     Dim selectedFilePath As String = openFileDialog.FileName
                     errormsgbox = "ok"
-                    Dim window2 As New Window2
-                    SharedV.Saving = False
-                    window2.Show()
+
 
 
                     GC.Collect()
@@ -706,6 +681,7 @@ Public Class Window1
                     End Using
                     'End If
                     SharedV.Saving = True
+                    cg114()
                 Else
                     MsgBox("不是，哥们，你选文件自己干嘛？", vbExclamation)
 
@@ -720,7 +696,7 @@ Public Class Window1
                 End If
             Catch ex As Exception
                 errormsgbox = "替换失败，因为" & vbCrLf & vbCrLf & ex.ToString
-
+                Errorbox("替换失败，因为" & vbCrLf & vbCrLf & ex.ToString)
                 SharedV.Saving = True
                 'Dim window2 As New Window2
                 'SharedV.Saving = False
@@ -763,20 +739,7 @@ Public Class Window1
             Try
                 Dim selectedItem As ListBoxItem = List1.SelectedItem
                 If ComparePaths(ThemsDirectory & "\" & selectedItem.Content.ToString() & "\" & ttrademark.Text, openFileDialog.FileName) = False Then
-                    Dim secondWindow As New Window2
-                    Dim x As Double = Me.Left + Me.ActualWidth - (secondWindow.Width / 3)
-                    Dim y As Double = Me.Top
 
-                    secondWindow.Left = x
-                    secondWindow.Top = y
-                    Dim moveAnimation As New DoubleAnimation()
-                    moveAnimation.From = secondWindow.Left + secondWindow.Width
-                    moveAnimation.To = x
-                    moveAnimation.Duration = New Duration(TimeSpan.FromSeconds(1))
-                    moveAnimation.EasingFunction = New QuarticEase()
-                    secondWindow.BeginAnimation(Window.LeftProperty, moveAnimation)
-
-                    secondWindow.Show()
 
                     ttrademark.Text = System.IO.Path.GetFileName(openFileDialog.FileName)
                     Dim selectedFilePath As String = openFileDialog.FileName
@@ -812,6 +775,7 @@ Public Class Window1
                     End Using
                     ' End If
                     SharedV.Saving = True
+                    cg114()
                 Else
                     MsgBox("不是，哥们，你选文件自己干嘛？", vbExclamation)
 
@@ -826,6 +790,7 @@ Public Class Window1
                 End If
             Catch ex As Exception
                 errormsgbox = "替换失败，因为" & vbCrLf & vbCrLf & ex.ToString
+                Errorbox("替换失败，因为" & vbCrLf & vbCrLf & ex.ToString)
                 SharedV.Saving = True
                 'Dim window2 As New Window2
                 'SharedV.Saving = False
@@ -846,49 +811,43 @@ Public Class Window1
         End If
     End Sub
 
-    Private Sub add_Click(sender As Object, e As RoutedEventArgs) Handles add.Click
-        Dim input As String = InputBox("请输入新的主题名称", "主题名称", "")
-        Console.WriteLine(input)
-        If input = "" Then
-            MsgBox("你需要输入文字", vbInformation, "无法创建新主题")
-        Else
-            Dim NewWholeName As String = ThemsDirectory & "\" & input
-            If Directory.Exists(NewWholeName) Then
-                MsgBox("同名称的主题已经存在，请先删除旧的主题，或更换名称后重试。", vbInformation, "无法创建新主题")
+    Private Async Sub add_Click(sender As Object, e As RoutedEventArgs) Handles add.Click
+        AddTextTip.Text = "添加新的主题(默认复制默认主题)"
+        Dim YesOrNo = Await DialogHost.Show(AddDialog.DialogContent, "Add")
+        If YesOrNo Then
+            Dim input As String = NewHot.Text()
+            Console.WriteLine(input)
+            If input = "" Then
+                Errorbox("无法创建新主题:你需要输入文字")
             Else
-                errormsgbox = “ok”
-                Dim secondWindow As New Window2
-                Dim x As Double = Me.Left + Me.ActualWidth - (secondWindow.Width / 3)
-                Dim y As Double = Me.Top
-
-                secondWindow.Left = x
-                secondWindow.Top = y
-                Dim moveAnimation As New DoubleAnimation()
-                moveAnimation.From = secondWindow.Left + secondWindow.Width
-                moveAnimation.To = x
-                moveAnimation.Duration = New Duration(TimeSpan.FromSeconds(1))
-                moveAnimation.EasingFunction = New QuarticEase()
-                secondWindow.BeginAnimation(Window.LeftProperty, moveAnimation)
-                secondWindow.Show()
-
-                Directory.CreateDirectory(NewWholeName)
-                Try
-                    For Each filePath As String In Directory.GetFiles(ThemsDirectory & "\" & "DEFAULT")
-                        Dim fileName As String = Path.GetFileName(filePath)
-                        Dim destFilePath As String = Path.Combine(NewWholeName, fileName)
-                        File.Copy(filePath, destFilePath, True) ' 第三个参数表示覆盖已存在的文件
-                    Next
-                    SharedV.Saving = True
-                Catch ex As Exception
-                    SharedV.Saving = True
-                    errormsgbox = "无法复制主题模板，可能是 DEFAULT 主题被删除。你可能需要重新安装本工具再进行重试。"
+                Dim NewWholeName As String = ThemsDirectory & "\" & input
+                If Directory.Exists(NewWholeName) Then
+                    MsgBox("同名称的主题已经存在，请先删除旧的主题，或更换名称后重试。", vbInformation, "无法创建新主题")
+                Else
+                    errormsgbox = "ok"
 
 
-                    Directory.Delete(NewWholeName)
-                    'Dim window4 As New Window2
+                    Directory.CreateDirectory(NewWholeName)
+                    Try
+                        For Each filePath As String In Directory.GetFiles(ThemsDirectory & "\" & "DEFAULT")
+                            Dim fileName As String = Path.GetFileName(filePath)
+                            Dim destFilePath As String = Path.Combine(NewWholeName, fileName)
+                            File.Copy(filePath, destFilePath, True) ' 第三个参数表示覆盖已存在的文件
+                        Next
+                        SharedV.Saving = True
+                        cg114()
+                    Catch ex As Exception
+                        SharedV.Saving = True
+                        errormsgbox = "无法复制主题模板，可能是 DEFAULT 主题被删除。你可能需要重新安装本工具再进行重试。"
 
-                    'window4.Show()
-                End Try
+
+                        Directory.Delete(NewWholeName)
+                        Errorbox("无法复制主题模板，可能是 DEFAULT 主题被删除。你可能需要重新安装本工具再进行重试。")
+                        'Dim window4 As New Window2
+
+                        'window4.Show()
+                    End Try
+                End If
             End If
         End If
 
@@ -921,13 +880,13 @@ Public Class Window1
 
     End Sub
 
-    Private Sub del_Click(sender As Object, e As RoutedEventArgs) Handles del.Click
+    Private Async Sub del_Click(sender As Object, e As RoutedEventArgs) Handles del.Click
 
         Dim selectedItem As ListBoxItem = List1.SelectedItem
         If selectedItem Is Nothing Then
-            MsgBox("请先选择一个主题", vbInformation, "不能删除")
+            messagebox("请先选择一个主题", "不能删除")
         ElseIf selectedItem.Content = "default" Or selectedItem.Content = "Default" Or selectedItem.Content = "DEFAULT" Then
-            MsgBox("你不能删除默认主题", vbExclamation, "不能删除")
+            messagebox("你不能删除默认主题", "不能删除")
         Else
 
             image1.Source = Nothing
@@ -936,92 +895,88 @@ Public Class Window1
             kdtkyd6666.Source = Nothing
 
             GC.Collect()
+            DialogText.Text = "真的要删除主题 " & selectedItem.Content & " 吗？这是不可恢复的噢！＞﹏＜"
+            MessageGood.Content = "确认"
+            MessageBad.Content = "取消"
 
-            Dim ISOK = MsgBox("真的要删除主题 " & selectedItem.Content & " 吗？这是不可恢复的噢！＞﹏＜", vbYesNo, "删除确认")
-            If ISOK = 6 Then
+            Dim ConfirmToDel = Await DialogHost.Show(MessageDialog.DialogContent, "Msg")
+
+            If ConfirmToDel IsNot Nothing And ConfirmToDel.ToString() = "True" Then
+                'Dim ISOK = MsgBox("真的要删除主题 " & selectedItem.Content & " 吗？这是不可恢复的噢！＞﹏＜", vbYesNo, "删除确认")
+                'If ISOK = 6 Then
                 SharedV.Saving = False
-                errormsgbox = "ok"
-                Dim secondWindow As New Window2
-                Dim x As Double = Me.Left + Me.ActualWidth - (secondWindow.Width / 3)
-                Dim y As Double = Me.Top
+                    errormsgbox = "ok"
 
-                secondWindow.Left = x
-                secondWindow.Top = y
-                Dim moveAnimation As New DoubleAnimation()
-                moveAnimation.From = secondWindow.Left + secondWindow.Width
-                moveAnimation.To = x
-                moveAnimation.Duration = New Duration(TimeSpan.FromSeconds(1))
-                moveAnimation.EasingFunction = New QuarticEase()
-                secondWindow.BeginAnimation(Window.LeftProperty, moveAnimation)
-                secondWindow.Show()
-                image1.Source = Nothing
-                image2.Source = Nothing
-                yuanshen.Source = Nothing
-                kdtkyd6666.Source = Nothing
-                GC.Collect()
-                GC.WaitForPendingFinalizers()
-                Try
-                    Directory.Delete(ThemsDirectory & "\" & selectedItem.Content, True)
-                Catch ex As Exception
-                    errormsgbox = "错误,无法删除该主题，报错如下" & ex.ToString
-                End Try
-                List1.Items.Clear()
-                comboBox.Items.Clear()
-                folders = Directory.GetDirectories(ThemsDirectory)
-                For i As Integer = 1 To folders.Length()
-                    Console.WriteLine(i - 1)
-                    Dim myString As String = folders(i - 1)
+                    image1.Source = Nothing
+                    image2.Source = Nothing
+                    yuanshen.Source = Nothing
+                    kdtkyd6666.Source = Nothing
+                    GC.Collect()
+                    GC.WaitForPendingFinalizers()
+                    Try
+                        Directory.Delete(ThemsDirectory & "\" & selectedItem.Content, True)
+                    Catch ex As Exception
+                        errormsgbox = "错误,无法删除该主题，报错如下" & ex.ToString
+                        Errorbox("错误,无法删除该主题，报错如下" & ex.ToString)
+                    End Try
+                    List1.Items.Clear()
+                    comboBox.Items.Clear()
+                    folders = Directory.GetDirectories(ThemsDirectory)
+                    For i As Integer = 1 To folders.Length()
+                        Console.WriteLine(i - 1)
+                        Dim myString As String = folders(i - 1)
 
-                    '查找最后一个 "\" 的位置
-                    Dim lastBackslashIndex As Integer = myString.LastIndexOf("\")
-                    If lastBackslashIndex <> -1 Then '确保找到了 "\" 符号
-                        '截取 "\" 后面的全部字符
-                        Dim result As String = myString.Substring(lastBackslashIndex + 1)
-                        Console.WriteLine(result) '输出结果
+                        '查找最后一个 "\" 的位置
+                        Dim lastBackslashIndex As Integer = myString.LastIndexOf("\")
+                        If lastBackslashIndex <> -1 Then '确保找到了 "\" 符号
+                            '截取 "\" 后面的全部字符
+                            Dim result As String = myString.Substring(lastBackslashIndex + 1)
+                            Console.WriteLine(result) '输出结果
 
-                        Dim newItem As New ListBoxItem With {
+                            Dim newItem As New ListBoxItem With {
                             .Content = result
                         }
 
-                        List1.Items.Add(newItem)
+                            List1.Items.Add(newItem)
 
-                        Dim newItem1 As New ComboBoxItem With {
+                            Dim newItem1 As New ComboBoxItem With {
                             .Content = result
                         }
-                        comboBox.Items.Add(newItem1)
-                    End If
-                Next
+                            comboBox.Items.Add(newItem1)
+                        End If
+                    Next
 
-                cuowu.Visibility = Visibility.Visible
-                tbackground.IsEnabled = False
-                ttrademark.IsEnabled = False
-                tstartimg.IsEnabled = False
-                xbacoground.IsEnabled = False
-                xtrademark.IsEnabled = False
-                xstartimg.IsEnabled = False
-                sname.IsEnabled = False
-                namesave.IsEnabled = False
-                sname_Copy.IsEnabled = False
-                namesave_Copy.IsEnabled = False
-                sname_Copy1.IsEnabled = False
-                namesave_Copy2.IsEnabled = False
-                _1_1.IsEnabled = False
-                _2_2.IsEnabled = False
-                _3_3.IsEnabled = False
-                _4_4.IsEnabled = False
-                _5_5.IsEnabled = False
-                SharedV.Saving = True
-            Else
-                Dim StartIMG = ThemsDirectory & "\" & selectedItem.Content & "\" & tstartimg.Text
-                Dim trademark = ThemsDirectory & "\" & selectedItem.Content & "\" & ttrademark.Text
-                Dim background = ThemsDirectory & "\" & selectedItem.Content & "\" & tbackground.Text
-                Dim startmp4 = ThemsDirectory & "\" & selectedItem.Content & "\startmp4.mp4"
-                image1.Source = New BitmapImage(New Uri(background, UriKind.Absolute))
-                yuanshen.Source = New BitmapImage(New Uri(StartIMG, UriKind.Absolute))
-                image2.Source = New BitmapImage(New Uri(trademark, UriKind.Absolute))
-                kdtkyd6666.Source = New Uri(startmp4, UriKind.Absolute)
+                    cuowu.Visibility = Visibility.Visible
+                    tbackground.IsEnabled = False
+                    ttrademark.IsEnabled = False
+                    tstartimg.IsEnabled = False
+                    xbacoground.IsEnabled = False
+                    xtrademark.IsEnabled = False
+                    xstartimg.IsEnabled = False
+                    sname.IsEnabled = False
+                    namesave.IsEnabled = False
+                    sname_Copy.IsEnabled = False
+                    namesave_Copy.IsEnabled = False
+                    sname_Copy1.IsEnabled = False
+                    namesave_Copy2.IsEnabled = False
+                    _1_1.IsEnabled = False
+                    _2_2.IsEnabled = False
+                    _3_3.IsEnabled = False
+                    _4_4.IsEnabled = False
+                    _5_5.IsEnabled = False
+                    SharedV.Saving = True
+                    cg114()
+                Else
+                    Dim StartIMG = ThemsDirectory & "\" & selectedItem.Content & "\" & tstartimg.Text
+                    Dim trademark = ThemsDirectory & "\" & selectedItem.Content & "\" & ttrademark.Text
+                    Dim background = ThemsDirectory & "\" & selectedItem.Content & "\" & tbackground.Text
+                    Dim startmp4 = ThemsDirectory & "\" & selectedItem.Content & "\startmp4.mp4"
+                    image1.Source = New BitmapImage(New Uri(background, UriKind.Absolute))
+                    yuanshen.Source = New BitmapImage(New Uri(StartIMG, UriKind.Absolute))
+                    image2.Source = New BitmapImage(New Uri(trademark, UriKind.Absolute))
+                    kdtkyd6666.Source = New Uri(startmp4, UriKind.Absolute)
+                End If
             End If
-        End If
     End Sub
 
     Private Sub namesave_Click(sender As Object, e As RoutedEventArgs) Handles namesave.Click
@@ -1038,6 +993,7 @@ Public Class Window1
 
         Catch ex As Exception
             errormsgbox = "替换失败，因为" & vbCrLf & vbCrLf & ex.ToString
+            Errorbox("替换失败，因为" & vbCrLf & vbCrLf & ex.ToString)
             SharedV.Saving = True
         End Try
     End Sub
@@ -1046,19 +1002,7 @@ Public Class Window1
         'Dim window2 As New Window2
         'SharedV.Saving = False
         'window2.Show()
-        Dim secondWindow As New Window2
-        Dim x As Double = Me.Left + Me.ActualWidth - (secondWindow.Width / 3)
-        Dim y As Double = Me.Top
 
-        secondWindow.Left = x
-        secondWindow.Top = y
-        Dim moveAnimation As New DoubleAnimation()
-        moveAnimation.From = secondWindow.Left + secondWindow.Width
-        moveAnimation.To = x
-        moveAnimation.Duration = New Duration(TimeSpan.FromSeconds(1))
-        moveAnimation.EasingFunction = New QuarticEase()
-        secondWindow.BeginAnimation(Window.LeftProperty, moveAnimation)
-        secondWindow.Show()
         GC.Collect()
         GC.WaitForPendingFinalizers()
 
@@ -1130,6 +1074,7 @@ Public Class Window1
         _4_4.IsEnabled = False
         _5_5.IsEnabled = False
         SharedV.Saving = True
+        cg114()
     End Sub
 
     Private Sub button_Click(sender As Object, e As RoutedEventArgs) Handles button.Click
@@ -1182,19 +1127,7 @@ Public Class Window1
             Dim path As String = openFileDialog.FileName
             Dim path114 As String = System.IO.Path.GetFileName(openFileDialog.FileName)
             If ComparePaths(appDirectory & "\" & textBox.Text, path) = False Then
-                Dim secondWindow As New Window2
-                Dim x As Double = Me.Left + Me.ActualWidth - (secondWindow.Width / 3)
-                Dim y As Double = Me.Top
 
-                secondWindow.Left = x
-                secondWindow.Top = y
-                Dim moveAnimation As New DoubleAnimation()
-                moveAnimation.From = secondWindow.Left + secondWindow.Width
-                moveAnimation.To = x
-                moveAnimation.Duration = New Duration(TimeSpan.FromSeconds(1))
-                moveAnimation.EasingFunction = New QuarticEase()
-                secondWindow.BeginAnimation(Window.LeftProperty, moveAnimation)
-                secondWindow.Show()
                 'errormsgbox = "ok"
                 'Dim window2 As New Window2
                 'SharedV.Saving = False
@@ -1210,9 +1143,10 @@ Public Class Window1
                     End Using
                     SharedV.Saving = True
 
-
+                    cg114()
                 Catch ex As Exception
                     errormsgbox = "替换失败，因为" & vbCrLf & vbCrLf & ex.ToString
+                    Errorbox("替换失败，因为" & vbCrLf & vbCrLf & ex.ToString)
                     SharedV.Saving = False
                     'Dim window3 As New Window2
                     'window3.Show()
@@ -1241,20 +1175,7 @@ Public Class Window1
         errormsgbox = "ok"
         ' Dim window2 As New Window2
         'Window2.Show()
-        Dim secondWindow As New Window2
-        Dim x As Double = Me.Left + Me.ActualWidth - (secondWindow.Width / 3)
-        Dim y As Double = Me.Top
 
-        secondWindow.Left = x
-        secondWindow.Top = y
-        Dim moveAnimation As New DoubleAnimation()
-        moveAnimation.From = secondWindow.Left + secondWindow.Width
-        moveAnimation.To = x
-        moveAnimation.Duration = New Duration(TimeSpan.FromSeconds(1))
-        moveAnimation.EasingFunction = New QuarticEase()
-        secondWindow.BeginAnimation(Window.LeftProperty, moveAnimation)
-
-        secondWindow.Show()
 
         If File.Exists(_filepath.Text()) = True Then
             Try
@@ -1309,11 +1230,14 @@ Public Class Window1
                 End Using ' 关闭文件并释放资源
             Catch ex As System.NullReferenceException
                 errormsgbox = "已引发异常：" & vbCrLf & ex.ToString & vbCrLf & vbCrLf & "    请用户检查主题配置中是否有值为空"
+                Errorbox("已引发异常：" & vbCrLf & ex.ToString & vbCrLf & vbCrLf & "    请用户检查主题配置中是否有值为空")
             Catch _e As Exception
                 errormsgbox = "已引发异常：" & vbCrLf & _e.ToString & vbCrLf & vbCrLf & "    请用户检查主题配置中是否有值为空"
+                Errorbox("已引发异常：" & vbCrLf & _e.ToString & vbCrLf & vbCrLf & "    请用户检查主题配置中是否有值为空")
             End Try
         Else
             errormsgbox = "指定的 " & _filepath.Text() & " 由于不存在、不可用、不完整、没有权限等其他原因无法被设定，请更换路径。" & vbLf & vbCrLf & "提示：暂不支持完整路径后面接参数"
+            Errorbox("指定的 " & _filepath.Text() & " 由于不存在、不可用、不完整、没有权限等其他原因无法被设定，请更换路径。" & vbLf & vbCrLf & "提示：暂不支持完整路径后面接参数")
         End If
         File.Delete("product.config")
         Dim filePath1 As String = "product.config" ' 设置文件路径
@@ -1325,7 +1249,7 @@ Public Class Window1
 
         End Using ' 关闭文件并释放资源
         SharedV.Saving = True
-
+        cg114()
     End Sub
 
     Private Sub windowsave_Click() Handles windowsave.Click
@@ -1394,20 +1318,7 @@ Public Class Window1
 
     Private Sub windowsave_Copy_Click() Handles windowsave_Copy.Click
         Try
-            Dim secondWindow As New Window2
-            Dim x As Double = Me.Left + Me.ActualWidth - (secondWindow.Width / 3)
-            Dim y As Double = Me.Top
 
-            secondWindow.Left = x
-            secondWindow.Top = y
-            Dim moveAnimation As New DoubleAnimation()
-            moveAnimation.From = secondWindow.Left + secondWindow.Width
-            moveAnimation.To = x
-            moveAnimation.Duration = New Duration(TimeSpan.FromSeconds(1))
-            moveAnimation.EasingFunction = New QuarticEase()
-            secondWindow.BeginAnimation(Window.LeftProperty, moveAnimation)
-
-            secondWindow.Show()
 
             'MsgBox(zt)
             File.Delete(zt)
@@ -1420,10 +1331,11 @@ Public Class Window1
                 writer.WriteLine(_5_5.Text)
             End Using ' 关闭文件并释放资源
             errormsgbox = "ok"
-
+            cg114()
             'Window2.Show()
         Catch ex As Exception
             errormsgbox = "替换失败，因为" & vbCrLf & vbCrLf & ex.ToString
+            Errorbox("替换失败，因为" & vbCrLf & vbCrLf & ex.ToString)
             'Dim secondWindow As New Window2
             'Dim x As Double = Me.Left + Me.ActualWidth - (secondWindow.Width / 3)
             'Dim y As Double = Me.Top
@@ -1476,19 +1388,7 @@ Public Class Window1
                 Dim selectedItem As ListBoxItem = List1.SelectedItem
                 Dim startmp4 = ThemsDirectory & "\" & selectedItem.Content & "\startmp4.mp4"
                 If ComparePaths(startmp4, selectedFilePath) = False Then
-                    Dim secondWindow As New Window2
-                    Dim x As Double = Me.Left + Me.ActualWidth - (secondWindow.Width / 3)
-                    Dim y As Double = Me.Top
 
-                    secondWindow.Left = x
-                    secondWindow.Top = y
-                    Dim moveAnimation As New DoubleAnimation()
-                    moveAnimation.From = secondWindow.Left + secondWindow.Width
-                    moveAnimation.To = x
-                    moveAnimation.Duration = New Duration(TimeSpan.FromSeconds(1))
-                    moveAnimation.EasingFunction = New QuarticEase()
-                    secondWindow.BeginAnimation(Window.LeftProperty, moveAnimation)
-                    secondWindow.Show()
                     SharedV.Saving = False
 
 
@@ -1508,6 +1408,7 @@ Public Class Window1
                     kdtkyd6666.Source = New Uri(startmp4, UriKind.Absolute)
                     errormsgbox = "ok"
                     SharedV.Saving = True
+                    cg114()
                 Else
                     MsgBox("不是，哥们，你选文件自己干嘛？", vbExclamation)
                     'Dim selectedItem As ListBoxItem = List1.SelectedItem
@@ -1524,7 +1425,7 @@ Public Class Window1
             Catch ex As Exception
 
                 errormsgbox = "替换失败，因为" & vbCrLf & vbCrLf & ex.ToString
-
+                Errorbox("替换失败，因为" & vbCrLf & vbCrLf & ex.ToString)
 
             End Try
         Else
@@ -1574,20 +1475,7 @@ Public Class Window1
     Private Sub MP4114_Click() Handles MP4114.Click
         If MP4114.IsChecked = True Then
             Try
-                Dim secondWindow As New Window2
-                Dim x As Double = Me.Left + Me.ActualWidth - (secondWindow.Width / 3)
-                Dim y As Double = Me.Top
 
-                secondWindow.Left = x
-                secondWindow.Top = y
-                Dim moveAnimation As New DoubleAnimation()
-                moveAnimation.From = secondWindow.Left + secondWindow.Width
-                moveAnimation.To = x
-                moveAnimation.Duration = New Duration(TimeSpan.FromSeconds(1))
-                moveAnimation.EasingFunction = New QuarticEase()
-                secondWindow.BeginAnimation(Window.LeftProperty, moveAnimation)
-
-                secondWindow.Show()
 
                 Dim selectedItem As ListBoxItem = List1.SelectedItem
                 sname_Copy.IsEnabled = False
@@ -1608,28 +1496,14 @@ Public Class Window1
                 errormsgbox = "ok"
                 'Dim win As New Window2
                 'win.Show()
+                cg114()
             Catch ex As Exception
-                error1 = "保存失败"
-                error2 = ex.ToString
-                Dim error114 As New error114
-                error114.ShowDialog()
+                errormsgbox = "替换失败，因为" & vbCrLf & vbCrLf & ex.ToString
+                Errorbox("替换失败，因为" & vbCrLf & vbCrLf & ex.ToString)
             End Try
         Else
             Try
-                Dim secondWindow As New Window2
-                Dim x As Double = Me.Left + Me.ActualWidth - (secondWindow.Width / 3)
-                Dim y As Double = Me.Top
 
-                secondWindow.Left = x
-                secondWindow.Top = y
-                Dim moveAnimation As New DoubleAnimation()
-                moveAnimation.From = secondWindow.Left + secondWindow.Width
-                moveAnimation.To = x
-                moveAnimation.Duration = New Duration(TimeSpan.FromSeconds(1))
-                moveAnimation.EasingFunction = New QuarticEase()
-                secondWindow.BeginAnimation(Window.LeftProperty, moveAnimation)
-
-                secondWindow.Show()
 
                 Dim selectedItem As ListBoxItem = List1.SelectedItem
                 MP4114_Copy1.IsEnabled = True
@@ -1669,13 +1543,12 @@ Public Class Window1
                 End Using
                 'End If
                 errormsgbox = "ok"
+                cg114()
                 'Dim win As New Window2
                 'win.Show()
             Catch ex As Exception
-                error1 = "保存失败"
-                error2 = ex.ToString
-                Dim error114 As New error114
-                error114.Show()
+                errormsgbox = "替换失败，因为" & vbCrLf & vbCrLf & ex.ToString
+                Errorbox("替换失败，因为" & vbCrLf & vbCrLf & ex.ToString)
             End Try
         End If
     End Sub
@@ -1685,19 +1558,7 @@ Public Class Window1
         errormsgbox = "ok"
         'Dim window2 As New Window2
         'window2.Show()
-        Dim secondWindow As New Window2
-        Dim x As Double = Me.Left + Me.ActualWidth - (secondWindow.Width / 3)
-        Dim y As Double = Me.Top
-        secondWindow.Left = x
-        secondWindow.Top = y
-        Dim moveAnimation As New DoubleAnimation()
-        moveAnimation.From = secondWindow.Left + secondWindow.Width
-        moveAnimation.To = x
-        moveAnimation.Duration = New Duration(TimeSpan.FromSeconds(1))
-        moveAnimation.EasingFunction = New QuarticEase()
-        secondWindow.BeginAnimation(Window.LeftProperty, moveAnimation)
 
-        secondWindow.Show()
 
         If File.Exists(_filepath.Text()) = True Then
             Try
@@ -1755,14 +1616,18 @@ Public Class Window1
                 windowsave_Click()
             Catch ex As System.NullReferenceException
                 errormsgbox = "已引发异常：" & vbCrLf & ex.ToString & vbCrLf & vbCrLf & "    请用户检查主题配置中是否有值为空"
+                Errorbox("已引发异常：" & vbCrLf & ex.ToString & vbCrLf & vbCrLf & "    请用户检查主题配置中是否有值为空")
             Catch _e As Exception
                 errormsgbox = "已引发异常：" & vbCrLf & _e.ToString & vbCrLf & vbCrLf & "    请用户检查主题配置中是否有值为空"
+                Errorbox("已引发异常：" & vbCrLf & _e.ToString & vbCrLf & vbCrLf & "    请用户检查主题配置中是否有值为空")
             End Try
         Else
             errormsgbox = "指定的 " & _filepath.Text() & " 由于不存在、不可用、不完整、没有权限等其他原因无法被设定，请更换路径。" & vbLf & vbCrLf & "提示：暂不支持完整路径后面接参数"
+            Errorbox("指定的 " & _filepath.Text() & " 由于不存在、不可用、不完整、没有权限等其他原因无法被设定，请更换路径。" & vbLf & vbCrLf & "提示：暂不支持完整路径后面接参数")
         End If
 
         SharedV.Saving = True
+        cg114()
     End Sub
 
     Private Sub namesave_Copy1_Click(sender As Object, e As RoutedEventArgs) Handles namesave_Copy1.Click
@@ -1770,20 +1635,7 @@ Public Class Window1
         errormsgbox = "ok"
         'Dim window2 As New Window2
         'Window2.Show()
-        Dim secondWindow As New Window2
-        Dim x As Double = Me.Left + Me.ActualWidth - (secondWindow.Width / 3)
-        Dim y As Double = Me.Top
 
-        secondWindow.Left = x
-        secondWindow.Top = y
-        Dim moveAnimation As New DoubleAnimation()
-        moveAnimation.From = secondWindow.Left + secondWindow.Width
-        moveAnimation.To = x
-        moveAnimation.Duration = New Duration(TimeSpan.FromSeconds(1))
-        moveAnimation.EasingFunction = New QuarticEase()
-        secondWindow.BeginAnimation(Window.LeftProperty, moveAnimation)
-
-        secondWindow.Show()
 
         If File.Exists(_filepath.Text()) = True Then
             Try
@@ -1877,11 +1729,14 @@ Public Class Window1
                         End Using ' 关闭文件并释放资源
                     Catch ex As System.NullReferenceException
                         errormsgbox = "已引发异常：" & vbCrLf & ex.ToString & vbCrLf & vbCrLf & "    请用户检查主题配置中是否有值为空"
+                        Errorbox("已引发异常：" & vbCrLf & ex.ToString & vbCrLf & vbCrLf & "    请用户检查主题配置中是否有值为空")
                     Catch _e As Exception
                         errormsgbox = "已引发异常：" & vbCrLf & _e.ToString & vbCrLf & vbCrLf & "    请用户检查主题配置中是否有值为空"
+                        Errorbox("已引发异常：" & vbCrLf & _e.ToString & vbCrLf & vbCrLf & "    请用户检查主题配置中是否有值为空")
                     End Try
                 Else
                     errormsgbox = "指定的 " & _filepath.Text() & " 由于不存在、不可用、不完整、没有权限等其他原因无法被设定，请更换路径。" & vbLf & vbCrLf & "提示：暂不支持完整路径后面接参数"
+                    Errorbox("指定的 " & _filepath.Text() & " 由于不存在、不可用、不完整、没有权限等其他原因无法被设定，请更换路径。" & vbLf & vbCrLf & "提示：暂不支持完整路径后面接参数")
                 End If
                 File.Delete("product.config")
                 Dim filePath115 As String = "product.config" ' 设置文件路径
@@ -1915,15 +1770,18 @@ Public Class Window1
                 End Using ' 关闭文件并释放资源
             Catch ex As System.NullReferenceException
                 errormsgbox = "已引发异常：" & vbCrLf & ex.ToString & vbCrLf & vbCrLf & "    请用户检查主题配置中是否有值为空"
-
+                Errorbox("已引发异常：" & vbCrLf & ex.ToString & vbCrLf & vbCrLf & "    请用户检查主题配置中是否有值为空")
             Catch _e As Exception
                 errormsgbox = "已引发异常：" & vbCrLf & _e.ToString & vbCrLf & vbCrLf & "    请用户检查主题配置中是否有值为空"
+                Errorbox("已引发异常：" & vbCrLf & _e.ToString & vbCrLf & vbCrLf & "    请用户检查主题配置中是否有值为空")
             End Try
         Else
             errormsgbox = "指定的 " & _filepath.Text() & " 由于不存在、不可用、不完整、没有权限等其他原因无法被设定，请更换路径。" & vbLf & vbCrLf & "提示：暂不支持完整路径后面接参数"
+            Errorbox("指定的 " & _filepath.Text() & " 由于不存在、不可用、不完整、没有权限等其他原因无法被设定，请更换路径。" & vbLf & vbCrLf & "提示：暂不支持完整路径后面接参数")
         End If
 
         SharedV.Saving = True
+        cg114()
     End Sub
 
     Private Sub cs_Copy_Click(sender As Object, e As RoutedEventArgs) Handles cs_Copy.Click
@@ -1958,27 +1816,15 @@ Public Class Window1
         If result = True Then
 
             Try
-                Dim secondWindow As New Window2
-                Dim x As Double = Me.Left + Me.ActualWidth - (secondWindow.Width / 3)
-                Dim y As Double = Me.Top
 
-                secondWindow.Left = x
-                secondWindow.Top = y
-                Dim moveAnimation As New DoubleAnimation()
-                moveAnimation.From = secondWindow.Left + secondWindow.Width
-                moveAnimation.To = x
-                moveAnimation.Duration = New Duration(TimeSpan.FromSeconds(1))
-                moveAnimation.EasingFunction = New QuarticEase()
-                secondWindow.BeginAnimation(Window.LeftProperty, moveAnimation)
-                secondWindow.Show()
                 Dim selectedItem As ListBoxItem = List1.SelectedItem
                 Dim selectedFilePath As String = openFileDialog.FileName
                 If ComparePaths(ThemsDirectory & "\" & selectedItem.Content & "\startmp41.mp4", selectedFilePath) = False Then
-                    Dim window2 As New Window2
+
 
                     SharedV.Saving = False
 
-                    window2.Show()
+
 
 
 
@@ -2000,6 +1846,7 @@ Public Class Window1
                     kdtkyd6666.Source = New Uri(startmp4, UriKind.Absolute)
                     errormsgbox = "ok"
                     SharedV.Saving = True
+                    cg114()
                 Else
                     MsgBox("不是，哥们，你选文件自己干嘛？", vbExclamation)
                     'Dim selectedItem As ListBoxItem = List1.SelectedItem
@@ -2016,6 +1863,7 @@ Public Class Window1
             Catch ex As Exception
 
                 errormsgbox = "替换失败，因为" & vbCrLf & vbCrLf & ex.ToString
+                Errorbox("替换失败，因为" & vbCrLf & vbCrLf & ex.ToString)
                 'Dim window2 As New Window2
 
                 'SharedV.Saving = True
@@ -2051,11 +1899,28 @@ Public Class Window1
 
     End Sub
 
-    Private Sub update114_Click(sender As Object, e As RoutedEventArgs) Handles update114.Click
+    Private Async Sub update114_Click(sender As Object, e As RoutedEventArgs) Handles update114.Click
         Dim update9 As New update
         update9.ShowDialog()
-    End Sub
 
+
+    End Sub
+    Private Async Sub Errorbox(nr114514 As String)
+        singleText.Text = nr114514
+        singleTitle.Text = "保存失败"
+        HelperGrid.MaxWidth = ActualWidth * 0.85
+        HelperContent.MaxHeight = ActualHeight * 0.55
+        Activate()
+        Await DialogHost.Show(SingleDialog.DialogContent, "singleSetting")
+    End Sub
+    Private Async Sub messagebox(nr114514 As String, title114514 As String)
+        singleText.Text = nr114514
+        singleTitle.Text = title114514
+        HelperGrid.MaxWidth = ActualWidth * 0.85
+        HelperContent.MaxHeight = ActualHeight * 0.55
+        Activate()
+        Await DialogHost.Show(SingleDialog.DialogContent, "singleSetting")
+    End Sub
     Private Sub tabControl_SelectionChanged(sender As Object, e As SelectionChangedEventArgs) Handles tabControl.SelectionChanged
         Dim tabControl As TabControl = CType(sender, TabControl)
         Dim selectedTab As TabItem = CType(tabControl.SelectedItem, TabItem)
@@ -2075,4 +1940,5 @@ Public Class Window1
             refreshh.Foreground = New SolidColorBrush(Color.FromRgb(128, 128, 128))
         End If
     End Sub
+
 End Class

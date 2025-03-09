@@ -4,8 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SeewoStart"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
         mc:Ignorable="d"
-        Title="正在检查更新~" Height="141.334" Width="683.333" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="正在检查更新~" Height="385" Width="674" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" FontFamily="HarmonyOS Sans SC Black">
     <Window.Resources>
         <Storyboard x:Key="ColorAnimation">
             <ColorAnimation
@@ -16,23 +17,31 @@
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="53*"/>
-            <ColumnDefinition Width="286*"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <ProgressBar x:Name="ProgressBar1" HorizontalAlignment="Left" Height="34.4" Margin="19.091,44.133,0,0" VerticalAlignment="Top" Width="637.776" RenderTransformOrigin="1,0.5" UseLayoutRounding="False" Foreground="#FF2ACDFF" IsIndeterminate="True" Background="#FFE6E6E6" Grid.ColumnSpan="2">
-            <ProgressBar.Style>
-                <Style TargetType="{x:Type ProgressBar}">
-                    <Style.Triggers>
-                        <Trigger Property="IsIndeterminate" Value="True">
-                            <Trigger.EnterActions>
-                                <BeginStoryboard Storyboard="{StaticResource ColorAnimation}" />
-                            </Trigger.EnterActions>
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </ProgressBar.Style>
-        </ProgressBar>
-        <TextBlock x:Name="_114514in" HorizontalAlignment="Left" Height="26.666" Margin="20.333,10.667,0,0" TextWrapping="Wrap" Text="正在检查更新...." VerticalAlignment="Top" Width="642" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black" FontSize="18" Grid.ColumnSpan="2"/>
-
+        <TextBlock x:Name="_114514in" HorizontalAlignment="Left" Height="26" Margin="20,11,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="642" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black" FontSize="18"><Run Language="zh-cn" Text="无可用更新..."/></TextBlock>
+        <TextBlock x:Name="ver666" HorizontalAlignment="Left" Height="34" Margin="47,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="576" FontFamily="HarmonyOS Sans SC Black" FontSize="14"><Run Language="zh-cn" Text="当前版本已是最新 Version4.0"/></TextBlock>
+        <TextBlock x:Name="gxnr114" HorizontalAlignment="Left" Height="217" Margin="47,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="590" FontFamily="HarmonyOS Sans SC Light"><Run Language="zh-cn" Text="更新内容:"/></TextBlock>
+        <Button x:Name="checkupdate" Content="检查更新" HorizontalAlignment="Left" Height="31" Margin="426,310,0,0" VerticalAlignment="Top" Width="96" FontFamily="HarmonyOS Sans SC Black"/>
+        <Button x:Name="dlgx" Content="下载更新" HorizontalAlignment="Left" Height="31" Margin="549,311,0,0" VerticalAlignment="Top" Width="97" IsEnabled="False" Click="dlgx_Click"/>
+        <materialDesign:Snackbar
+x:Name="SnackbarOne"
+IsActive="False"
+Message="无可用更新 " HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+        <materialDesign:DialogHost x:Name="errorbox1145" Identifier="errorbox114"
+DialogContentUniformCornerRadius="18"
+DialogTheme="Inherit" Visibility="Visible" Margin="-10,10,10,-10">
+            <materialDesign:DialogHost.DialogContent>
+                <StackPanel x:Name="HelperGrid" Background="White">
+                    <TextBlock x:Name="singleTitle" Margin="16,16,16,0" FontFamily="HarmonyOS Sans SC Medium" FontSize="24" ></TextBlock>
+                    <ScrollViewer x:Name="HelperContent">
+                        <TextBlock x:Name="singleText" Margin="16,5,16,16" FontFamily="HarmonyOS Sans SC Medium" FontSize="16" TextWrapping="Wrap" Text="首先，API Key 的申请和使用是完全免费的，无需任何费用，申请前后也无需观看任何广告。" ></TextBlock>
+                    </ScrollViewer>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="16">
+                        <Button Content="好" Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" IsDefault="True" CommandParameter="True" Style="{StaticResource MaterialDesignFlatButton}" Foreground="{DynamicResource MaterialDesign.Brush.Primary}"/>
+                    </StackPanel>
+                </StackPanel>
+            </materialDesign:DialogHost.DialogContent>
+        </materialDesign:DialogHost>
     </Grid>
 </Window>

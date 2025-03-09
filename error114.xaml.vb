@@ -1,4 +1,4 @@
-﻿Imports System.IO
+﻿Imports System.ComponentModel
 Public Class error114
 
     ' dim appdirectory = readsettings.appdirectoryin '运行目录
@@ -23,6 +23,10 @@ Public Class error114
         Clipboard.SetText(error1 & vbCrLf & "详细报错：" & error2)
         MsgBox("已自动将报错消息复制到剪切板", vbInformation)
         Process.Start("https://github.com/SRInternet-Studio/Seewo-Custom_Start/issues")
+    End Sub
+
+    Private Sub error114_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        End
     End Sub
 
     'private async sub printtotext(text as string)

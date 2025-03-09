@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SeewoStart"
         xmlns:effects="clr-namespace:System.Windows.Media.Effects;assembly=PresentationCore"
-        xmlns:SVG="clr-namespace:SVGImage.SVG;assembly=SVGImage" xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls" x:Class="Window1"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:SVG="clr-namespace:SVGImage.SVG;assembly=SVGImage"  x:Class="Window1"
         mc:Ignorable="d"
         Title="定制启动器 设置界面" Height="498.8" Width="983.2" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Window.Resources>
@@ -783,7 +785,7 @@
                         <TranslateTransform/>
                     </TransformGroup>
                 </TabControl.RenderTransform>
-                <TabItem x:Name="tabItem" Header="启动常量" RenderTransformOrigin="0.5,0.5" >
+                <TabItem x:Name="tabItem" Header="启动常量" RenderTransformOrigin="0.5,0.5" Width="205" >
                     <TabItem.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -805,7 +807,7 @@
                                     <TranslateTransform/>
                                 </TransformGroup>
                             </TextBlock.RenderTransform><Run Text="启动"/><Run Text="程序路径"/><Run Text=""/><Run Text="："/></TextBlock>
-                        <TextBox x:Name="_filepath" HorizontalAlignment="Left" Height="20" Margin="139.751,13,0,0" Text=".exe" VerticalAlignment="Top" Width="554.666" FontSize="14" RenderTransformOrigin="0.5,0.5" >
+                        <TextBox x:Name="_filepath" HorizontalAlignment="Left" Height="24" Margin="140,13,0,0" Text=".exe" VerticalAlignment="Top" Width="554" FontSize="14" RenderTransformOrigin="0.5,0.5" >
                             <TextBox.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform/>
@@ -815,7 +817,7 @@
                                 </TransformGroup>
                             </TextBox.RenderTransform>
                         </TextBox>
-                        <Button x:Name="button" Content="选取" HorizontalAlignment="Left" Height="21" Margin="702.041,13,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.5,0.5" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black">
+                        <Button x:Name="button" Content="选取" HorizontalAlignment="Left" Height="28" Margin="702,13,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.5,0.5" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black">
                             <Button.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform/>
@@ -843,7 +845,7 @@
                                     <TranslateTransform/>
                                 </TransformGroup>
                             </TextBlock.RenderTransform><Run Text="标题"/><Run Text="："/></TextBlock>
-                        <TextBox x:Name="_1" HorizontalAlignment="Left" Height="20" Margin="70.638,113,0,0" Text="希沃" VerticalAlignment="Top" Width="706" FontSize="14" RenderTransformOrigin="0.5,0.5">
+                        <TextBox x:Name="_1" HorizontalAlignment="Left" Height="29" Margin="71,113,0,0" Text="希沃" VerticalAlignment="Top" Width="706" FontSize="14" RenderTransformOrigin="0.5,0.5">
                             <TextBox.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform/>
@@ -862,7 +864,7 @@
                                     <TranslateTransform/>
                                 </TransformGroup>
                             </TextBlock.RenderTransform><Run Text="副标题"/><Run Text="："/></TextBlock>
-                        <TextBox x:Name="_2" HorizontalAlignment="Left" Height="20" Margin="71.417,142,0,0" Text="Pro" VerticalAlignment="Top" Width="687" FontSize="14" RenderTransformOrigin="0.5,0.5">
+                        <TextBox x:Name="_2" HorizontalAlignment="Left" Height="24" Margin="71,142,0,0" Text="Pro" VerticalAlignment="Top" Width="687" FontSize="14" RenderTransformOrigin="0.5,0.5">
                             <TextBox.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform/>
@@ -881,7 +883,7 @@
                                     <TranslateTransform/>
                                 </TransformGroup>
                             </TextBlock.RenderTransform><Run Text="启动文字"/><Run Text="："/></TextBlock>
-                        <TextBox x:Name="_3" HorizontalAlignment="Left" Height="20" Margin="88.417,172,0,0" Text="正在启动！" VerticalAlignment="Top" Width="670" FontSize="14" RenderTransformOrigin="0.5,0.5">
+                        <TextBox x:Name="_3" HorizontalAlignment="Left" Height="29" Margin="88,172,0,0" Text="正在启动！" VerticalAlignment="Top" Width="670" FontSize="14" RenderTransformOrigin="0.5,0.5">
                             <TextBox.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform/>
@@ -900,7 +902,7 @@
                                     <TranslateTransform/>
                                 </TransformGroup>
                             </TextBlock.RenderTransform><Run Text="警示"/><Run Text="文字"/><Run Text="："/></TextBlock>
-                        <TextBox x:Name="_4" HorizontalAlignment="Left" Height="20" Margin="88.417,201,0,0" Text="抵制扰乱秩序，坚持认真上课，注意自我提醒，谨防上课睡觉；适度教学益脑，拖堂教学伤身，合理安排时间，享受快乐教学。" VerticalAlignment="Top" Width="670" FontSize="14" MaxLines="1" RenderTransformOrigin="0.5,0.5">
+                        <TextBox x:Name="_4" HorizontalAlignment="Left" Height="29" Margin="88,196,0,0" Text="抵制扰乱秩序，坚持认真上课，注意自我提醒，谨防上课睡觉；适度教学益脑，拖堂教学伤身，合理安排时间，享受快乐教学。" VerticalAlignment="Top" Width="670" FontSize="14" MaxLines="1" RenderTransformOrigin="0.5,0.5">
                             <TextBox.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform/>
@@ -919,7 +921,7 @@
                                     <TranslateTransform/>
                                 </TransformGroup>
                             </TextBlock.RenderTransform><Run Text="版权文字"/><Run Text="："/></TextBlock>
-                        <TextBox x:Name="_5" HorizontalAlignment="Left" Height="20" Margin="88.417,229,0,0" VerticalAlignment="Top" Width="670" FontSize="14" MaxLines="1" Text="Copyright © 2011-2023 Guangzhou Shirui. All Rights Reserved" RenderTransformOrigin="0.5,0.5">
+                        <TextBox x:Name="_5" HorizontalAlignment="Left" Height="28" Margin="88,225,0,0" VerticalAlignment="Top" Width="670" FontSize="14" MaxLines="1" Text="Copyright © 2011-2023 Guangzhou Shirui. All Rights Reserved" RenderTransformOrigin="0.5,0.5">
                             <TextBox.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform/>
@@ -947,7 +949,7 @@
                                     <TranslateTransform/>
                                 </TransformGroup>
                             </TextBlock.RenderTransform><Run Text="音效"/><Run Text="："/></TextBlock>
-                        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="20" Margin="70.638,290,0,0" Text="Start.wav" VerticalAlignment="Top" Width="643" FontSize="14" RenderTransformOrigin="0.5,0.5" IsReadOnly="True">
+                        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="24" Margin="71,290,0,0" Text="Start.wav" VerticalAlignment="Top" Width="643" FontSize="14" RenderTransformOrigin="0.5,0.5" IsReadOnly="True">
                             <TextBox.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform/>
@@ -978,7 +980,7 @@
                                 </TransformGroup>
                             </CheckBox.RenderTransform>
                         </CheckBox>
-                        <Button x:Name="button1" Content="选取" HorizontalAlignment="Left" Height="21" Margin="720.541,289.5,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.5,0.5" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black">
+                        <Button x:Name="button1" Content="选取" HorizontalAlignment="Left" Height="24" Margin="721,290,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.5,0.5" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black">
                             <Button.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform/>
@@ -1008,8 +1010,7 @@
                                 </TransformGroup>
                             </ComboBox.RenderTransform>
                         </ComboBox>
-
-                        <Button x:Name="saving" Content="全部应用" HorizontalAlignment="Left" Height="30" Margin="640.041,398,0,0" VerticalAlignment="Top" Width="130" RenderTransformOrigin="0.5,0.5" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black">
+                        <Button x:Name="saving" Content="全部应用" HorizontalAlignment="Left" Height="30" Margin="640,373,0,0" VerticalAlignment="Top" Width="130" RenderTransformOrigin="0.5,0.5" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black">
                             <Button.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform/>
@@ -1022,7 +1023,7 @@
 
                     </Grid>
                 </TabItem>
-                <TabItem x:Name="tabItem1" Header="主题编辑" HorizontalAlignment="Left" Width="64" RenderTransformOrigin="0.5,0.5">
+                <TabItem x:Name="tabItem1" Header="主题编辑" HorizontalAlignment="Left" Width="206" RenderTransformOrigin="0.5,0.5">
                     <TabItem.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -1071,49 +1072,49 @@
                                 </TransformGroup>
                             </MediaElement.RenderTransform>
                         </MediaElement>
-                        <TextBlock x:Name="cuowu" HorizontalAlignment="Left" Height="24" Margin="463.879,392.041,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="16" Text="请重新选择一个主题" Foreground="Red"  />
+                        <TextBlock x:Name="cuowu" HorizontalAlignment="Left" Height="24" Margin="464,380,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="16" Text="请重新选择一个主题" Foreground="Red"  />
                         <CheckBox x:Name="MP4114" Content="禁用启动视频" HorizontalAlignment="Left" Height="28" Margin="448.905,282.915,0,0" VerticalAlignment="Top" Width="103" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black" IsEnabled="False"/>
-                        <Button x:Name="namesave_Copy1" Content="全部应用" HorizontalAlignment="Left" Height="40.5" Margin="630.963,377.724,0,0" VerticalAlignment="Top" Width="133.442" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
-                        <CheckBox x:Name="MP4114_Copy1" Content="启动视频点击" HorizontalAlignment="Left" Height="22" Margin="556.905,282.915,0,0" VerticalAlignment="Top" Width="103" IsEnabled="False" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
-                        <CheckBox x:Name="MP4114_Copy" Content="窗口化启动视频" HorizontalAlignment="Left" Height="28" Margin="666.906,283.416,0,0" VerticalAlignment="Top" Width="107" IsEnabled="False" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
-                        <ScrollViewer Margin="8.004,22.727,403.496,0" VerticalAlignment="Top" Height="393.314">
+                        <Button x:Name="namesave_Copy1" Content="全部应用" HorizontalAlignment="Left" Height="40" Margin="631,362,0,0" VerticalAlignment="Top" Width="133" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
+                        <CheckBox x:Name="MP4114_Copy1" Content="启动视频点击" HorizontalAlignment="Left" Height="22" Margin="557,287,0,0" VerticalAlignment="Top" Width="103" IsEnabled="False" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
+                        <CheckBox x:Name="MP4114_Copy" Content="窗口化启动视频" HorizontalAlignment="Left" Height="28" Margin="667,284,0,0" VerticalAlignment="Top" Width="107" IsEnabled="False" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
+                        <ScrollViewer  Margin="8,23,404,0" VerticalAlignment="Top" Height="393.314">
                             <StackPanel>
-                                <Grid Height="637.524" Margin="-5,0,0,0">
+                                <Grid Height="747" Margin="-5,0,0,0">
                                     <TextBlock HorizontalAlignment="Left" Height="24" Margin="15,12,-26.233,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="768" FontSize="16" Text="背景：" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
-                                    <TextBox x:Name="tbackground" HorizontalAlignment="Left" Height="20" Margin="16.689,39,0,0" Text="background.png" VerticalAlignment="Top" Width="343" FontSize="14" IsReadOnly="True" />
-                                    <Button x:Name="xbacoground" Content="选取" HorizontalAlignment="Left" Height="21" Margin="65.879,11.5,0,0" VerticalAlignment="Top" Width="60" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
+                                    <TextBox x:Name="tbackground" HorizontalAlignment="Left" Height="30" Margin="17,38,0,0" Text="background.png" VerticalAlignment="Top" Width="343" FontSize="14" IsReadOnly="True" Padding="0,0,0,0" />
+                                    <Button x:Name="xbacoground" Content="选取" HorizontalAlignment="Left" Height="24" Margin="66,12,0,0" VerticalAlignment="Top" Width="60" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
                                     <TextBlock HorizontalAlignment="Left" Height="24" Margin="15,69,-26.233,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="768" FontSize="16" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"><Run Text="商标"/><Run Text="："/></TextBlock>
-                                    <TextBox x:Name="ttrademark" HorizontalAlignment="Left" Height="20" Margin="16.189,98.5,0,0" Text="trademark.png" VerticalAlignment="Top" Width="343" FontSize="14" IsReadOnly="True"/>
-                                    <Button x:Name="xtrademark" Content="选取" HorizontalAlignment="Left" Height="21" Margin="65.879,69,0,0" VerticalAlignment="Top" Width="60" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
+                                    <TextBox x:Name="ttrademark" HorizontalAlignment="Center" Height="26" Margin="0,98,0,0" Text="trademark.png" VerticalAlignment="Top" Width="343" FontSize="14" IsReadOnly="True" Padding="0,0,0,0"/>
+                                    <Button x:Name="xtrademark" Content="选取" HorizontalAlignment="Left" Height="24" Margin="66,69,0,0" VerticalAlignment="Top" Width="60" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
                                     <TextBlock HorizontalAlignment="Left" Height="24" Margin="15,129,-26.233,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="768" FontSize="16" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"><Run Text="图标"/><Run Text="："/></TextBlock>
-                                    <TextBox x:Name="tstartimg" HorizontalAlignment="Left" Height="20" Margin="16.189,157.5,0,0" Text="StartIMG.png" VerticalAlignment="Top" Width="343" FontSize="14" IsReadOnly="True"/>
-                                    <Button x:Name="xstartimg" Content="选取" HorizontalAlignment="Left" Height="21" Margin="66.379,129,0,0" VerticalAlignment="Top" Width="60" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
+                                    <TextBox x:Name="tstartimg" HorizontalAlignment="Center" Height="31" Margin="0,158,0,0" Text="StartIMG.png" VerticalAlignment="Top" Width="343" FontSize="14" IsReadOnly="True" Padding="0,0,0,0"/>
+                                    <Button x:Name="xstartimg" Content="选取" HorizontalAlignment="Left" Height="24" Margin="66,129,0,0" VerticalAlignment="Top" Width="60" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
                                     <TextBlock HorizontalAlignment="Left" Height="24" Margin="15,188.786,-26.233,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="768" FontSize="16" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"><Run Text="主题名称"/><Run Text="："/></TextBlock>
-                                    <TextBox x:Name="sname" HorizontalAlignment="Left" Height="20" Margin="16.189,216.786,0,0" Text="DEFAULT" VerticalAlignment="Top" Width="343" FontSize="14"/>
-                                    <Button x:Name="namesave" Content="应用" HorizontalAlignment="Left" Height="21" Margin="97.879,188.786,0,0" VerticalAlignment="Top" Width="60" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
+                                    <TextBox x:Name="sname" HorizontalAlignment="Center" Height="25" Margin="0,217,0,0" Text="DEFAULT" VerticalAlignment="Top" Width="343" FontSize="14" Padding="0,0,0,-3"/>
+                                    <Button x:Name="namesave" Content="应用" HorizontalAlignment="Left" Height="28" Margin="98,189,0,0" VerticalAlignment="Top" Width="60" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
                                     <TextBlock HorizontalAlignment="Left" Height="24" Margin="15,247.286,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="82" FontSize="16" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"><Run Text="启动视频"/><Run Text="："/></TextBlock>
-                                    <Button x:Name="namesave_Copy" Content="选取" HorizontalAlignment="Left" Height="21" Margin="97.879,246.786,0,0" VerticalAlignment="Top" Width="60" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
-                                    <Button x:Name="namesave_Copy2" Content="选取" HorizontalAlignment="Left" Height="21" Margin="105.379,303.786,0,0" VerticalAlignment="Top" Width="60" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
+                                    <Button x:Name="namesave_Copy" Content="选取" HorizontalAlignment="Left" Height="27" Margin="98,247,0,0" VerticalAlignment="Top" Width="60" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
+                                    <Button x:Name="namesave_Copy2" Content="选取" HorizontalAlignment="Left" Height="27" Margin="105,304,0,0" VerticalAlignment="Top" Width="60" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
                                     <TextBlock Height="24" Margin="15,302.786,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" HorizontalAlignment="Left" Width="111.5" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"><Run Text="启动视频2"/><Run Text="："/></TextBlock>
-                                    <TextBox x:Name="sname_Copy" HorizontalAlignment="Left" Height="20" Margin="16.189,274.286,0,0" Text="startmp4.mp4" VerticalAlignment="Top" Width="343" FontSize="14" IsReadOnly="True"/>
-                                    <TextBox x:Name="sname_Copy1" HorizontalAlignment="Left" Height="20" Margin="16.189,330.786,0,0" Text="starmp41.mp4" VerticalAlignment="Top" Width="343" FontSize="14" IsReadOnly="True"/>
+                                    <TextBox x:Name="sname_Copy" HorizontalAlignment="Center" Height="29" Margin="0,274,0,0" Text="startmp4.mp4" VerticalAlignment="Top" Width="343" FontSize="14" IsReadOnly="True" Padding="0,-2,0,0"/>
+                                    <TextBox x:Name="sname_Copy1" HorizontalAlignment="Center" Height="33" Margin="0,331,0,0" Text="starmp41.mp4" VerticalAlignment="Top" Width="343" FontSize="14" IsReadOnly="True" Padding="0,0,0,0"/>
                                     <TextBlock HorizontalAlignment="Left" Height="33.44" Margin="15,392.745,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="101" Text="标题:" FontSize="17" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
-                                    <TextBox x:Name="_1_1" HorizontalAlignment="Left" Height="33.174" Margin="16.689,419.745,0,0" Text="希沃 " VerticalAlignment="Top" Width="343" FontSize="14" AcceptsTab="True" MaxHeight="20"/>
+                                    <TextBox x:Name="_1_1" HorizontalAlignment="Left" Height="33.174" Margin="16.689,419.745,0,0" Text="希沃 " VerticalAlignment="Top" Width="343" FontSize="14" AcceptsTab="True" MaxHeight="20" Padding="0,0,0,0"/>
                                     <TextBlock HorizontalAlignment="Left" Height="33.44" Margin="15,442.025,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="101" Text="副标题:" FontSize="17" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
-                                    <TextBox x:Name="_2_2" HorizontalAlignment="Left" Height="33.175" Margin="16.689,467.689,0,0" Text="Pro" VerticalAlignment="Top" Width="343" FontSize="14" MaxHeight="20"/>
+                                    <TextBox x:Name="_2_2" HorizontalAlignment="Left" Height="33.175" Margin="16.689,467.689,0,0" Text="Pro" VerticalAlignment="Top" Width="343" FontSize="14" MaxHeight="20" Padding="0,0,0,0"/>
                                     <TextBlock HorizontalAlignment="Left" Height="33.44" Margin="15,487.785,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="101" Text="启动文字:" FontSize="16" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
-                                    <TextBox x:Name="_3_3" HorizontalAlignment="Left" Height="33.176" Margin="16.689,512.316,0,0" Text="寓教于乐 2.0" VerticalAlignment="Top" Width="343" FontSize="14" MaxHeight="20"/>
+                                    <TextBox x:Name="_3_3" HorizontalAlignment="Left" Height="33.176" Margin="16.689,512.316,0,0" Text="寓教于乐 2.0" VerticalAlignment="Top" Width="343" FontSize="14" MaxHeight="20" Padding="0,0,0,0"/>
                                     <TextBlock HorizontalAlignment="Left" Height="33.44" Margin="15,533.545,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="101" Text="警示文字:" FontSize="16" Cursor="None" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
-                                    <TextBox x:Name="_4_4" HorizontalAlignment="Left" Height="33.174" Margin="16.689,555.444,0,0" VerticalAlignment="Top" Width="343" FontSize="14" Text="抵制扰乱秩序，坚持认真上课，注意自我提醒，谨防上课睡觉；适度教学益脑，拖堂教学伤身，合理安排时间，享受快乐教学。" MaxHeight="20"/>
+                                    <TextBox x:Name="_4_4" HorizontalAlignment="Left" Height="33.174" Margin="16.689,555.444,0,0" VerticalAlignment="Top" Width="343" FontSize="14" Text="抵制扰乱秩序，坚持认真上课，注意自我提醒，谨防上课睡觉；适度教学益脑，拖堂教学伤身，合理安排时间，享受快乐教学。" MaxHeight="20" Padding="0,0,0,0"/>
                                     <TextBlock HorizontalAlignment="Left" Height="33.44" Margin="15,579.305,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="101" Text="版权文字:" FontSize="16" Cursor="Arrow" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
-                                    <TextBox x:Name="_5_5" HorizontalAlignment="Left" Height="33.174" Margin="16.689,603.071,0,-17.721" Text="Copyright © 2011-2024 Guangzhou Shirui. All Rights Reserved" VerticalAlignment="Top" Width="343" FontSize="14"  MaxHeight="20"/>
+                                    <TextBox x:Name="_5_5" HorizontalAlignment="Left" Height="33.174" Margin="16.689,603.071,0,-17.721" Text="Copyright © 2011-2024 Guangzhou Shirui. All Rights Reserved" VerticalAlignment="Top" Width="343" FontSize="14"  MaxHeight="20" Padding="0,0,0,0"/>
                                     <CheckBox x:Name="ff" Content="文字跟随主题（支持每个主题单独设置以下内容）" HorizontalAlignment="Left" Height="21" Margin="15.5,369.245,0,0" VerticalAlignment="Top" Width="335" FontSize="14" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
                                 </Grid>
                             </StackPanel>
                         </ScrollViewer>
                     </Grid>
                 </TabItem>
-                <TabItem x:Name="advanced" Header="高级设置" Margin="-2,0" Height="18.84" VerticalAlignment="Bottom">
+                <TabItem x:Name="advanced" Header="高级设置" Height="46" VerticalAlignment="Top" Width="198">
                     <TabItem.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -1130,22 +1131,22 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <TextBlock HorizontalAlignment="Left" Height="23.2" Margin="19,9.76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="767.2" FontSize="16" Text="窗口监测：" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
-                        <TextBox x:Name="windowname" Height="20" Margin="101.655,10.36,16.733,0" Text="DEFAULT" VerticalAlignment="Top" FontSize="14"/>
+                        <TextBox x:Name="windowname" Height="26" Margin="102,10,10,0" Text="DEFAULT" VerticalAlignment="Top" FontSize="14" Padding="0,0,0,0"/>
                         <Button x:Name="windowsave" Content="应用" HorizontalAlignment="Left" Height="20.8" Margin="692,69.2,0,0" VerticalAlignment="Top" Width="60" FontFamily="/SeewoStart;component/#DingTalk JinBuTi" Visibility="Hidden"/>
-                        <TextBlock HorizontalAlignment="Left" Height="23" Margin="19,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="767" FontSize="16" Text="建议在开发者的指导下修改，任意修改可能会造成判定失误！" Foreground="#FFFF0404" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
-                        <CheckBox x:Name="cs" Content="是否带参数启动" HorizontalAlignment="Left" Height="18" Margin="10,41,0,0" VerticalAlignment="Top" Width="152" IsChecked="True" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
-                        <TextBox x:Name="cstext" HorizontalAlignment="Left" Height="16" Margin="121.818,39,0,0" TextWrapping="Wrap" Text="-m Display -iwb" VerticalAlignment="Top" Width="254"/>
-                        <CheckBox x:Name="ckjczq" Content="窗口检测在前 (可防止希沃白板已经启动，但又多次启动的问题）" HorizontalAlignment="Left" Height="21" Margin="12,100,0,0" VerticalAlignment="Top" Width="391" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
+                        <TextBlock HorizontalAlignment="Center" Height="23" Margin="0,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="767" FontSize="16" Text="建议在开发者的指导下修改，任意修改可能会造成判定失误！" Foreground="#FFFF0404" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
+                        <CheckBox x:Name="cs" Content="是否带参数启动" HorizontalAlignment="Left" Height="24" Margin="10,42,0,0" VerticalAlignment="Top" Width="152" IsChecked="True" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
+                        <TextBox x:Name="cstext" HorizontalAlignment="Left" Height="28" Margin="122,39,0,0" TextWrapping="Wrap" Text="-m Display -iwb" VerticalAlignment="Top" Width="254"/>
+                        <CheckBox x:Name="ckjczq" Content="窗口检测在前 (可防止希沃白板已经启动，但又多次启动的问题）" HorizontalAlignment="Left" Height="21" Margin="9,100,0,0" VerticalAlignment="Top" Width="391" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
                         <CheckBox x:Name="cjmode" Content="⚡沉浸式模式⚡(去除希沃Pro文本框的显示，高度还原神启动画面)" HorizontalAlignment="Left" Height="33" Margin="13,146,0,0" VerticalAlignment="Top" Width="426" Visibility="Hidden"/>
                         <Button x:Name="windowsave_Copy" Content="应用（仅主题文字）" HorizontalAlignment="Left" Height="34.3" Margin="636.838,342,0,0" VerticalAlignment="Top" Width="115.162" Visibility="Hidden"/>
-                        <Button x:Name="windowsave_Copy1" Content="全部应用" HorizontalAlignment="Left" Height="34.3" Margin="37.838,383,0,0" VerticalAlignment="Top" Width="115.162" FontFamily="/SeewoStart;component/#DingTalk JinBuTi"/>
-                        <CheckBox x:Name="cs_Copy" Content="启动视频窗口设置 如勾选，则在视频放完后启动程序，反之，您可以输入一个毫秒数(1s=1000ms),启动器将在您设置的时间启动程序！" HorizontalAlignment="Left" Height="19" Margin="10,122,0,0" VerticalAlignment="Top" Width="742" IsChecked="True" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
-                        <TextBox x:Name="cstext_Copy" HorizontalAlignment="Left" Height="16" Margin="34,141.5,0,0" TextWrapping="Wrap" Text="5000" VerticalAlignment="Top" Width="254"/>
+                        <Button x:Name="windowsave_Copy1" Content="全部应用" HorizontalAlignment="Left" Height="35" Margin="637,367,0,0" VerticalAlignment="Top" Width="115" FontFamily="HarmonyOS Sans SC Black"/>
+                        <CheckBox x:Name="cs_Copy" Content="启动视频窗口设置 如勾选，则在视频放完后启动程序，反之，您可以输入一个毫秒数(1s=1000ms),启动器将在您设置的时间启动程序！" HorizontalAlignment="Left" Height="19" Margin="9,122,0,0" VerticalAlignment="Top" Width="742" IsChecked="True" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black"/>
+                        <TextBox x:Name="cstext_Copy" HorizontalAlignment="Left" Height="21" Margin="19,146,0,0" TextWrapping="Wrap" Text="5000" VerticalAlignment="Top" Width="254" Padding="0,0,0,0"/>
                         <TextBlock HorizontalAlignment="Left" Height="19" Margin="236.1,381.3,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="545.5" Text="注意:保存文字跟随主题先点此按钮，再点全部应用，不然不生效！！ ↑" FontSize="16" Foreground="#FFF70303" Visibility="Hidden"/>
 
                     </Grid>
                 </TabItem>
-                <TabItem x:Name="gy" Header="关于页面" Margin="-2,0" Height="18.84" VerticalAlignment="Bottom">
+                <TabItem x:Name="gy" Header="关于页面" Height="48" VerticalAlignment="Center" Width="203">
                     <TabItem.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -1162,17 +1163,17 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <TextBlock HorizontalAlignment="Left" Height="50" Margin="10,10.5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="768" FontSize="16" FontWeight="Bold" FontFamily="/SeewoStart;component/Font/#DingTalk JinBuTi"><Run Text="关于和鸣谢"/><Run Text=" ——————————————————"/><Run Text="——————————————"/><Run Text="—————————"/></TextBlock>
-                        <Image Margin="24,58,702.457,312" Source="default-img/srlogo.png" Stretch="Fill"/>
-                        <TextBlock HorizontalAlignment="Left" Height="56" Margin="91.963,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="418" FontSize="18" FontFamily="/SeewoStart;component/Font/#DingTalk JinBuTi"><Run Text="本程序由 "/><Run Foreground="#FF8E32E3" Text="思锐工作室 "/><Run Text="制作"/><LineBreak/><Run Text="M"/><Run Text="ade by "/><Run Foreground="#FF8E32E3" FontWeight="Bold" Text="SR Studio"/></TextBlock>
-                        <Image Margin="24,151.022,702.457,219" Source="default-img/logo.png" Stretch="Fill"/>
-                        <TextBlock HorizontalAlignment="Left" Height="56" Margin="91.963,162.022,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="418" FontSize="18" FontFamily="/SeewoStart;component/Font/#DingTalk JinBuTi"><Run Text="本程序由 "/><Run Foreground="#FF289FCF" Text="思锐云盘 "/><Run Foreground="#FF75C0B7" Text="Powered by AList"/><LineBreak/><Run Text="提供下载和服务支持"/></TextBlock>
-                        <Image Margin="27,257.022,705.457,120" Source="default-img/9919.png" Stretch="Fill"/>
-                        <TextBlock x:Name="_114514homo" HorizontalAlignment="Left" Height="56" Margin="91.963,264.022,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="418" FontSize="18" FontFamily="/SeewoStart;component/Font/#DingTalk JinBuTi"><Run Text="本程序"/><Run Text="在 Github 上维护"/><Run Text=" "/><Run Foreground="#FFFF6500" FontWeight="Bold" TextDecorations="Underline"/><LineBreak/><Run Foreground="#FFFF6500" FontWeight="Bold" Text="遵顼Apache开源协议" TextDecorations="Underline"/></TextBlock>
-                        <Image Margin="27,344.022,705.457,33" Source="default-img/sbenlauncher.ico" Stretch="Fill"/>
-                        <TextBlock HorizontalAlignment="Left" Height="56" Margin="91.963,353.022,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="418" FontSize="18" FontFamily="/SeewoStart;component/Font/#DingTalk JinBuTi"><Run Text="本程序"/><Run Text="灵感来源于 "/><Run Foreground="#FF2DB45C" Text="希沃白板"/><LineBreak/><Run Text="仅供娱乐使用，如有侵权请联系"/><LineBreak/></TextBlock>
-                        <TextBlock HorizontalAlignment="Left" Height="305.002" Margin="428.07,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="352" FontSize="14"><Run Text="本程序所使用第三方字体："/><LineBreak/><Run Text="1. "/><Run FontFamily="/SeewoStart;component/Font/#DingTalk JinBuTi" Text="钉钉进步体"/><LineBreak/><Run Text="2. "/><Run FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black" Text="HarmonyOS Sans"/><Run FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black" Text=" SC"/><LineBreak/><Run/><LineBreak/><Run Text="本程序所使用的默认第三方素材来源："/><LineBreak/><Run Text="1. 原神（米哈游） "/><LineBreak/><Run Text="2.崩坏 · 星穹铁道"/><Run Text="（米哈游） "/><LineBreak/><Run Text="3"/><Run Text=". 阴阳师（网易游戏）"/><LineBreak/><Run Text="4"/><Run Text=". Minecraft（Mojang）"/><LineBreak/><Run Text="所使用的素材如有侵权，请联系我们。"/><LineBreak/><Run/><LineBreak/><Run Text="在分发和传播的过程中，请注意遵循Apache开源协议，并保持程序的完整性、安全性和可行性、保留所有声明，不得对此程序进行商用，且在传播过程中始终将原作者（思锐工作室 或 SR思锐）标注在明显位置。"/><LineBreak/><Run/><LineBreak/><Run Text="联系我们：QQ群 36779800 邮箱 srinternet@qq.com"/></TextBlock>
-                        <TextBlock x:Name="ver" HorizontalAlignment="Left" Height="33.623" Margin="434.841,351.002,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="344.666" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black" Foreground="#FF0A00FF" TextAlignment="Center" Panel.ZIndex="-28" FontSize="18"><Run Text="当前程序版本："/></TextBlock>
-                        <Button x:Name="update114" Content="检查更新" HorizontalAlignment="Left" Height="34.667" Margin="544.174,384.625,0,0" VerticalAlignment="Top" Width="124.834" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black" FontSize="18"/>
+                        <Image Margin="24,58,706,313" Source="default-img/srlogo.png" Stretch="Fill"/>
+                        <TextBlock HorizontalAlignment="Left" Height="56" Margin="92,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="418" FontSize="18" FontFamily="/SeewoStart;component/Font/#DingTalk JinBuTi"><Run Text="本程序由 "/><Run Foreground="#FF8E32E3" Text="思锐工作室 "/><Run Text="制作"/><LineBreak/><Run Text="M"/><Run Text="ade by "/><Run Foreground="#FF8E32E3" FontWeight="Bold" Text="SR Studio"/></TextBlock>
+                        <Image Margin="24,143,706,228" Source="default-img/logo.png" Stretch="Fill"/>
+                        <TextBlock HorizontalAlignment="Left" Height="56" Margin="100,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="418" FontSize="18" FontFamily="/SeewoStart;component/Font/#DingTalk JinBuTi"><Run Text="本程序由 "/><Run Foreground="#FF289FCF" Text="思锐云盘 "/><Run Foreground="#FF75C0B7" Text="Powered by AList"/><LineBreak/><Run Text="提供下载和服务支持"/></TextBlock>
+                        <Image Margin="23,240,710,133" Source="default-img/9919.png" Stretch="Fill"/>
+                        <TextBlock x:Name="_114514homo" HorizontalAlignment="Left" Height="56" Margin="100,249,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="418" FontSize="18" FontFamily="/SeewoStart;component/Font/#DingTalk JinBuTi"><Run Text="本程序"/><Run Text="在 Github 上维护"/><Run Text=" "/><Run Foreground="#FFFF6500" FontWeight="Bold" TextDecorations="Underline"/><LineBreak/><Run Foreground="#FFFF6500" FontWeight="Bold" Text="遵顼Apache开源协议" TextDecorations="Underline"/></TextBlock>
+                        <Image Margin="23,330,710,42" Source="default-img/sbenlauncher.ico" Stretch="Fill"/>
+                        <TextBlock HorizontalAlignment="Left" Height="56" Margin="92,341,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="418" FontSize="18" FontFamily="/SeewoStart;component/Font/#DingTalk JinBuTi"><Run Text="本程序"/><Run Text="灵感来源于 "/><Run Foreground="#FF2DB45C" Text="希沃白板"/><LineBreak/><Run Text="仅供娱乐使用，如有侵权请联系"/><LineBreak/></TextBlock>
+                        <TextBlock HorizontalAlignment="Left" Height="305" Margin="428,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="352" FontSize="14"><Run Text="本程序所使用第三方字体："/><LineBreak/><Run Text="1. "/><Run FontFamily="/SeewoStart;component/Font/#DingTalk JinBuTi" Text="钉钉进步体"/><LineBreak/><Run Text="2. "/><Run FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black" Text="HarmonyOS Sans"/><Run FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black" Text=" SC"/><LineBreak/><Run/><LineBreak/><Run Text="本程序所使用的默认第三方素材来源："/><LineBreak/><Run Text="1. 原神（米哈游） "/><LineBreak/><Run Text="2.崩坏 · 星穹铁道"/><Run Text="（米哈游） "/><LineBreak/><Run Text="3"/><Run Text=". 阴阳师（网易游戏）"/><LineBreak/><Run Text="4"/><Run Text=". Minecraft（Mojang）"/><LineBreak/><Run Text="所使用的素材如有侵权，请联系我们。"/><LineBreak/><Run/><LineBreak/><Run Text="在分发和传播的过程中，请注意遵循Apache开源协议，并保持程序的完整性、安全性和可行性、保留所有声明，不得对此程序进行商用，且在传播过程中始终将原作者（思锐工作室 或 SR思锐）标注在明显位置。"/><LineBreak/><Run/><LineBreak/><Run Text="联系我们：QQ群 36779800 邮箱 srinternet@qq.com"/></TextBlock>
+                        <TextBlock x:Name="ver" HorizontalAlignment="Left" Height="34" Margin="435,339,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="345" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black" Foreground="#FF0A00FF" TextAlignment="Center" Panel.ZIndex="-28" FontSize="18"><Run Text="当前程序版本："/></TextBlock>
+                        <Button x:Name="update114" Content="检查更新" HorizontalAlignment="Left" Height="34" Margin="543,373,0,0" VerticalAlignment="Top" Width="122" FontFamily="/SeewoStart;component/Font/#HarmonyOS Sans SC Black" FontSize="18"/>
 
                     </Grid>
                 </TabItem>
@@ -1192,6 +1193,77 @@
             </TextBlock.RenderTransform>
         </TextBlock>
 
+        <materialDesign:Snackbar
+  x:Name="SnackbarOne"
+  IsActive="False"
+  Message="设置已生效 " HorizontalAlignment="Center" VerticalAlignment="Bottom" FontFamily="HarmonyOS Sans SC Black"/>
+        <materialDesign:DialogHost x:Name="SingleDialog" Identifier="singleSetting"
+    DialogContentUniformCornerRadius="18"
+    DialogTheme="Inherit" Visibility="Visible" Margin="-10,10,10,-10">
+            <materialDesign:DialogHost.DialogContent>
+                <StackPanel x:Name="HelperGrid" Background="White">
+                    <TextBlock x:Name="singleTitle" Margin="16,16,16,0" FontFamily="HarmonyOS Sans SC Black" FontSize="24" ></TextBlock>
+                    <ScrollViewer x:Name="HelperContent">
+                        <TextBlock x:Name="singleText" Margin="16,5,16,16" FontFamily="HarmonyOS Sans SC Black" FontSize="16" TextWrapping="Wrap" Text="114514" ></TextBlock>
+                    </ScrollViewer>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="16">
+                        <Button Content="OK" Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" FontFamily="HarmonyOS Sans SC Black" IsDefault="True" CommandParameter="True" Style="{StaticResource MaterialDesignFlatButton}" Foreground="{DynamicResource MaterialDesign.Brush.Primary}"/>
+                    </StackPanel>
+                </StackPanel>
+            </materialDesign:DialogHost.DialogContent>
+        </materialDesign:DialogHost>
+        <materialDesign:DialogHost x:Name="AddDialog" 
+          Identifier="Add"
+              DialogContentUniformCornerRadius="18"
+              DialogTheme="Inherit"
+                                  >
+            <materialDesign:DialogHost.DialogContent>
+                <StackPanel Margin="16">
+                    <TextBlock x:Name="AddTextTip" Text="添加新的主题" FontSize="16" FontWeight="Bold" FontFamily="HarmonyOS Sans SC Black" />
 
+                    <TextBox x:Name="NewHot"
+Margin="0,8,0,0"
+HorizontalAlignment="Stretch" FontSize="14" MinWidth="200"/>
+
+                    <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                        <Button Margin="0,8,8,0"
+ Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"
+ Content="完成"
+ FontFamily="HarmonyOS Sans SC Black"
+ IsDefault="True"
+ Style="{StaticResource MaterialDesignFlatButton}">
+                            <Button.CommandParameter>
+                                <system:Boolean>True</system:Boolean>
+                            </Button.CommandParameter>
+                        </Button>
+
+                        <Button Margin="0,8,8,0"
+ Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"
+ Content="取消"
+ FontFamily="HarmonyOS Sans SC Black"
+ IsCancel="True"
+ Style="{StaticResource MaterialDesignFlatButton}">
+                            <Button.CommandParameter>
+                                <system:Boolean>False</system:Boolean>
+                            </Button.CommandParameter>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+            </materialDesign:DialogHost.DialogContent>
+        </materialDesign:DialogHost>
+        <materialDesign:DialogHost x:Name="MessageDialog" 
+                             Identifier="Msg"
+                                 DialogContentUniformCornerRadius="18"
+                                 DialogTheme="Inherit">
+            <materialDesign:DialogHost.DialogContent>
+                <StackPanel>
+                    <TextBlock x:Name="DialogText" Text="Default text" Margin="16" FontFamily="HarmonyOS Sans SC Black" FontSize="16" />
+                    <StackPanel Orientation="Horizontal" Margin="16" HorizontalAlignment="Right">
+                        <Button x:Name="MessageGood" Content="更改" Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" IsDefault="True" CommandParameter="True" Style="{StaticResource MaterialDesignFlatButton}" HorizontalAlignment="Right" Margin="15,0,0,0" FontFamily="HarmonyOS Sans SC Black"/>
+                        <Button x:Name="MessageBad" Content="取消" Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" IsCancel="True" CommandParameter="False" Style="{StaticResource MaterialDesignFlatButton}" HorizontalAlignment="Right" FontFamily="HarmonyOS Sans SC Black"/>
+                    </StackPanel>
+                </StackPanel>
+            </materialDesign:DialogHost.DialogContent>
+        </materialDesign:DialogHost>
     </Grid>
 </Window>
